@@ -1,6 +1,6 @@
 # FE Quick Drill
 
-基本情報技術者試験 科目A・科目B向けの静的な演習アプリ。HTML / CSS / JavaScript ES Modulesのみで動きます。アカウント、バックエンド、外部API、ビルドは不要です。
+基本情報技術者試験 科目A・科目B向けの静的な演習アプリ。HTML / CSS / JavaScript ES Modulesのみで動きます。アカウント、バックエンド、外部APIは不要です。配信時のビルドも不要です。
 
 ## ローカルで使う
 
@@ -29,33 +29,30 @@ css/style.css        レスポンシブデザイン
 js/app.js            画面・操作・タイマー・JSON入出力
 js/core.js           データ検証・出題・採点・集計（DOM非依存）
 js/storage.js        localStorage入出力
-data/questions.js    問題データ
+data/questions.js    既存サンプルと追加問題の結合
+data/additional-questions.json  追加問題の編集用JSON
+data/additional-questions.js    検査後に生成する配信用データ
+js/question-bank.js  JSONバンクの検査・直列化
+scripts/build-questions.js     問題検査・変換コマンド
+docs/question-data.md          調査結果・IPA収録手順
 tests/               出題・採点・復元・画面操作フローのテスト
 ```
 
 ## 問題を追加する
 
-`data/questions.js` の `questions` 配列に次の形式で追加します。ビルドは不要です。IDは公開後に変更・再利用しないでください。既存の正答や選択肢の順序を変更すると、既存履歴とJSONの整合性が変わるため、新しいIDでの追加を推奨します。
+`data/additional-questions.json` の `questions` 配列へまとめて追加し、次を実行します。
 
-```js
-{
-  id: 'A-T100',
-  subject: 'A', // A または B
-  field: 'テクノロジ',
-  prompt: '問題文',
-  choices: ['選択肢1', '選択肢2'], // 2〜20個。数字キーは1〜9、それ以外はクリック
-  answer: 0, // 正答の0始まりインデックス
-  explanation: { brief: '簡潔な説明', detail: '詳細な説明' },
-  source: { type: 'ai', title: '出典の名称・年度・問題番号等' }, // ai / ipa / original
-  verification: { status: 'pending' }, // レビュー後 verified に変更
-  // verified の場合 method（検証内容）と date（検証日）が必須
-  // code: '疑似言語\n  インデントを保持',
-  // table: { headers: ['列名'], rows: [['値']] },
-  // trace: { headers: ['変数'], rows: [[1]] },
-}
+```sh
+npm run questions:build
+npm run questions:check
+npm test
 ```
 
-分野名は `js/core.js` の `FIELDS` に定義した文字列に一致させます。未検証（`pending`）は通常演習・復習ともに出題しません。起動時に形式を検証し、不正な問題がある場合は問題ID付きのエラーを表示します。HTMLは埋め込まず、問題文・コード・表をそれぞれデータで定義してください。表示時には文字列をエスケープします。
+Node.js 20以上が必要です。問題追加時だけJSONを検査して静的JSへ変換します。配信時のビルド・外部APIは不要です。JSONと生成された `data/additional-questions.js` を一緒にコミットしてください。
+
+[データ構造・6要件の調査結果・検証方法・IPA収録手順](docs/question-data.md) に必須フィールドと公式利用条件をまとめています。新規の検証済み問題には正答と両解説の確認記録が必須です。検査だけで問題を検証済みに変更することはありません。未検証問題は通常演習・復習ともに除外します。
+
+問題JSONは学習記録のJSONとは別形式です。既存サンプルのID・正答・保存形式は維持しています。
 
 ### 初期問題の位置付け
 
@@ -73,7 +70,7 @@ Node.js 20以上で依存パッケージ不要です。
 node --test
 ```
 
-主要ロジック7項目と、DOMアダプターを使った画面操作フロー1項目を用意しています。画面操作テストは実ブラウザの表示検証の代用ではありません。ブラウザでも科目切替・分野切替・演習・解答変更・中断再開・採点・復習・記録・JSON入出力を確認してください。スマートフォン幅ではコードと表が内容領域の横スクロールで読めることを確認してください。
+主要ロジック7項目、問題バンク8項目、DOMアダプターを使った画面操作フロー1項目を用意しています。画面操作テストは実ブラウザの表示検証の代用ではありません。ブラウザでも科目切替・分野切替・演習・解答変更・中断再開・採点・復習・記録・JSON入出力を確認してください。スマートフォン幅ではコードと表が内容領域の横スクロールで読めることを確認してください。
 
 ## GitHub Pagesで公開
 

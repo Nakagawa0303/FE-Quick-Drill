@@ -1,5 +1,5 @@
 import assert from 'node:assert/strict';
-import {questions} from '../data/questions.js';
+import {sampleQuestions as questions} from '../data/questions.js';
 import {freshState,validateQuestions,selectQuestions,grade,stats,validateState} from '../js/core.js';
 
 export function registerTests(test) {

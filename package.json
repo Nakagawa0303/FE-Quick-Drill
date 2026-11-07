@@ -1,1 +1,1 @@
-{"name":"fe-quick-drill","private":true,"type":"module","scripts":{"test":"node --test","start":"python -m http.server 8000"}}
+{"name":"fe-quick-drill","private":true,"type":"module","scripts":{"test":"node --test","start":"python -m http.server 8000","questions:check":"node scripts/build-questions.js --check","questions:build":"node scripts/build-questions.js --write"}}
