@@ -1,0 +1,126 @@
+{
+  "date": "2026-11-08",
+  "officialAnswersMatched": 56,
+  "algorithmQuestions": 8,
+  "note": "AIによる原本・解説の照合と独立計算。専門家レビュー未実施。テスト入力の網羅は各問題の検査範囲を参照。",
+  "checks": {
+    "IPA-FE-2025-KOUKAI-A-004": {
+      "calculatedValue": 0.92,
+      "uniqueChoice": true
+    },
+    "IPA-FE-2025-KOUKAI-A-007": {
+      "calculatedValue": 80.0,
+      "uniqueChoice": true
+    },
+    "IPA-FE-2025-KOUKAI-A-019": {
+      "calculatedValue": 5.0,
+      "uniqueChoice": true
+    },
+    "IPA-FE-2024-KOUKAI-A-004": {
+      "calculatedValue": 80.0,
+      "uniqueChoice": true
+    },
+    "IPA-FE-2026-KOUKAI-A-014": {
+      "calculatedValue": 1.99,
+      "uniqueChoice": true
+    },
+    "IPA-FE-2024-KOUKAI-A-002": {
+      "hashValues": [
+        [
+          7,
+          5
+        ],
+        [
+          8,
+          4
+        ],
+        [
+          9,
+          8
+        ],
+        [
+          0,
+          0
+        ]
+      ],
+      "uniqueChoice": true
+    },
+    "IPA-FE-2026-KOUKAI-A-017": {
+      "retentionRates": [
+        0.3,
+        0.6,
+        0.4,
+        0.5333333333333333
+      ],
+      "uniqueChoice": true
+    },
+    "IPA-FE-2026-KOUKAI-A-007": {
+      "sqliteConstraintFailures": [
+        3
+      ],
+      "uniqueChoice": true
+    },
+    "IPA-FE-2025-KOUKAI-A-006": {
+      "sqliteEquivalentChoices": [
+        2
+      ],
+      "uniqueChoice": true
+    },
+    "IPA-FE-2026-KOUKAI-B-001": {
+      "officialLabel": "エ",
+      "independentCases": 19,
+      "uniqueChoice": true,
+      "codeSha256": "5fb650f592e18ba5f8cfbfebcbef50aac269d9d38d3a39ad8320cc925e561636",
+      "traceSha256": "08796982872cb6c6c019c7f01a16ea1f89b5eed70c9fa319a93c85036dde95fd"
+    },
+    "IPA-FE-2026-KOUKAI-B-002": {
+      "officialLabel": "カ",
+      "independentCases": 256,
+      "uniqueChoice": true,
+      "codeSha256": "ed2ec4c375bf1ffc7c94779c530da80b706ade938f8fe2dd45d4345d4682eaed",
+      "traceSha256": "173524dae47d35b9fa5a0d482def9671f86c41365985e975544af3350b584412"
+    },
+    "IPA-FE-2026-KOUKAI-B-003": {
+      "officialLabel": "ア",
+      "independentCases": 36,
+      "uniqueChoice": true,
+      "codeSha256": "2cd7848957033899d501aeadc9634c053d1ad9d1d7d2a986c86613bb3cbe4d53",
+      "traceSha256": "7e8fd251604c555cea6fadbcd4849c6f9b32b66b7edb1125786e4e9d939cd03a"
+    },
+    "IPA-FE-2025-KOUKAI-B-001": {
+      "officialLabel": "カ",
+      "independentCases": 2624,
+      "uniqueChoice": true,
+      "codeSha256": "841e30189a60478c8d99a57eb21893b96063e38dc97ba4dc4343c2b39af6b28f",
+      "traceSha256": "7c47fa28b31d65cb14e63cbd2e860438de1e8e5b5c9576be7757491ec743bfb0"
+    },
+    "IPA-FE-2025-KOUKAI-B-002": {
+      "officialLabel": "ア",
+      "independentCases": 190,
+      "uniqueChoice": true,
+      "codeSha256": "d9542b6b5a16345cb10c28cb1ad64ab353d804efbdce95dab9b292e8c0782a7d",
+      "traceSha256": "0fcff1f86dfba644836fbf31972e1a23018db595f93bc2007f410f5309a11746"
+    },
+    "IPA-FE-2024-KOUKAI-B-001": {
+      "officialLabel": "イ",
+      "independentCases": 210,
+      "uniqueChoice": true,
+      "codeSha256": "b4e9c66e1e8349e3a490cb9aecc992330595e930d29c9171e0e59634129d8dd8",
+      "traceSha256": "2699f3d6f3cf8e3207b847b017d256d19797563bdcbd688d543ab5eeee3505f3"
+    },
+    "IPA-FE-2024-KOUKAI-B-002": {
+      "officialLabel": "エ",
+      "independentCases": 2046,
+      "uniqueChoice": true,
+      "codeSha256": "7a53a57114aeff218c738612a9e58820ed6b9c8458bbf6c654015eff0883ae75",
+      "traceSha256": "22a4a7f0ab5ba112fd5bed04fb34980381c88bc2e6d66ffc7d59590e9a742acc"
+    },
+    "IPA-FE-2024-KOUKAI-B-004": {
+      "officialLabel": "イ",
+      "independentCases": 1,
+      "uniqueChoice": true,
+      "codeSha256": "6f278f9a75d6af94b3b86cb2fe556a959cfca2080a1444779842e6967b223e96",
+      "traceSha256": "3529d31fc0296f393122f36339361c8d23dfc98087f261c961b13c26b71ff53b"
+    }
+  }
+}
