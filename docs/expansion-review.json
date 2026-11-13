@@ -1,0 +1,837 @@
+{
+  "date": "2026-11-13",
+  "reviewer": "Codex（AI。同一担当が転記後に別工程で原本・正答・独自解説を確認。人手・専門家の独立レビューではない）",
+  "batches": [
+    {
+      "number": 1,
+      "questions": [
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-025",
+          "officialAnswer": "ア",
+          "contentSha256": "6d1b8f8eb5df0d4f5643b69290b3ad0ca42fb46f40052fedcb1aaadf15d10cee",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-026",
+          "officialAnswer": "エ",
+          "contentSha256": "16dd3fa175b096ad1790e81302ffe0502348e41b35135192db5eaf998c3f1eb1",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-027",
+          "officialAnswer": "イ",
+          "contentSha256": "d243b1bd4ba4286c8108d293dd53cc912d4b5de1bbd9c1492ce5e3fb8cc9f55d",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-028",
+          "officialAnswer": "エ",
+          "contentSha256": "2163c6d4e9d34cd84b761d95c91692f94c9ab57ecb9af2d9b6e199ad293839cb",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-029",
+          "officialAnswer": "ア",
+          "contentSha256": "1a4fb71325db5623047ddfeada7d741f155218412e6a407e70c8aaf946635abf",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-030",
+          "officialAnswer": "ア",
+          "contentSha256": "18059bb3f33b48647afd637e39575f7ecb40a10021bd1f347e17eac8ad554a1b",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-031",
+          "officialAnswer": "エ",
+          "contentSha256": "d00fe04a63acaf15f0de029f7e0dd2a522d1732924293a7dfb252bf00be5c930",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-032",
+          "officialAnswer": "ア",
+          "contentSha256": "f7a59e1aa94c07e782169c0ed7c06e2f02a776e84f607bcc736b821ba4fdf2a3",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-033",
+          "officialAnswer": "ウ",
+          "contentSha256": "43ac744b4c6e2f59f2465332077dba24f3abcde55b46d018a35c7f799da34786",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-034",
+          "officialAnswer": "ウ",
+          "contentSha256": "682066cd67373174e8ca37323a5b7170305554083689996d4ac61176095f0af2",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-035",
+          "officialAnswer": "イ",
+          "contentSha256": "a117f7f4a57e08568ea87eb4ca7b73331f3259a0400dad669edd269423f9ff0b",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-036",
+          "officialAnswer": "ア",
+          "contentSha256": "5525a3be1c3cc39b6bb1f223c8a8daed22e605203fba5cf46d05da4adef604e6",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-037",
+          "officialAnswer": "エ",
+          "contentSha256": "ec4d1e150ac3217b471bf1f1f8e1ce01b56895787319283005275939b90fb9b4",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-038",
+          "officialAnswer": "イ",
+          "contentSha256": "8df1b09da84f110744b584e803bcf65fb382bd25d16e816803cb8a9f277e59d9",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-039",
+          "officialAnswer": "イ",
+          "contentSha256": "6c31eb10fa7281053c5f0b144d157bbea02ab116fcbe3bb5d55368165e18b2f3",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-040",
+          "officialAnswer": "イ",
+          "contentSha256": "1499ec03bdf463481cc4f90f4ae7dc45de8e762e23c98dced522ec3c686c591a",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-041",
+          "officialAnswer": "ウ",
+          "contentSha256": "8886412fec87a7b04310e20e5b35220529f8f64185241dd2ea33cd15aaa9fb65",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-042",
+          "officialAnswer": "エ",
+          "contentSha256": "3111bb3c3390f9b364f499fd95de6113d1da8359578613661b1334ad96043064",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-043",
+          "officialAnswer": "ウ",
+          "contentSha256": "2fffb17dc7310fcb0fa36e201ec41e6f1e587c2c045594c570d382201dfa322d",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-045",
+          "officialAnswer": "イ",
+          "contentSha256": "dee16ab741c6d73aa2b94fcb331cb6cf0513df58943bd305c33243991137caba",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-046",
+          "officialAnswer": "エ",
+          "contentSha256": "ba485f3143836c9cc6529d156e086907fe37038954e2f548ca90e0e6af8029ad",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-047",
+          "officialAnswer": "エ",
+          "contentSha256": "2e7ecb4e80147b32da01212ce3a22610503bdb16c33441a7812ea60793f7686c",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-048",
+          "officialAnswer": "イ",
+          "contentSha256": "7f3135b326f00619eb1e945da85f9d9d97aa17207ee066b34e0e26f531753a5e",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-049",
+          "officialAnswer": "ア",
+          "contentSha256": "b332cf59130c57d44a526380d2b521fffd51c606656b379efbbda448ddd6abf7",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-051",
+          "officialAnswer": "エ",
+          "contentSha256": "bebeef0a7803a37ddd3479d74dfc2e5917908e80d599057b7dea858888197a35",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-053",
+          "officialAnswer": "エ",
+          "contentSha256": "859e9154f7d7a3459cbcfd9570164c3e8203aae2d726435334a44f7805914f90",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-054",
+          "officialAnswer": "エ",
+          "contentSha256": "856c273d4e3a8c7f4d0957e4723a1f4a309313ae614eb51dac82332f037291cb",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-055",
+          "officialAnswer": "イ",
+          "contentSha256": "d7c16555a02feab9ac2a3fdebc0b9700c7edc721a8d5b8c6f028175aaa286a85",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-056",
+          "officialAnswer": "エ",
+          "contentSha256": "23f3825b9627edfbf9eac641bf3a5c21b8cce35d76eaec1eaf4edf90c5636b36",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-005",
+          "officialAnswer": "イ",
+          "contentSha256": "a096c6d74f2da567e349016aac1f99e695c23c366b4a00c8b248224261a2ce57",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-001",
+          "officialAnswer": "カ",
+          "contentSha256": "8c52ba835cd88ccfeabf1bcccec53621a9fe9a880c3971dbb57b397961619550",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-002",
+          "officialAnswer": "ウ",
+          "contentSha256": "965e8e5a8db675bb4ae89ac613537b1ae7302144b5958ef3314d0236af825dbd",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-003",
+          "officialAnswer": "カ",
+          "contentSha256": "23fbf53765f8ba06392f8ae3e1c7b5529adf629992500f14faec3d5c948940fc",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-004",
+          "officialAnswer": "エ",
+          "contentSha256": "93d920f4f5f980c74c1e59186f3b66839fa1111c43229e3b9b95de620171ed3e",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-005",
+          "officialAnswer": "オ",
+          "contentSha256": "888cf05faa28f7f25d1e54a6b2a72172fc7b1c11d680c678f9d8439f1bb41fb9",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        }
+      ]
+    },
+    {
+      "number": 2,
+      "questions": [
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-001",
+          "officialAnswer": "エ",
+          "contentSha256": "e032a338a7ade56c7734faa4646cde39794db3e454856fb19295af64bce6c5b9",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-003",
+          "officialAnswer": "エ",
+          "contentSha256": "5541ba4428452a4e566827ccc75d2cf255e8be538d1796c091e81259cfbb148b",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-007",
+          "officialAnswer": "イ",
+          "contentSha256": "b9281aa1698a58400cd7e6ef150616dfa292d39906a34975edab04c5770d07c2",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-008",
+          "officialAnswer": "ウ",
+          "contentSha256": "049c5f0fe24d7edb73f7997a5ebce2dac27aea4d105b23f95f390605eafa8956",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-009",
+          "officialAnswer": "エ",
+          "contentSha256": "91b6eef4a4b7dcf78bb51bb6574841fdb2622d737268974f77a755ebbd48921b",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-010",
+          "officialAnswer": "ウ",
+          "contentSha256": "dfb826401fac0f461321132ad6651e2c1f0a4856d82f58d7505b1437c1488769",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-011",
+          "officialAnswer": "ウ",
+          "contentSha256": "d27aefed59fab09fea620898698f689a5e1483ac490931ba44b9ba19da32d5f1",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-013",
+          "officialAnswer": "エ",
+          "contentSha256": "03b9710f79ef1c9342bdafc0abd7f26c8892e83c07566379328e8a4da7a4bcc3",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-016",
+          "officialAnswer": "ア",
+          "contentSha256": "38eef0fc86d579c1f75333749c92ce8d54ca7c96b3e42eba6a7b5f83c068c00f",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-017",
+          "officialAnswer": "エ",
+          "contentSha256": "8f893406c0099426168cc53dd24379af0ead64c02c63946cc92a8a6dfe68ace5",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-018",
+          "officialAnswer": "エ",
+          "contentSha256": "e0088b136fe135d85d96a3ee97ef7e75dd3d8726717084a5d12616616aa456ba",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-019",
+          "officialAnswer": "エ",
+          "contentSha256": "b04ade685d26f2fa47ee98473776e3a5f6d72a77b7bb3af7a82b23e965e0f296",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-021",
+          "officialAnswer": "ア",
+          "contentSha256": "a97321fc53cfd4d20367725032d0621a65a7c30726c2620a473ee13189821509",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-023",
+          "officialAnswer": "ア",
+          "contentSha256": "035c17471f0cf9ce50bb8fefdd25f3fbb2cc2d0e8852125f19bb497f80565cfe",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-024",
+          "officialAnswer": "イ",
+          "contentSha256": "c8f06f3036f7b8387ee49e065046fc16b48327f2fba5cd8b7d9aa8930d7b96a4",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-058",
+          "officialAnswer": "イ",
+          "contentSha256": "cd9247d09199b4b17e2214c3d7eaff48e4e5364d1dc97df79800c9e121464d6c",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-A-059",
+          "officialAnswer": "イ",
+          "contentSha256": "b68805c75a32a435f16900f775e1d4bcc3c0d2db39e17e9bc85ec8e508bc9425",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-001",
+          "officialAnswer": "ウ",
+          "contentSha256": "d0b26180891874cd832c4ee51372bfcd3927b391112bffa3cef6f4e95ea16bc7",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-003",
+          "officialAnswer": "エ",
+          "contentSha256": "b3c50c58ef0564f9badde75057ea20523c9e2f0f7f5406352e9bbeb9389c2029",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-004",
+          "officialAnswer": "エ",
+          "contentSha256": "9dddde6deebe2198bd243c8b0637c52fd19fcbbc8b9a065f722de1c0e0bcad59",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-006",
+          "officialAnswer": "ウ",
+          "contentSha256": "539dfa491fcdc8ea774a6b7dff9aa25fd989f9f39f71a7fd9e12629cdb936326",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-008",
+          "officialAnswer": "エ",
+          "contentSha256": "25a648e47670a65fb1274dc1d18936736108279936270857cf9e16cf8f2da654",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-009",
+          "officialAnswer": "ウ",
+          "contentSha256": "ae046a502aeaaaaea28ce62d20811af90d505140b618e9da8fd8b07795fb0a38",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-014",
+          "officialAnswer": "ウ",
+          "contentSha256": "c4a295f7bbfbf3c9a8c41ccf1519061ea4cb5ed9e28703d380ffcbf707b72d4e",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-015",
+          "officialAnswer": "エ",
+          "contentSha256": "8daf8ad44867922dd90618897e38e1b8b6bcc431472fd6a673fa9a529c98cb2b",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-016",
+          "officialAnswer": "イ",
+          "contentSha256": "8516104fe008cbd6c50fff0a168d1e605ec1255beb132bdbba5a0e2b14a17868",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-017",
+          "officialAnswer": "ウ",
+          "contentSha256": "fafa056702b911d6d06d73a1e01d7240867c7b3cf4a6460d0d60bf94eae865a8",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-018",
+          "officialAnswer": "ウ",
+          "contentSha256": "68003b2259d2655aadd9e4ad757240b7a8cc13f97dc86f2f8b7ab1d7d3c10584",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-019",
+          "officialAnswer": "エ",
+          "contentSha256": "4f7a9bc13246bd63831b2b7a3d9249757d58fa6b4e72b7e1f0a44017f2f16525",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-A-020",
+          "officialAnswer": "ア",
+          "contentSha256": "f6f3f0d040d17c0bc6668a1925334d4cbd24cbc80e5436765b83ed8fa19c6ba2",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-006",
+          "officialAnswer": "ア",
+          "contentSha256": "5d46b1db7e948f350a6a611f5fded885751bdea97f24f1d73f7abe3000266cc6",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-007",
+          "officialAnswer": "カ",
+          "contentSha256": "f54626a39bdd120ca9af1a11dda9841bbd98c154bd7fa24646ad3633152d7d57",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-008",
+          "officialAnswer": "エ",
+          "contentSha256": "3eb73255c77cac13f9fd19ec7302e1e61d7dfe74293b6f1353fbd4c8d42cf7eb",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-010",
+          "officialAnswer": "カ",
+          "contentSha256": "224b96a48a0eef1239a647154949ee3683167b2d27a19f22fada0c8b19a0ca5c",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-011",
+          "officialAnswer": "ア",
+          "contentSha256": "f261cfe6135c8896940a2efc01141e0b0b871ff37d15ba162115b5470207449e",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        }
+      ]
+    },
+    {
+      "number": 3,
+      "questions": [
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-023",
+          "officialAnswer": "ア",
+          "contentSha256": "4d5ad57d0cbac31200a50626c7101000869a0b70986e872d998db32d33863641",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-024",
+          "officialAnswer": "ウ",
+          "contentSha256": "9d22822870d61d2526ac83f2bbb4efaf2d9b4b82bdb00cacacd121386cf2e691",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-025",
+          "officialAnswer": "ウ",
+          "contentSha256": "c4d0c8f8ba23a91d9a4c35cdc1a05b92c6f61c1cd2b81ab4851346a80ba89e7b",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-026",
+          "officialAnswer": "イ",
+          "contentSha256": "163c1407764454383253b25ebd70b8c474cd3a6e58f7d085d2f7d660f3b29aaa",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-027",
+          "officialAnswer": "イ",
+          "contentSha256": "8e666d7f260dad8f755c14b1595aff0e8c547cffbca584f446c84c02cb89b79b",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-030",
+          "officialAnswer": "エ",
+          "contentSha256": "91d62ac0d2bf9444905256c07980970324421a76e7762e177c360f9bf3763a65",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-031",
+          "officialAnswer": "ア",
+          "contentSha256": "fefb0aebe2e2a8699efe2ce3ebfa5b5df2142fbf361fe901062dceadbf548d42",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-032",
+          "officialAnswer": "エ",
+          "contentSha256": "c304e7ee9842305a1939fa3041c6c66cb7061721310a599f52c58d9861fbabc3",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-035",
+          "officialAnswer": "ウ",
+          "contentSha256": "d19cad68cc9ad80e05dfb1fd90b015eaa184e3d6b8c1ca185146b3ea17144f23",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-036",
+          "officialAnswer": "ア",
+          "contentSha256": "5005c9f59280c3ba7d75d77d8125f47e134eb2c85d68f06c8e79497ffcf8d5d2",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-037",
+          "officialAnswer": "ウ",
+          "contentSha256": "8dfa7643fc43a26aef618f5ce41b3da7f103afd0d59ac1f9de26fd17f2d5b2bf",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-039",
+          "officialAnswer": "ア",
+          "contentSha256": "bca0c677ad0360d1ae27e981524a93c7ce94e50af2a24e93a8827adae54c7b56",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-060",
+          "officialAnswer": "エ",
+          "contentSha256": "d1bf309b30a702868d270f17db14b5b78384512f829ad9a3f553ef5a16be1810",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-061",
+          "officialAnswer": "イ",
+          "contentSha256": "4398fff199511676ec6dea738b16de11a93df5043cc54c5a747a8debd406b6b0",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-062",
+          "officialAnswer": "エ",
+          "contentSha256": "a8692f3c0c07d24be91f751cbd6477f9711dc226d6c022540bb09ede43516e5f",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-063",
+          "officialAnswer": "イ",
+          "contentSha256": "0e6ca1e38e727b95c7aa7906e1d375ca2539147a71dcd717948a4b1ca33b1392",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-066",
+          "officialAnswer": "エ",
+          "contentSha256": "5a81f128897b0b007a44f79caf3ea201de5bb1bc4a9546a595ccbc3bd880a9cc",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-068",
+          "officialAnswer": "イ",
+          "contentSha256": "ee3c029818d4a4dea0463522ce535b2ec248acd676a9f46e723d718c24582bfb",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-069",
+          "officialAnswer": "イ",
+          "contentSha256": "c330da8faae43a8a7259e242d006b5c52f9b449a4fdb6c6df3224c63903c96ff",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-070",
+          "officialAnswer": "イ",
+          "contentSha256": "762ce0660836ed56e3212eed996d68d86f3580ca0d7bfdc7a1d23b5bb9abbb59",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-073",
+          "officialAnswer": "エ",
+          "contentSha256": "fcf14d2037eca284391d30c89ae228bfbb3971ddfeefdbc7da578a74ae4cf887",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-074",
+          "officialAnswer": "ウ",
+          "contentSha256": "b14f9d17fdb24c0b2638f338a78f0f7c672dbb5bd92cd7f0d98e24921f1bcfac",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-076",
+          "officialAnswer": "エ",
+          "contentSha256": "5759839f2ed57830c252645ca4caa9e1b903ee5e90863acc78d22bc4c669e7a0",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-079",
+          "officialAnswer": "エ",
+          "contentSha256": "66cee6c9af2ef29be45e3fb36386a65598daac1c1902e3e67b864fca33a65808",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2019-SPRING-AM-A-080",
+          "officialAnswer": "ウ",
+          "contentSha256": "a535818621d3a6d2e7dadc8b5260d3061756070ec1b390984b12c122047d6fdb",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-017",
+          "officialAnswer": "カ",
+          "contentSha256": "bb98fe89909de53b22e7783a836ff23ce1a9b38f21e7dd2cdad049711c06b6fd",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-018",
+          "officialAnswer": "エ",
+          "contentSha256": "4a5271603cc17abce5e75feff7797736db6e29c7eac2e1f626b3db406cb237fb",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-019",
+          "officialAnswer": "エ",
+          "contentSha256": "46aa37761d9448e8e492a352d3c47ed0df8247c72f93566af5761394ce34b7fc",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-020",
+          "officialAnswer": "カ",
+          "contentSha256": "bd1341b492072dd709568a8208eeae633bf1f8bbf448802ed2b0df9ad5ce6bb0",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2023-KOUKAI-B-006",
+          "officialAnswer": "ア",
+          "contentSha256": "ccf45b837ab85a4719da3dfd13537cc6d5c05996d11ff675c7c865e3a517bedb",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-009",
+          "officialAnswer": "ウ",
+          "contentSha256": "d2a7f41bf9d78fcccb25b1d9ce38cd38732441673d977c55b053193b6b034815",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        },
+        {
+          "id": "IPA-FE-2022-SAMPLESET-B-012",
+          "officialAnswer": "エ",
+          "contentSha256": "451acf11b1c2567714ac15da1ee863c32b03df6b3547461ef23f8a6dacbca875",
+          "answerChecked": true,
+          "transcriptionChecked": true,
+          "explanationChecked": true
+        }
+      ]
+    }
+  ]
+}
