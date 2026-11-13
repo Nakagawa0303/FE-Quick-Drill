@@ -1,0 +1,202 @@
+{
+  "IPA-FE-2022-SAMPLESET-A-007": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 2,
+    "contentSha256": "b9281aa1698a58400cd7e6ef150616dfa292d39906a34975edab04c5770d07c2"
+  },
+  "IPA-FE-2022-SAMPLESET-A-008": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 15,
+    "contentSha256": "049c5f0fe24d7edb73f7997a5ebce2dac27aea4d105b23f95f390605eafa8956"
+  },
+  "IPA-FE-2022-SAMPLESET-A-011": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 9,
+    "contentSha256": "d27aefed59fab09fea620898698f689a5e1483ac490931ba44b9ba19da32d5f1"
+  },
+  "IPA-FE-2022-SAMPLESET-A-013": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 5,
+    "contentSha256": "03b9710f79ef1c9342bdafc0abd7f26c8892e83c07566379328e8a4da7a4bcc3"
+  },
+  "IPA-FE-2022-SAMPLESET-A-026": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 128.0,
+    "contentSha256": "16dd3fa175b096ad1790e81302ffe0502348e41b35135192db5eaf998c3f1eb1"
+  },
+  "IPA-FE-2022-SAMPLESET-A-058": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 6.5,
+    "contentSha256": "cd9247d09199b4b17e2214c3d7eaff48e4e5364d1dc97df79800c9e121464d6c"
+  },
+  "IPA-FE-2022-SAMPLESET-A-059": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 120.0,
+    "contentSha256": "b68805c75a32a435f16900f775e1d4bcc3c0d2db39e17e9bc85ec8e508bc9425"
+  },
+  "IPA-FE-2023-KOUKAI-A-001": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 0.75,
+    "contentSha256": "d0b26180891874cd832c4ee51372bfcd3927b391112bffa3cef6f4e95ea16bc7"
+  },
+  "IPA-FE-2019-SPRING-AM-A-025": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 775,
+    "contentSha256": "c4d0c8f8ba23a91d9a4c35cdc1a05b92c6f61c1cd2b81ab4851346a80ba89e7b"
+  },
+  "IPA-FE-2019-SPRING-AM-A-032": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 510,
+    "contentSha256": "c304e7ee9842305a1939fa3041c6c66cb7061721310a599f52c58d9861fbabc3"
+  },
+  "IPA-FE-2022-SAMPLESET-A-001": {
+    "cases": 127,
+    "uniqueChoice": true,
+    "contentSha256": "e032a338a7ade56c7734faa4646cde39794db3e454856fb19295af64bce6c5b9"
+  },
+  "IPA-FE-2022-SAMPLESET-A-003": {
+    "cases": 4,
+    "uniqueChoice": true,
+    "contentSha256": "5541ba4428452a4e566827ccc75d2cf255e8be538d1796c091e81259cfbb148b"
+  },
+  "IPA-FE-2022-SAMPLESET-A-017": {
+    "cases": 6,
+    "uniqueChoice": true,
+    "allocation": [
+      90,
+      100,
+      110
+    ],
+    "contentSha256": "8f893406c0099426168cc53dd24379af0ead64c02c63946cc92a8a6dfe68ace5"
+  },
+  "IPA-FE-2022-SAMPLESET-B-001": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "contentSha256": "8c52ba835cd88ccfeabf1bcccec53621a9fe9a880c3971dbb57b397961619550"
+  },
+  "IPA-FE-2022-SAMPLESET-B-002": {
+    "cases": 601,
+    "uniqueChoice": true,
+    "contentSha256": "965e8e5a8db675bb4ae89ac613537b1ae7302144b5958ef3314d0236af825dbd"
+  },
+  "IPA-FE-2022-SAMPLESET-B-003": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "value": 17,
+    "contentSha256": "23fbf53765f8ba06392f8ae3e1c7b5529adf629992500f14faec3d5c948940fc"
+  },
+  "IPA-FE-2022-SAMPLESET-B-004": {
+    "cases": 1600,
+    "uniqueChoice": true,
+    "contentSha256": "93d920f4f5f980c74c1e59186f3b66839fa1111c43229e3b9b95de620171ed3e"
+  },
+  "IPA-FE-2022-SAMPLESET-B-005": {
+    "cases": 4,
+    "uniqueChoice": true,
+    "contentSha256": "888cf05faa28f7f25d1e54a6b2a72172fc7b1c11d680c678f9d8439f1bb41fb9"
+  },
+  "IPA-FE-2022-SAMPLESET-B-006": {
+    "cases": 256,
+    "uniqueChoice": true,
+    "contentSha256": "5d46b1db7e948f350a6a611f5fded885751bdea97f24f1d73f7abe3000266cc6"
+  },
+  "IPA-FE-2022-SAMPLESET-B-007": {
+    "cases": 9,
+    "uniqueChoice": true,
+    "contentSha256": "f54626a39bdd120ca9af1a11dda9841bbd98c154bd7fa24646ad3633152d7d57"
+  },
+  "IPA-FE-2022-SAMPLESET-B-008": {
+    "cases": 1,
+    "uniqueChoice": true,
+    "output": [
+      "A",
+      "C",
+      "D",
+      "D"
+    ],
+    "contentSha256": "3eb73255c77cac13f9fd19ec7302e1e61d7dfe74293b6f1353fbd4c8d42cf7eb"
+  },
+  "IPA-FE-2022-SAMPLESET-B-009": {
+    "cases": 14,
+    "uniqueChoice": true,
+    "output": [
+      8,
+      4,
+      9,
+      2,
+      10,
+      5,
+      11,
+      1,
+      12,
+      6,
+      13,
+      3,
+      14,
+      7
+    ],
+    "contentSha256": "d2a7f41bf9d78fcccb25b1d9ce38cd38732441673d977c55b053193b6b034815"
+  },
+  "IPA-FE-2022-SAMPLESET-B-010": {
+    "cases": 36,
+    "uniqueChoice": true,
+    "contentSha256": "224b96a48a0eef1239a647154949ee3683167b2d27a19f22fada0c8b19a0ca5c"
+  },
+  "IPA-FE-2022-SAMPLESET-B-011": {
+    "cases": 4,
+    "uniqueChoice": true,
+    "contentSha256": "f261cfe6135c8896940a2efc01141e0b0b871ff37d15ba162115b5470207449e"
+  },
+  "IPA-FE-2022-SAMPLESET-B-012": {
+    "cases": 900,
+    "uniqueChoice": true,
+    "contentSha256": "451acf11b1c2567714ac15da1ee863c32b03df6b3547461ef23f8a6dacbca875"
+  },
+  "IPA-FE-2019-SPRING-AM-A-027": {
+    "cases": 8,
+    "uniqueChoice": true,
+    "result": [
+      [
+        "A",
+        "数学",
+        15.0
+      ],
+      [
+        "A",
+        "英語",
+        65.0
+      ],
+      [
+        "B",
+        "数学",
+        60.0
+      ],
+      [
+        "B",
+        "英語",
+        30.0
+      ]
+    ],
+    "contentSha256": "8e666d7f260dad8f755c14b1595aff0e8c547cffbca584f446c84c02cb89b79b"
+  },
+  "IPA-FE-2022-SAMPLESET-B-017": {
+    "cases": 3,
+    "uniqueChoice": true,
+    "contentSha256": "bb98fe89909de53b22e7783a836ff23ce1a9b38f21e7dd2cdad049711c06b6fd"
+  },
+  "IPA-FE-2022-SAMPLESET-B-018": {
+    "cases": 5,
+    "uniqueChoice": true,
+    "contentSha256": "4a5271603cc17abce5e75feff7797736db6e29c7eac2e1f626b3db406cb237fb"
+  }
+}
