@@ -18,6 +18,12 @@ import unicodedata
 ROOT=Path(__file__).resolve().parents[1]
 candidate='--candidate' in sys.argv
 questions=json.loads((ROOT/('tmp/pdfs/stage1-candidate.json' if candidate else 'data/additional-questions.json')).read_text(encoding='utf-8'))['questions']
+# 第1段階の固定56問を検査する。後続バッチはそれぞれの確認記録で検査する。
+if not candidate:
+    baseline=json.loads((ROOT/'tests/fixtures/bank-1930ef1.json').read_text(encoding='utf-8'))
+    stage1_ids={q['id'] for q in baseline if q['source']['type']=='ipa'}
+    questions=[q for q in questions if q['id'] in stage1_ids]
+    assert len(questions)==len(stage1_ids)==56,'第1段階の問題が欠落しています。'
 sources=json.loads((ROOT/'docs/ipa-stage1-sources.json').read_text(encoding='utf-8'))
 by_id={q['id']:q for q in questions}
 report={}

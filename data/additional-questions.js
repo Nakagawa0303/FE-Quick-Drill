@@ -76,7 +76,8 @@ export const additionalQuestions = [
           "d"
         ]
       ]
-    }
+    },
+    "subfield": "基礎理論"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-002",
@@ -135,7 +136,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "アルゴリズムとプログラミング"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-003",
@@ -194,7 +196,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "コンピュータ構成要素"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-004",
@@ -253,7 +256,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "システム構成要素"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-005",
@@ -312,7 +316,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ソフトウェア"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-007",
@@ -411,7 +416,8 @@ export const additionalQuestions = [
           20
         ]
       ]
-    }
+    },
+    "subfield": "データベース"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-008",
@@ -470,7 +476,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ネットワーク"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-009",
@@ -529,7 +536,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "セキュリティ"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-010",
@@ -588,7 +596,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "セキュリティ"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-011",
@@ -647,7 +656,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "システム開発技術"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-012",
@@ -706,7 +716,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "プロジェクトマネジメント"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-013",
@@ -765,7 +776,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "プロジェクトマネジメント"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-014",
@@ -824,7 +836,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "サービスマネジメント"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-015",
@@ -883,7 +896,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "システム監査"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-016",
@@ -942,7 +956,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "経営戦略マネジメント"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-017",
@@ -1035,7 +1050,8 @@ export const additionalQuestions = [
           1800
         ]
       ]
-    }
+    },
+    "subfield": "経営戦略マネジメント"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-018",
@@ -1094,7 +1110,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ビジネスインダストリ"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-A-019",
@@ -1153,7 +1170,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "企業活動"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-001",
@@ -1212,7 +1230,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "基礎理論"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-002",
@@ -1271,7 +1290,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "基礎理論"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-004",
@@ -1330,7 +1350,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "システム構成要素"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-005",
@@ -1389,7 +1410,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ソフトウェア開発管理技術"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-006",
@@ -1495,7 +1517,8 @@ export const additionalQuestions = [
           "12,000"
         ]
       ]
-    }
+    },
+    "subfield": "データベース"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-007",
@@ -1554,7 +1577,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ネットワーク"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-008",
@@ -1613,7 +1637,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "セキュリティ"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-009",
@@ -1672,7 +1697,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "セキュリティ"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-010",
@@ -1731,7 +1757,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "セキュリティ"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-011",
@@ -1790,7 +1817,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "データベース"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-012",
@@ -1849,7 +1877,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "アルゴリズムとプログラミング"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-013",
@@ -1908,7 +1937,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ソフトウェア開発管理技術"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-015",
@@ -1967,7 +1997,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "システム監査"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-016",
@@ -2026,7 +2057,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "経営戦略マネジメント"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-017",
@@ -2085,7 +2117,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ビジネスインダストリ"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-018",
@@ -2144,7 +2177,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ビジネスインダストリ"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-019",
@@ -2231,7 +2265,8 @@ export const additionalQuestions = [
           "10席"
         ]
       ]
-    }
+    },
+    "subfield": "企業活動"
   },
   {
     "id": "IPA-FE-2025-KOUKAI-A-020",
@@ -2290,7 +2325,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "企業活動"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-002",
@@ -2349,7 +2385,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "アルゴリズムとプログラミング"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-004",
@@ -2408,7 +2445,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "システム構成要素"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-005",
@@ -2467,7 +2505,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ソフトウェア"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-006",
@@ -2526,7 +2565,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "情報メディア"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-007",
@@ -2585,7 +2625,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "データベース"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-008",
@@ -2644,7 +2685,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ネットワーク"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-009",
@@ -2703,7 +2745,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "セキュリティ"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-010",
@@ -2762,7 +2805,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "セキュリティ"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-011",
@@ -2821,7 +2865,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "システム開発技術"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-012",
@@ -2880,7 +2925,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "ソフトウェア開発管理技術"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-014",
@@ -2939,7 +2985,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "サービスマネジメント"
   },
   {
     "id": "IPA-FE-2024-KOUKAI-A-015",
@@ -2998,7 +3045,8 @@ export const additionalQuestions = [
         "explanationChecked": true,
         "transcriptionChecked": true
       }
-    }
+    },
+    "subfield": "基礎理論"
   },
   {
     "id": "IPA-FE-2026-KOUKAI-B-001",
@@ -3792,6 +3840,401 @@ export const additionalQuestions = [
           3,
           3,
           5
+        ]
+      ]
+    }
+  },
+  {
+    "id": "IPA-FE-2024-KOUKAI-A-016",
+    "subject": "A",
+    "field": "ストラテジ",
+    "prompt": "コアコンピタンスを説明したものはどれか。",
+    "choices": [
+      "経営活動における基本精神や行動指針",
+      "事業戦略の遂行によって達成すべき到達目標",
+      "自社を取り巻く環境に関するビジネス上の機会と脅威",
+      "他社との競争優位の源泉となる経営資源及び企業能力"
+    ],
+    "choiceLabels": [
+      "ア",
+      "イ",
+      "ウ",
+      "エ"
+    ],
+    "answer": 3,
+    "explanation": {
+      "brief": "コアコンピタンスは競争優位の源泉となる中核的な能力。",
+      "detail": "他社が容易にまねできない技術・組織能力などが競争優位を生む。アは経営理念、イは目標、ウは外部環境の機会と脅威であり、中核能力そのものではない。",
+      "author": "Codex（AIによる独自解説。IPA公式解説ではない）"
+    },
+    "source": {
+      "type": "ipa",
+      "title": "令和6年度 基本情報技術者試験 科目A 公開問題",
+      "year": 2024,
+      "session": "公開問題",
+      "exam": "FE",
+      "section": "科目A",
+      "questionNumber": 16,
+      "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_ans.pdf",
+      "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+      "accessedAt": "2026-11-13",
+      "modified": true,
+      "modificationNote": "原本の組版上の改行・空白を整理。内容・選択肢順・正答は維持。",
+      "answerKey": {
+        "label": "エ",
+        "index": 3
+      },
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2024r06.html",
+      "questionSha256": "c8a462741a1111950f7376e3ebd9bd0b2eff75d32fa9cfa3e39e97b7bf979789",
+      "answerSha256": "2f72e5e6ef0dafc14bbe8c52a174979b506c560ee26e67af223c1aabae70778e"
+    },
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-13",
+      "method": "公式問題冊子のページ画像・本文・選択肢・表と公式解答例を転記後の別工程で照合。簡潔／詳細解説と各選択肢の整合性をAIレビュー。B問6はルール3の違反集合を独立に確認。実ブラウザ確認は未完了。",
+      "review": {
+        "reviewer": "Codex（AI、同一担当で転記後に別工程レビュー。人手・専門家レビューではない）",
+        "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_ans.pdf 問16; docs/collection-stage2.md; docs/ipa-stage2-review.json",
+        "answerIndex": 3,
+        "answerChecked": true,
+        "explanationChecked": true,
+        "transcriptionChecked": true
+      }
+    },
+    "subfield": "経営戦略マネジメント"
+  },
+  {
+    "id": "IPA-FE-2024-KOUKAI-A-017",
+    "subject": "A",
+    "field": "ストラテジ",
+    "prompt": "マーケティング戦略におけるブルーオーシャンの説明として，適切なものはどれか。",
+    "choices": [
+      "競争が存在していない未知の市場",
+      "コモディティ化が進んだ既存の市場",
+      "新事業のアイディアを実際のビジネスに育成するまでの期間",
+      "製品開発したものを市場化する過程に横たわっている障壁"
+    ],
+    "choiceLabels": [
+      "ア",
+      "イ",
+      "ウ",
+      "エ"
+    ],
+    "answer": 0,
+    "explanation": {
+      "brief": "ブルーオーシャンは競争が存在しない未知の市場。",
+      "detail": "既存市場の競争から離れ、新たな価値によって未開拓の需要を創造する考え方。イは競争の進んだ既存市場であり、ウの事業育成期間やエの市場化への障壁を指す語ではない。",
+      "author": "Codex（AIによる独自解説。IPA公式解説ではない）"
+    },
+    "source": {
+      "type": "ipa",
+      "title": "令和6年度 基本情報技術者試験 科目A 公開問題",
+      "year": 2024,
+      "session": "公開問題",
+      "exam": "FE",
+      "section": "科目A",
+      "questionNumber": 17,
+      "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_ans.pdf",
+      "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+      "accessedAt": "2026-11-13",
+      "modified": true,
+      "modificationNote": "原本の組版上の改行・空白を整理。内容・選択肢順・正答は維持。",
+      "answerKey": {
+        "label": "ア",
+        "index": 0
+      },
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2024r06.html",
+      "questionSha256": "c8a462741a1111950f7376e3ebd9bd0b2eff75d32fa9cfa3e39e97b7bf979789",
+      "answerSha256": "2f72e5e6ef0dafc14bbe8c52a174979b506c560ee26e67af223c1aabae70778e"
+    },
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-13",
+      "method": "公式問題冊子のページ画像・本文・選択肢・表と公式解答例を転記後の別工程で照合。簡潔／詳細解説と各選択肢の整合性をAIレビュー。B問6はルール3の違反集合を独立に確認。実ブラウザ確認は未完了。",
+      "review": {
+        "reviewer": "Codex（AI、同一担当で転記後に別工程レビュー。人手・専門家レビューではない）",
+        "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_ans.pdf 問17; docs/collection-stage2.md; docs/ipa-stage2-review.json",
+        "answerIndex": 0,
+        "answerChecked": true,
+        "explanationChecked": true,
+        "transcriptionChecked": true
+      }
+    },
+    "subfield": "経営戦略マネジメント"
+  },
+  {
+    "id": "IPA-FE-2024-KOUKAI-A-018",
+    "subject": "A",
+    "field": "ストラテジ",
+    "prompt": "HR テックの説明はどれか。",
+    "choices": [
+      "ICT を活用して，住宅内のエネルギー使用状況の監視，機器の遠隔操作や自動制御などを可能にし，家庭におけるエネルギー管理を支援するソリューション",
+      "既存のビジネスモデルによる業界秩序や既得権益を破壊してしまうほど大きな影響を与える新しいICT やビジネスモデル",
+      "個人の資金に関わる情報を統合的に管理するサービスやマーケットプレイス・レンディングなどの金融サービスを実現するための新しい情報技術",
+      "採用，育成，評価，配属などの人事領域の業務を対象に，ビッグデータ解析やAI などの最新ICT を活用して，業務改善と社員満足度向上を図るソリューション"
+    ],
+    "choiceLabels": [
+      "ア",
+      "イ",
+      "ウ",
+      "エ"
+    ],
+    "answer": 3,
+    "explanation": {
+      "brief": "HRテックは人事領域へICTを活用するソリューション。",
+      "detail": "Human ResourcesとTechnologyを組み合わせた用語。採用・育成・評価・配属などにAIやデータ分析を利用する。アは家庭のエネルギー管理、イは破壊的な技術・ビジネスモデル、ウは金融サービスの情報技術である。",
+      "author": "Codex（AIによる独自解説。IPA公式解説ではない）"
+    },
+    "source": {
+      "type": "ipa",
+      "title": "令和6年度 基本情報技術者試験 科目A 公開問題",
+      "year": 2024,
+      "session": "公開問題",
+      "exam": "FE",
+      "section": "科目A",
+      "questionNumber": 18,
+      "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_ans.pdf",
+      "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+      "accessedAt": "2026-11-13",
+      "modified": true,
+      "modificationNote": "原本の組版上の改行・空白を整理。内容・選択肢順・正答は維持。",
+      "answerKey": {
+        "label": "エ",
+        "index": 3
+      },
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2024r06.html",
+      "questionSha256": "c8a462741a1111950f7376e3ebd9bd0b2eff75d32fa9cfa3e39e97b7bf979789",
+      "answerSha256": "2f72e5e6ef0dafc14bbe8c52a174979b506c560ee26e67af223c1aabae70778e"
+    },
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-13",
+      "method": "公式問題冊子のページ画像・本文・選択肢・表と公式解答例を転記後の別工程で照合。簡潔／詳細解説と各選択肢の整合性をAIレビュー。B問6はルール3の違反集合を独立に確認。実ブラウザ確認は未完了。",
+      "review": {
+        "reviewer": "Codex（AI、同一担当で転記後に別工程レビュー。人手・専門家レビューではない）",
+        "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_ans.pdf 問18; docs/collection-stage2.md; docs/ipa-stage2-review.json",
+        "answerIndex": 3,
+        "answerChecked": true,
+        "explanationChecked": true,
+        "transcriptionChecked": true
+      }
+    },
+    "subfield": "ビジネスインダストリ"
+  },
+  {
+    "id": "IPA-FE-2024-KOUKAI-A-020",
+    "subject": "A",
+    "field": "ストラテジ",
+    "prompt": "日本において，産業財産権と総称される四つの権利はどれか。",
+    "choices": [
+      "意匠権，実用新案権，商標権，特許権",
+      "意匠権，実用新案権，著作権，特許権",
+      "意匠権，商標権，著作権，特許権",
+      "実用新案権，商標権，著作権，特許権"
+    ],
+    "choiceLabels": [
+      "ア",
+      "イ",
+      "ウ",
+      "エ"
+    ],
+    "answer": 0,
+    "explanation": {
+      "brief": "産業財産権は特許権・実用新案権・意匠権・商標権の四つ。",
+      "detail": "発明を保護する特許権、物品の形状等の考案を保護する実用新案権、デザインを保護する意匠権、商品・サービスを識別する標識を保護する商標権から成る。イ・ウ・エには産業財産権に含まれない著作権が入り、四つのうち一つが欠けている。",
+      "author": "Codex（AIによる独自解説。IPA公式解説ではない）"
+    },
+    "source": {
+      "type": "ipa",
+      "title": "令和6年度 基本情報技術者試験 科目A 公開問題",
+      "year": 2024,
+      "session": "公開問題",
+      "exam": "FE",
+      "section": "科目A",
+      "questionNumber": 20,
+      "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_ans.pdf",
+      "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+      "accessedAt": "2026-11-13",
+      "modified": true,
+      "modificationNote": "原本の組版上の改行・空白を整理。内容・選択肢順・正答は維持。",
+      "answerKey": {
+        "label": "ア",
+        "index": 0
+      },
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2024r06.html",
+      "questionSha256": "c8a462741a1111950f7376e3ebd9bd0b2eff75d32fa9cfa3e39e97b7bf979789",
+      "answerSha256": "2f72e5e6ef0dafc14bbe8c52a174979b506c560ee26e67af223c1aabae70778e"
+    },
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-13",
+      "method": "公式問題冊子のページ画像・本文・選択肢・表と公式解答例を転記後の別工程で照合。簡潔／詳細解説と各選択肢の整合性をAIレビュー。B問6はルール3の違反集合を独立に確認。実ブラウザ確認は未完了。",
+      "review": {
+        "reviewer": "Codex（AI、同一担当で転記後に別工程レビュー。人手・専門家レビューではない）",
+        "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_a_ans.pdf 問20; docs/collection-stage2.md; docs/ipa-stage2-review.json",
+        "answerIndex": 0,
+        "answerChecked": true,
+        "explanationChecked": true,
+        "transcriptionChecked": true
+      }
+    },
+    "subfield": "法務"
+  },
+  {
+    "id": "IPA-FE-2026-KOUKAI-A-020",
+    "subject": "A",
+    "field": "ストラテジ",
+    "prompt": "A 社は，自社の業務可視化をB 社に委託しその成果物として納品された業務フロー図をC 社に提示することによって，業務システムの開発をC 社に委託することを検討している。A 社がこの業務フロー図を使用する上で生じる制約として，適切なものはどれか。なお，B 社への委託に当たって締結された契約には，著作権は全てA 社に譲渡する旨の記述があり，著作者人格権については特段の記述はない。",
+    "choices": [
+      "C 社と守秘義務契約を締結したとしても，C 社に対して，納品された業務フロー図の電子データを提供することはできない。",
+      "納品された業務フロー図の各ページに作成者名として記されているB 社の企業名をA 社の企業名に変更し，C 社に提示することはできない。",
+      "納品された業務フロー図を印刷し，社内資料としてA 社の社員に配布することはできない。",
+      "バックアップの目的で，納品された業務フロー図の電子データを複製し，A 社だけがアクセス可能なクラウドストレージに保管することはできない。"
+    ],
+    "choiceLabels": [
+      "ア",
+      "イ",
+      "ウ",
+      "エ"
+    ],
+    "answer": 1,
+    "explanation": {
+      "brief": "著作権を譲渡しても著作者人格権は譲渡されない。",
+      "detail": "契約で著作権はA社へ移っているが、著作者人格権はB社に残る。作成者としてのB社名をA社名へ変更するイは氏名表示権に関わるためできない。アの開発先への電子データ提供、ウの社内配布、エのバックアップ複製は、設問の条件では譲渡された著作権によって可能である。",
+      "author": "Codex（AIによる独自解説。IPA公式解説ではない）"
+    },
+    "source": {
+      "type": "ipa",
+      "title": "令和8年度 基本情報技術者試験 科目A 公開問題",
+      "year": 2026,
+      "session": "公開問題",
+      "exam": "FE",
+      "section": "科目A",
+      "questionNumber": 20,
+      "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_a_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_a_ans.pdf",
+      "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+      "accessedAt": "2026-11-13",
+      "modified": true,
+      "modificationNote": "原本の組版上の改行・空白を整理。内容・選択肢順・正答は維持。",
+      "answerKey": {
+        "label": "イ",
+        "index": 1
+      },
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2026r08.html",
+      "questionSha256": "7fb3984bb494cad928232823e224b7e58f3eaef59ea523deaa4bae2085c8fba3",
+      "answerSha256": "02976cdb5d2c14ec3c5304a1dc89d1db77ca04f0d62fe78fc4c2448dcf0ea6a7"
+    },
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-13",
+      "method": "公式問題冊子のページ画像・本文・選択肢・表と公式解答例を転記後の別工程で照合。簡潔／詳細解説と各選択肢の整合性をAIレビュー。B問6はルール3の違反集合を独立に確認。実ブラウザ確認は未完了。",
+      "review": {
+        "reviewer": "Codex（AI、同一担当で転記後に別工程レビュー。人手・専門家レビューではない）",
+        "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_a_ans.pdf 問20; docs/collection-stage2.md; docs/ipa-stage2-review.json",
+        "answerIndex": 1,
+        "answerChecked": true,
+        "explanationChecked": true,
+        "transcriptionChecked": true
+      }
+    },
+    "subfield": "法務"
+  },
+  {
+    "id": "IPA-FE-2026-KOUKAI-B-006",
+    "subject": "B",
+    "field": "情報セキュリティ",
+    "prompt": "A 社は，従業員1,000 名の広告代理店である。A 社では，各部署がA 社の社内ネットワークに設置したファイルサーバを，設置した部署の運用担当者が管理している。各部署で新たなクラウドサービスを利用する場合，各部署の責任者の承認のもと契約し，各部署の運用担当者が管理している。営業部では，営業部がA 社の社内ネットワークに設置したファイルサーバ（以下，Y サーバという）及び顧客管理のためのクラウドサービス（以下，Z サービスという）を利用している。営業部の各従業員にはY サーバの一般利用者アカウントが割り当てられ，Y サーバ上の全てのファイルが編集可能である。また，営業部の各従業員には，Z サービスの一般利用者アカウントが割り当てられ，営業部の運用担当者には，Y サーバとZ サービスの管理者アカウントが割り当てられている。情報セキュリティ部門では，クラウドサービスに関連した情報セキュリティインシデントの発生に備えて，各部署で利用しているクラウドサービスのログ管理に関するルールを図1 のとおりに整備した。\n\n1. ログの取得\n次のログを取得すること\n・ログイン及びログアウトのログ（以下，ログインログという）\n・クラウドサービスでの重要な操作及びその成否に関するログ\n\n2. ログの項目\n少なくとも次が記録されること\n・対象のアカウント名，日本標準時での日時，操作内容\n\n3. ログのアクセス管理\n・運用担当者だけがログにアクセスできるようにすること\n・クラウドサービスからログをエクスポートして保管する場合は，社内ネットワークに設置した自部署のファイルサーバにログを保管し，運用担当者だけがアクセスできるようにすること\n・運用担当者は複数名にすること\n・クラウドサービスへの運用担当者のログインには，2 要素認証を必要とすること\n\n4. ログの保存期間\n・少なくとも過去1 年間のログが参照できるようにすること\n\n5. 改ざんへの対策\n・ログは運用担当者でも書込み及び消去ができないようにすること\n図1 各部署で利用しているクラウドサービスのログ管理に関するルール\n\n営業部の情報セキュリティリーダーであるB 課長は，運用担当者のC 主任及び情報セキュリティ部門の協力を得て，図1 のルールが順守されているかどうかを調査した。B 課長は，Z サービスでの現在の運用の中で，図1 のルールに違反しているものを表1のとおりまとめた。\n\n設問　表1中の運用のうち，図1のルール3に違反しているものの項番だけを全て挙げた組合せを，解答群の中から選べ。",
+    "choices": [
+      "(一)，(二)",
+      "(一)，(二)，(三)",
+      "(一)，(二)，(四)",
+      "(一)，(三)",
+      "(一)，(三)，(四)",
+      "(一)，(四)",
+      "(二)，(三)",
+      "(二)，(三)，(四)",
+      "(二)，(四)",
+      "(三)，(四)"
+    ],
+    "choiceLabels": [
+      "ア",
+      "イ",
+      "ウ",
+      "エ",
+      "オ",
+      "カ",
+      "キ",
+      "ク",
+      "ケ",
+      "コ"
+    ],
+    "answer": 8,
+    "explanation": {
+      "brief": "ルール3に違反するのは、運用担当者が一人の(二)と、一般利用者も編集できるYサーバへ保存する(四)。",
+      "detail": "図1のルール3は、運用担当者を複数名にし、ログを運用担当者だけがアクセスできる場所へ保管することを求める。(二)はC主任だけなので違反する。(四)のYサーバは営業部の各従業員が全ファイルを編集できるため違反する。(一)は主にルール4の保存期間、(三)はルール2の日本標準時の条件の問題であり、ルール3の違反を選ぶ設問には含めない。したがって(二)，(四)だけを挙げたケが正答である。",
+      "author": "Codex（AIによる独自解説。IPA公式解説ではない）"
+    },
+    "source": {
+      "type": "ipa",
+      "title": "令和8年度 基本情報技術者試験 科目B 公開問題",
+      "year": 2026,
+      "session": "公開問題",
+      "exam": "FE",
+      "section": "科目B",
+      "questionNumber": 6,
+      "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_ans.pdf",
+      "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+      "accessedAt": "2026-11-13",
+      "modified": true,
+      "modificationNote": "原本の改行・空白を整理。科目Bの図1の規則を本文、表1をHTML表へ再配置。設問の内容・選択肢順・正答は維持。",
+      "answerKey": {
+        "label": "ケ",
+        "index": 8
+      },
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2026r08.html",
+      "questionSha256": "3995e35d9ca102e9363ac049303e65b936a860ef6377ffbbcbc0620484a6bbb2",
+      "answerSha256": "ca47fecabfcb67745b339522f75f907a3d29217a63e0c1efb38cff4c7aaac2af"
+    },
+    "verification": {
+      "status": "verified",
+      "date": "2026-11-13",
+      "method": "公式問題冊子のページ画像・本文・選択肢・表と公式解答例を転記後の別工程で照合。簡潔／詳細解説と各選択肢の整合性をAIレビュー。B問6はルール3の違反集合を独立に確認。実ブラウザ確認は未完了。",
+      "review": {
+        "reviewer": "Codex（AI、同一担当で転記後に別工程レビュー。人手・専門家レビューではない）",
+        "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_ans.pdf 問6; docs/collection-stage2.md; docs/ipa-stage2-review.json",
+        "answerIndex": 8,
+        "answerChecked": true,
+        "explanationChecked": true,
+        "transcriptionChecked": true
+      }
+    },
+    "table": {
+      "headers": [
+        "項番",
+        "現在の運用（表1：図1のルールに違反している現在の運用）"
+      ],
+      "rows": [
+        [
+          "(一)",
+          "Zサービスのログは，空き容量が一定値以下になった場合，古いログから上書きされる。"
+        ],
+        [
+          "(二)",
+          "Zサービスの運用は，営業部のC主任とD主任の2名で担当していたが，D主任が先月退職したので，現在はC主任だけである。"
+        ],
+        [
+          "(三)",
+          "Zサービスのログの日時は，UTCで記録されている。"
+        ],
+        [
+          "(四)",
+          "Zサービスのログは，毎月末に全てエクスポートし，Yサーバに保管している。"
         ]
       ]
     }

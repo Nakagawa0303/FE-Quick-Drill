@@ -9,9 +9,10 @@ export async function applicationSmoke() {
   const listeners={},docListeners={},windowListeners={},memory=new Map(),notice={textContent:''};
   const root={innerHTML:'',addEventListener:(type,fn)=>listeners[type]=fn,querySelector:()=>({focus(){},click(){}})};
   let approved=true;
+  let exported=false;
   try {
     Object.assign(globalThis,{
-      document:{hidden:false,querySelector:s=>s==='#app'?root:s==='#notice'?notice:null,addEventListener:(type,fn)=>docListeners[type]=fn},
+      document:{hidden:false,querySelector:s=>s==='#app'?root:s==='#notice'?notice:null,addEventListener:(type,fn)=>docListeners[type]=fn,createElement:()=>({click(){exported=true;}})},
       localStorage:{getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,v)},
       window:{confirm:()=>approved,scrollTo(){},addEventListener:(type,fn)=>windowListeners[type]=fn},
       setInterval:()=>0,setTimeout:()=>0,clearTimeout:()=>{},
@@ -37,6 +38,30 @@ export async function applicationSmoke() {
     click('mark',{id});assert.notEqual(saved().review.includes(id),completed.review.includes(id));
     click('home');click('tab',{tab:'records'});assert(root.innerHTML.includes('分野別の正答率'));
     const before=memory.get('fe-quick-drill:v1');
+    const filter=(key,value)=>listeners.change({target:{id:`analysis-${key}`,value}});
+    assert.match(root.innerHTML,/id="analysis-field" disabled/);
+    await filter('subject','A');assert(root.innerHTML.includes('法務'));
+    await filter('subfield','データベース');
+    assert.match(root.innerHTML,/value="データベース" selected/);
+    await filter('field','マネジメント');assert.match(root.innerHTML,/value="全小分野" selected/);
+    assert(!root.innerHTML.includes('value="データベース"'));
+    await filter('subfield','未分類');assert(root.innerHTML.includes('—／未学習'));
+    await filter('subject','B');assert(!root.innerHTML.includes('id="analysis-subfield"'));
+    assert.match(root.innerHTML,/value="全分野" selected/);
+    await filter('subject','すべて');
+    assert(root.innerHTML.includes('演習全体の解説'));
+    assert(!root.innerHTML.includes('一致分の時間'));
+    assert.equal(memory.get('fe-quick-drill:v1'),before);
+    click('result',{id:completed.history[0].id});
+    assert.equal((root.innerHTML.match(/class="card review-card"/g)||[]).length,completed.history[0].items.length);
+    assert(completed.history[0].items.every(i=>root.innerHTML.includes(questions.find(q=>q.id===i.id).subfield)));
+    const first=questions.find(q=>q.id===completed.history[0].items[0].id),subfield=first.subfield;
+    delete first.subfield;click('result',{id:completed.history[0].id});assert(root.innerHTML.includes('未分類'));
+    first.subfield='<img src=x onerror="bad">';click('result',{id:completed.history[0].id});
+    assert(root.innerHTML.includes('&lt;img src=x onerror=&quot;bad&quot;&gt;'));assert(!root.innerHTML.includes('<img src=x'));
+    first.subfield=subfield;
+    click('home');click('tab',{tab:'records'});
+    click('export');assert(exported);assert.deepEqual(saved(),JSON.parse(before));
     const fileEvent=text=>({target:{id:'import-file',files:[{size:text.length,text:async()=>text}],value:'sample.json'}});
     await listeners.change(fileEvent('{broken'));assert.equal(memory.get('fe-quick-drill:v1'),before);assert(notice.textContent.includes('復元できませんでした'));
     approved=false;await listeners.change(fileEvent(JSON.stringify(completed)));assert.equal(memory.get('fe-quick-drill:v1'),before);

@@ -1,4 +1,5 @@
-export const FIELDS = { A: ['テクノロジ','マネジメント','ストラテジ'], B: ['アルゴリズム・プログラミング','情報セキュリティ'] };
+import {FIELDS,SUBFIELDS,subfieldOf,normalizeAnalysisFilter,matchesAnalysis} from './classification.js';
+export {FIELDS} from './classification.js';
 export const COUNTS = { A: [5,10,20], B: [1,3,5] };
 export const freshState = () => ({version:1,settings:{subject:'A',field:'全分野',count:5},review:[],history:[],active:null});
 const plain = x => x !== null && typeof x === 'object' && !Array.isArray(x);
@@ -20,7 +21,7 @@ export function formatSource(q) {
   if(s.type!=='ipa')return s.title;
   return `${s.year}年度 ${s.session} 基本情報技術者試験 ${s.section} 問${s.questionNumber}${s.modified?`（改変：${s.modificationNote}）`:''}`;
 }
-export function validateQuestions(list, {requireReviewEvidence=false,allowEmpty=false}={}) {
+export function validateQuestions(list, {requireReviewEvidence=false,allowEmpty=false,requireSubfield=false}={}) {
   if (!Array.isArray(list) || (!allowEmpty && !list.length)) throw new Error('問題配列が空、または配列形式ではありません。');
   const errors=[],ids=new Map(),contents=new Map(),sources=new Map();
   const duplicate=(map,key,id,name)=>{if(map.has(key))errors.push(`${id}: ${name}が ${map.get(key)} と重複しています。`);else map.set(key,id);};
@@ -32,6 +33,8 @@ export function validateQuestions(list, {requireReviewEvidence=false,allowEmpty=
     check(str(q.id)&&/^[A-Za-z0-9][A-Za-z0-9_-]*$/.test(q.id)&&!Object.hasOwn(Object.prototype,q.id),'id');
     check(Object.hasOwn(FIELDS,q.subject),'subject');
     check(Object.hasOwn(FIELDS,q.subject)&&FIELDS[q.subject].includes(q.field),'field');
+    if(Object.hasOwn(q,'subfield'))check(q.subject==='A'&&SUBFIELDS[q.field]?.includes(q.subfield),'subfield','小分野名と親分野を確認してください。旧問題の未分類はプロパティを省略します。');
+    if(requireSubfield&&q.subject==='A')check(Object.hasOwn(q,'subfield'),'subfield','新規科目A問題には小分野が必要です。');
     check(str(q.prompt),'prompt');
     const validChoices=Array.isArray(q.choices)&&q.choices.length>=2&&q.choices.length<=20&&q.choices.every(str);
     check(validChoices,'choices');
@@ -96,6 +99,36 @@ export function stats(state) {
     s.attempts++; s.correct += Number(item.correct);
   }
   return result;
+}
+// 履歴は変更せず、現在の問題バンクの分類で全集計をそろえる。
+export function analyzeHistory(state,bank,conditions={}) {
+  const filter=normalizeAnalysisFilter(conditions),byId=new Map(bank.map(q=>[q.id,q]));
+  const eligible=bank.filter(q=>matchesAnalysis(q,filter));
+  const summary={attempts:0,correct:0,uniqueQuestions:0,rate:null};
+  const perQuestion={},groups=new Map(),recent=[];
+  const groupKey=q=>JSON.stringify([q.subject,q.field,subfieldOf(q)]);
+  for(const q of eligible) {
+    const key=groupKey(q);
+    if(!groups.has(key))groups.set(key,{subject:q.subject,field:q.field,subfield:subfieldOf(q),attempts:0,correct:0,rate:null});
+  }
+  for(const block of state.history) {
+    let attempts=0,correct=0;
+    for(const item of block.items) {
+      const q=byId.get(item.id);
+      if(!q)throw new Error(`履歴の問題IDが見つかりません: ${item.id}`);
+      if(!matchesAnalysis(q,filter))continue;
+      attempts++;correct+=Number(item.correct);
+      const s=perQuestion[item.id]??={attempts:0,correct:0,rate:null};
+      s.attempts++;s.correct+=Number(item.correct);
+      const g=groups.get(groupKey(q));g.attempts++;g.correct+=Number(item.correct);
+    }
+    summary.attempts+=attempts;summary.correct+=correct;
+    if(attempts)recent.push({id:block.id,finishedAt:block.finishedAt,attempts,correct,totalItems:block.items.length});
+  }
+  summary.uniqueQuestions=Object.keys(perQuestion).length;
+  for(const s of [summary,...Object.values(perQuestion),...groups.values()])s.rate=s.attempts?s.correct/s.attempts:null;
+  recent.sort((a,b)=>Date.parse(b.finishedAt)-Date.parse(a.finishedAt));
+  return {filter,summary,groups:[...groups.values()],perQuestion,recent:recent.slice(0,20)};
 }
 function shuffle(list, random) {
   const a = [...list];

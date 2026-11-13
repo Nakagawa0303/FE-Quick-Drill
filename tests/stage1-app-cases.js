@@ -5,9 +5,9 @@ import {load} from '../js/storage.js';
 
 // 実アプリのイベント処理を使う。実ブラウザの描画・タップ確認とは区別する。
 export async function stage1ApplicationFlows(){
-  assert.equal(questions.filter(q=>q.subject==='A').length,60);
-  assert.equal(questions.filter(q=>q.subject==='B').length,12);
-  assert.equal(additionalQuestions.length,56);
+  assert.equal(questions.filter(q=>q.subject==='A').length,65);
+  assert.equal(questions.filter(q=>q.subject==='B').length,13);
+  assert.equal(additionalQuestions.length,62);
   const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const keys=['document','window','localStorage','setInterval','setTimeout','clearTimeout'];
   const originals=new Map(keys.map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)]));
