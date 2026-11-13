@@ -22,7 +22,7 @@
 3. `npm run questions:check` でJSON・既存サンプル・生成物の一致を確認する。
 4. `npm test` と少数問題の画面確認を行い、JSONと生成JSを一緒にコミットする。
 
-Node.js 20以上、追加パッケージ不要。`node scripts/build-questions.js --write` / `--check` でも実行できる。実行場所に依存せず、このリポジトリのJSONを読む。ブラウザで利用するときのビルドや外部通信は増えない。追加ファイルは現時点では空。
+Node.js 20以上、追加パッケージ不要。`node scripts/build-questions.js --write` / `--check` でも実行できる。実行場所に依存せず、このリポジトリのJSONを読む。ブラウザで利用するときのビルドや外部通信は増えない。以下は空の追加バンクの形式例であり、現在の収録数はREADMEを参照する。
 
 ```json
 {
@@ -37,7 +37,9 @@ Node.js 20以上、追加パッケージ不要。`node scripts/build-questions.j
 
 ## 追加問題の形式
 
-全問題で `id`, `subject`, `field`, `prompt`, `choices`, `answer`, `explanation.brief/detail`, `source.type/title`, `verification.status` が必須。大分野は `js/core.js` の `FIELDS` に一致させる。
+全問題で `id`, `subject`, `field`, `prompt`, `choices`, `answer`, `explanation.brief/detail`, `source.type/title`, `verification.status` が必須。分類辞書は `js/classification.js` に集約し、coreとappが共有する（coreは互換性のためFIELDSを再export）。
+
+新規科目A問題は `subfield` 必須。親の `field` 配下にある正確な名称を指定する。小分野はIPAシラバスVer.9.2の中分類相当で、公式の小分類ではない。旧バンクを直接読む `validateQuestions` の既定動作では、プロパティ欠落だけ「未分類」へフォールバックする。空文字・null・未知名・親子不一致・科目Bへの付与は拒否する。「未分類」という値を新規問題へ書かず、分類できない候補は追加バンクの外で理由とともに保留する。`prepareQuestionBank`／questions:buildは新規Aの分類欠落も拒否する。履歴のitemsには分類を追加しない。
 
 `answer` は**0始まりの整数**。確認前の正答候補・解説案が揃っていても `pending` とし、演習には出さない。候補も未入力の段階の作業メモは追加バンクの外で管理する。欠落項目を空白や「確認済み」の仮記録で埋めない。
 
@@ -48,6 +50,7 @@ Node.js 20以上、追加パッケージ不要。`node scripts/build-questions.j
   "id": "AI-FE-A-TECH-0001",
   "subject": "A",
   "field": "テクノロジ",
+  "subfield": "基礎理論",
   "prompt": "ここに問題文を記入",
   "choices": ["選択肢1", "選択肢2"],
   "answer": 0,

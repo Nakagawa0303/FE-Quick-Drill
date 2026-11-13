@@ -1,0 +1,55 @@
+{
+  "date": "2026-11-13",
+  "reviewer": "Codex（AI、同一担当で転記後に別工程レビュー。人手・専門家レビューではない）",
+  "questions": [
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-016",
+      "officialLabel": "エ",
+      "questionPages": [
+        8
+      ],
+      "contentSha256": "a39c99a43d8f257a24f2107a9d23c0b3b644c7a600e584c9e3fd1d25beb4b6cf"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-017",
+      "officialLabel": "ア",
+      "questionPages": [
+        8
+      ],
+      "contentSha256": "2f0bd732b38c1af9444960d4e0f353cb8f610d704ac14e42be8e56ca10cb1d0a"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-018",
+      "officialLabel": "エ",
+      "questionPages": [
+        8
+      ],
+      "contentSha256": "68c33bf19d2ed99629e6ba627f7bf3d618af445fe6c970db74be1265d128b9ae"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-020",
+      "officialLabel": "ア",
+      "questionPages": [
+        9
+      ],
+      "contentSha256": "085ddf01a4eb5f8def20f474fa0ad973c569bb1e761739fb95ba41d73d6b3619"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-020",
+      "officialLabel": "イ",
+      "questionPages": [
+        13
+      ],
+      "contentSha256": "44ecd48d3c33411b5d8c6b5a1e77c5da79ac3d11dc744a4ca935a9f5eaddb151"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-B-006",
+      "officialLabel": "ケ",
+      "questionPages": [
+        12,
+        13
+      ],
+      "contentSha256": "efd91938ff7c9511d6c00f6152bb11c1dfdb5aef25230eee3529a900876fcb71"
+    }
+  ]
+}
