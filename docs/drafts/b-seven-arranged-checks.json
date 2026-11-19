@@ -1,0 +1,540 @@
+{
+  "date": "2026-11-19",
+  "stage": "installed",
+  "method": "境界値・有限全列挙・独立モデル・全選択肢反例。有限検査は数学的証明の代替ではない。文章の条件と解説は別レビュー対象。",
+  "liveB": 60,
+  "proposedB": 60,
+  "proposedDistribution": {
+    "アルゴリズム・プログラミング": 48,
+    "情報セキュリティ": 12
+  },
+  "checks": [
+    {
+      "id": "ARR-B-ROTATE-001",
+      "cases": 154,
+      "passedByChoice": [
+        89,
+        154,
+        22,
+        88
+      ],
+      "answerIndex": 1,
+      "answerLabel": "イ",
+      "wrongChoiceCounterexamples": [
+        {
+          "data": [
+            -5,
+            -4,
+            -3
+          ],
+          "k": 1,
+          "expected": [
+            -4,
+            -3,
+            -5
+          ],
+          "actual": [
+            -3,
+            -3,
+            -5
+          ],
+          "error": null
+        },
+        null,
+        {
+          "data": [
+            -5,
+            -4
+          ],
+          "k": 1,
+          "expected": [
+            -4,
+            -5
+          ],
+          "actual": [
+            -4,
+            -4
+          ],
+          "error": "領域外参照"
+        },
+        {
+          "data": [
+            -5,
+            -4
+          ],
+          "k": 1,
+          "expected": [
+            -4,
+            -5
+          ],
+          "actual": [
+            -5,
+            -5
+          ],
+          "error": null
+        }
+      ],
+      "contentSha256": "9dd8325508d733a33beb54e051fc08296ba1450ade92c6f7a2ec1cee045a4b1b"
+    },
+    {
+      "id": "ARR-B-LOWERBOUND-002",
+      "cases": 3234,
+      "passedByChoice": [
+        182,
+        1974,
+        3234,
+        1690
+      ],
+      "answerIndex": 2,
+      "answerLabel": "ウ",
+      "wrongChoiceCounterexamples": [
+        {
+          "data": [
+            -2
+          ],
+          "target": -3,
+          "expected": 1,
+          "actual": 2
+        },
+        {
+          "data": [
+            -2
+          ],
+          "target": -2,
+          "expected": 1,
+          "actual": 2
+        },
+        null,
+        {
+          "data": [
+            -2
+          ],
+          "target": -3,
+          "expected": 1,
+          "actual": 2
+        }
+      ],
+      "contentSha256": "7c6f109c7f4f11625c3587bbb9e3875c84cdfb4cd6d6e6b684d03300aab9db5c"
+    },
+    {
+      "id": "ARR-B-STACK-003",
+      "cases": 1,
+      "passedByChoice": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "answerIndex": 0,
+      "answerLabel": "ア",
+      "wrongChoiceCounterexamples": [
+        null,
+        {
+          "expected": [
+            1,
+            false,
+            3,
+            2
+          ],
+          "actual": [
+            6,
+            false,
+            3,
+            2
+          ]
+        },
+        {
+          "expected": [
+            1,
+            false,
+            3,
+            2
+          ],
+          "actual": [
+            1,
+            true,
+            9,
+            3
+          ]
+        },
+        {
+          "expected": [
+            1,
+            false,
+            3,
+            2
+          ],
+          "actual": [
+            1,
+            false,
+            8,
+            1
+          ]
+        }
+      ],
+      "contentSha256": "2dfee0d27925629f4db03aa78dbdc5bddf01a1f2733536cc81556f23ebadc48b",
+      "trace": [
+        {
+          "op": "push",
+          "x": 6,
+          "result": true,
+          "stack": [
+            6
+          ],
+          "top": 1
+        },
+        {
+          "op": "push",
+          "x": 1,
+          "result": true,
+          "stack": [
+            6,
+            1
+          ],
+          "top": 2
+        },
+        {
+          "op": "pop",
+          "result": 1,
+          "stack": [
+            6
+          ],
+          "top": 1
+        },
+        {
+          "op": "push",
+          "x": 8,
+          "result": true,
+          "stack": [
+            6,
+            8
+          ],
+          "top": 2
+        },
+        {
+          "op": "push",
+          "x": 3,
+          "result": true,
+          "stack": [
+            6,
+            8,
+            3
+          ],
+          "top": 3
+        },
+        {
+          "op": "push",
+          "x": 9,
+          "result": false,
+          "stack": [
+            6,
+            8,
+            3
+          ],
+          "top": 3
+        },
+        {
+          "op": "pop",
+          "result": 3,
+          "stack": [
+            6,
+            8
+          ],
+          "top": 2
+        }
+      ]
+    },
+    {
+      "id": "ARR-B-SPARSE-004",
+      "cases": 1,
+      "passedByChoice": [
+        0,
+        0,
+        0,
+        1
+      ],
+      "answerIndex": 3,
+      "answerLabel": "エ",
+      "wrongChoiceCounterexamples": [
+        {
+          "expected": [
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              5,
+              -1
+            ]
+          ],
+          "actual": [
+            [
+              1,
+              2,
+              2
+            ],
+            [
+              2,
+              1,
+              3
+            ],
+            [
+              5,
+              2,
+              -1
+            ]
+          ]
+        },
+        {
+          "expected": [
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              5,
+              -1
+            ]
+          ],
+          "actual": [
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              2,
+              5,
+              -1
+            ]
+          ]
+        },
+        {
+          "expected": [
+            [
+              2,
+              1,
+              2
+            ],
+            [
+              1,
+              2,
+              3
+            ],
+            [
+              2,
+              5,
+              -1
+            ]
+          ],
+          "actual": [
+            [
+              2,
+              1
+            ],
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              5
+            ]
+          ]
+        },
+        null
+      ],
+      "contentSha256": "af3de9d215cf6548100d2363ff84a4a0a92378ca6ed918b22de8d25d5f153ccb"
+    },
+    {
+      "id": "ARR-B-LOG-005",
+      "cases": 1,
+      "passedByChoice": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "answerIndex": 1,
+      "answerLabel": "イ",
+      "wrongChoiceCounterexamples": [
+        {
+          "expected": [
+            1,
+            3
+          ],
+          "actual": [
+            1,
+            2
+          ]
+        },
+        null,
+        {
+          "expected": [
+            1,
+            3
+          ],
+          "actual": [
+            2,
+            4
+          ]
+        },
+        {
+          "expected": [
+            1,
+            3
+          ],
+          "actual": [
+            1,
+            3,
+            4
+          ]
+        }
+      ],
+      "contentSha256": "51ac01be05fc047ef09b2ec63e828a163d376f146104b522570c1fde3b7dc71e",
+      "allRuleViolations": [
+        [
+          2
+        ],
+        [
+          1
+        ],
+        [
+          3
+        ],
+        [
+          4
+        ]
+      ]
+    },
+    {
+      "id": "ARR-B-BACKUP-006",
+      "cases": 1,
+      "passedByChoice": [
+        0,
+        1,
+        0,
+        0
+      ],
+      "answerIndex": 1,
+      "answerLabel": "イ",
+      "wrongChoiceCounterexamples": [
+        {
+          "expected": {
+            "lossHours": 10,
+            "restoreMinutes": 180,
+            "rpo": true,
+            "rto": true
+          },
+          "actual": {
+            "lossHours": 10,
+            "restoreMinutes": 140,
+            "rpo": true,
+            "rto": true
+          }
+        },
+        null,
+        {
+          "expected": {
+            "lossHours": 10,
+            "restoreMinutes": 180,
+            "rpo": true,
+            "rto": true
+          },
+          "actual": {
+            "lossHours": 34,
+            "restoreMinutes": 160,
+            "rpo": false,
+            "rto": true
+          }
+        },
+        {
+          "expected": {
+            "lossHours": 10,
+            "restoreMinutes": 180,
+            "rpo": true,
+            "rto": true
+          },
+          "actual": {
+            "lossHours": 10,
+            "restoreMinutes": 180,
+            "rpo": true,
+            "rto": false
+          }
+        }
+      ],
+      "contentSha256": "2df94f87fbab9960ddb6647abf1868fdbd5ab94ff374f0940835a4127eaf3bd0"
+    },
+    {
+      "id": "ARR-B-CLOUD-007",
+      "cases": 1,
+      "passedByChoice": [
+        1,
+        0,
+        0,
+        0
+      ],
+      "answerIndex": 0,
+      "answerLabel": "ア",
+      "wrongChoiceCounterexamples": [
+        null,
+        {
+          "expected": [
+            "P社",
+            "D社",
+            "N社"
+          ],
+          "actual": [
+            "D社",
+            "D社",
+            "N社"
+          ]
+        },
+        {
+          "expected": [
+            "P社",
+            "D社",
+            "N社"
+          ],
+          "actual": [
+            "P社",
+            "P社",
+            "N社"
+          ]
+        },
+        {
+          "expected": [
+            "P社",
+            "D社",
+            "N社"
+          ],
+          "actual": [
+            "T社",
+            "T社",
+            "T社"
+          ]
+        }
+      ],
+      "contentSha256": "f199fdf1128c68859e7c017a092fc9825e7fd4a89a34081ce0957aea9bffb085"
+    }
+  ]
+}

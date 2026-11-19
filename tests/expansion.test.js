@@ -8,23 +8,29 @@ import {load,save} from '../js/storage.js';
 
 const json=async name=>JSON.parse(await readFile(new URL(name,import.meta.url),'utf8'));
 const before=await json('./fixtures/bank-before-expansion.json');
-const oldIds=new Set(before.map(q=>q.id));
-const additions=questions.filter(q=>!oldIds.has(q.id));
+const review=await json('../docs/expansion-review.json');
+const entries=review.batches.flatMap(b=>b.questions);
+// この履歴検証は当時のレビュー対象に固定し、後続の追加問題を含めない。
+const additions=entries.map(r=>{
+  const q=questions.find(q=>q.id===r.id);
+  assert(q,r.id+' の履歴対象問題が存在する');
+  return q;
+});
+const historicalBank=[...before,...additions];
 const digest=q=>createHash('sha256').update(JSON.stringify([q.prompt,q.choices,q.answer,q.code??null,q.table??null,q.trace??null,q.explanation])).digest('hex');
 
 test('追加前78問を全プロパティ厳密一致で保持し、verifiedのA150/B30を達成',()=>{
   assert.equal(before.length,78);
   for(const old of before)assert.deepEqual(questions.find(q=>q.id===old.id),old,old.id);
-  assert.equal(questions.filter(q=>q.subject==='A'&&q.verification.status==='verified').length,150);
-  assert.equal(questions.filter(q=>q.subject==='B'&&q.verification.status==='verified').length,30);
+  assert.equal(historicalBank.filter(q=>q.subject==='A'&&q.verification.status==='verified').length,150);
+  assert.equal(historicalBank.filter(q=>q.subject==='B'&&q.verification.status==='verified').length,30);
   assert.equal(additions.filter(q=>q.subject==='A').length,85);assert.equal(additions.filter(q=>q.subject==='B').length,17);
   assert.equal(additions.filter(q=>q.source.type!=='ipa').length,0);
   validateQuestions(additionalQuestions,{requireReviewEvidence:true,requireSubfield:true});
 });
 
 test('全追加問題の出典・公式解答・確認時の内容ハッシュと3区切りの照合記録',async()=>{
-  const review=await json('../docs/expansion-review.json'),sources=await json('../docs/expansion-sources.json');
-  const entries=review.batches.flatMap(b=>b.questions);
+  const sources=await json('../docs/expansion-sources.json');
   assert.deepEqual(review.batches.map(b=>b.questions.reduce((s,q)=>(s[q.id.includes('-B-')?'B':'A']++,s),{A:0,B:0})),[{A:30,B:5},{A:30,B:5},{A:25,B:7}]);
   assert.equal(entries.length,102);assert.equal(new Set(entries.map(r=>r.id)).size,102);
   for(const q of additions){

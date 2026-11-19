@@ -5,9 +5,9 @@ import {load} from '../js/storage.js';
 
 // 実アプリのイベント処理を使う。実ブラウザの描画・タップ確認とは区別する。
 export async function stage1ApplicationFlows(){
-  assert.equal(questions.filter(q=>q.subject==='A').length,150);
-  assert.equal(questions.filter(q=>q.subject==='B').length,30);
-  assert.equal(additionalQuestions.length,164);
+  assert(questions.filter(q=>q.subject==='A').length>=150);
+  assert(questions.filter(q=>q.subject==='B').length>=30);
+  assert(additionalQuestions.length>=164);
   assert.equal(questions.length,sampleQuestions.length+additionalQuestions.length);
   const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
   const keys=['document','window','localStorage','setInterval','setTimeout','clearTimeout'];
@@ -40,7 +40,11 @@ export async function stage1ApplicationFlows(){
       assert(root.innerHTML.includes(escape(q.explanation.brief)),q.id+' brief');
       assert(root.innerHTML.includes(escape(q.explanation.detail)),q.id+' detail');
       assert(root.innerHTML.includes(escape(formatSource(q))),q.id+' attribution');
-      assert(root.innerHTML.includes(q.source.answerUrl),q.id+' official answer link');
+      if(q.source.type==='ipa')assert(root.innerHTML.includes(q.source.answerUrl),q.id+' official answer link');
+      else {
+        assert(root.innerHTML.includes(escape(q.source.title)),q.id+' independent attribution');
+        assert(!root.innerHTML.includes('href="undefined"'),q.id+' no fake official answer link');
+      }
       assert(saved().review.includes(q.id));
       click('home');click('tab',{tab:'review'});click('start');
       assert.deepEqual(saved().active.ids,[q.id]);click('answer',{answer:String(q.answer)});click('finish');

@@ -1,0 +1,565 @@
+{
+  "date": "2026-11-19",
+  "reviewer": "Codex（AI。同一担当の転記後の別工程レビュー。人手・専門家レビュー未実施）",
+  "scope": "科目Aのみ30問。旧制度2019春期午前18問・秋期午前12問。既存JSON・JSは変更せず別ファイルへ出力。",
+  "sources": [
+    {
+      "questionUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_fe_am_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000ddiw-att/2019h31h_fe_am_ans.pdf",
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/2019h31.html",
+      "questionSha256": "55210d293f5fd96673cc1131acea3f8237209b4599d95d48bad02964abe62eb6",
+      "answerSha256": "0f871ce45cf3824b208591be14f7898b21bf4109b59aa82833d3693302f033df"
+    },
+    {
+      "questionUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000dict-att/2019r01a_fe_am_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/gmcbt8000000dict-att/2019r01a_fe_am_ans.pdf",
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/2019h31.html",
+      "questionSha256": "4cd404654bb4f465befc78a3ac44c79bcd0f019b12b68f93a38d9836710c7cb0",
+      "answerSha256": "074c4437b57dc5ba96b6f87da90d4b2fa905d436f4c606690010e1262f32e4e0"
+    }
+  ],
+  "webCheck": "2026-11-19にIPAの2019年度公式ページと春期・秋期の問題PDF及び公式解答PDFをWebツールで確認。秋期原本を当日ダウンロード。春期原本は既存manifestのSHA-256と一致。本文はPDFページを画像表示して転記照合。",
+  "duplicateCheck": "prepareQuestionBank(existing, payload)でID・公式出典・正規化本文及び選択肢集合の重複を検査。さらに既存科目Aとの文字bigram類似度を算出し近似候補をAI確認。既存サンプルと同じ主題でも異なる問い・選択肢は保持。2019春期問33/34/38，春期問28/71/72等の再出題は採用しない。",
+  "classificationNotes": {
+    "IPA-FE-2019-SPRING-AM-A-049": "潜在不良率・年間発見率から修正費用を見積もる開発管理・品質管理問題。",
+    "IPA-FE-2019-SPRING-AM-A-056": "サービス移行の計画・切替手順の検証としてサービスマネジメントに分類。"
+  },
+  "counts": {
+    "beforeA": 150,
+    "addedA": 30,
+    "afterA": 180,
+    "addedB": 0
+  },
+  "addedDistribution": {
+    "基礎理論": 2,
+    "アルゴリズムとプログラミング": 1,
+    "コンピュータ構成要素": 1,
+    "システム構成要素": 1,
+    "ソフトウェア": 1,
+    "情報メディア": 1,
+    "データベース": 2,
+    "ネットワーク": 3,
+    "セキュリティ": 4,
+    "システム開発技術": 1,
+    "ソフトウェア開発管理技術": 1,
+    "プロジェクトマネジメント": 1,
+    "サービスマネジメント": 1,
+    "システム監査": 1,
+    "システム戦略": 2,
+    "経営戦略マネジメント": 2,
+    "ビジネスインダストリ": 2,
+    "企業活動": 2,
+    "法務": 1
+  },
+  "resultDistribution": {
+    "基礎理論": 10,
+    "コンピュータ構成要素": 7,
+    "データベース": 14,
+    "ネットワーク": 16,
+    "アルゴリズムとプログラミング": 8,
+    "セキュリティ": 24,
+    "プロジェクトマネジメント": 6,
+    "サービスマネジメント": 6,
+    "システム監査": 8,
+    "企業活動": 11,
+    "経営戦略マネジメント": 13,
+    "システム戦略": 9,
+    "システム構成要素": 6,
+    "ソフトウェア": 6,
+    "システム開発技術": 6,
+    "ビジネスインダストリ": 11,
+    "ソフトウェア開発管理技術": 5,
+    "情報メディア": 4,
+    "法務": 6,
+    "ハードウェア": 1,
+    "ユーザーインタフェース": 1,
+    "システム企画": 1,
+    "技術戦略マネジメント": 1
+  },
+  "targetDifference": {
+    "基礎理論": 0,
+    "アルゴリズムとプログラミング": 0,
+    "コンピュータ構成要素": 0,
+    "システム構成要素": 0,
+    "ソフトウェア": 0,
+    "ハードウェア": 0,
+    "ユーザーインタフェース": 0,
+    "情報メディア": 0,
+    "データベース": 0,
+    "ネットワーク": 0,
+    "セキュリティ": 0,
+    "システム開発技術": 0,
+    "ソフトウェア開発管理技術": 0,
+    "プロジェクトマネジメント": 0,
+    "サービスマネジメント": 0,
+    "システム監査": 0,
+    "システム戦略": 0,
+    "システム企画": 0,
+    "経営戦略マネジメント": 0,
+    "技術戦略マネジメント": 0,
+    "ビジネスインダストリ": 0,
+    "企業活動": 0,
+    "法務": 0
+  },
+  "calculationChecks": {
+    "spring1": {
+      "value": 0.21875,
+      "selectedBinary": 0.21875
+    },
+    "spring2": {
+      "allByteInputsChecked": 256
+    },
+    "spring6": {
+      "B": [
+        1,
+        2,
+        3,
+        1,
+        2,
+        3
+      ]
+    },
+    "autumn30": {
+      "percent": 9.6
+    },
+    "spring49": {
+      "costManYen": 640
+    },
+    "spring78": {
+      "opportunityLossThousandYen": 2400
+    }
+  },
+  "checks": [
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-001",
+      "officialAnswer": "ウ",
+      "answerIndex": 2,
+      "questionPage": 3,
+      "contentSha256": "e2d25c64ba702eb277a09b1339ecf33c122ff4ca70ea4a93cc9e5119f62cb4b1",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "A-T01",
+        "score": 0.37037037037037035
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-002",
+      "officialAnswer": "ウ",
+      "answerIndex": 2,
+      "questionPage": 3,
+      "contentSha256": "8ab769110ad31aee202fa1b40db9180b4c8d1d9097ed26033e1a7a54e3abfbe6",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2022-SAMPLESET-A-001",
+        "score": 0.2112676056338028
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-006",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 5,
+      "contentSha256": "3fd26486c1f12693bd48295b714f72b2abc54303bcc443454b1287b582c3ded3",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2022-SAMPLESET-A-008",
+        "score": 0.20382165605095542
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-012",
+      "officialAnswer": "ウ",
+      "answerIndex": 2,
+      "questionPage": 7,
+      "contentSha256": "fa5b7aef19cee0995e6ff4543cff368d00bd37c88acbfa4c0469f27a67194e7b",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2022-SAMPLESET-A-016",
+        "score": 0.21739130434782608
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-013",
+      "officialAnswer": "エ",
+      "answerIndex": 3,
+      "questionPage": 8,
+      "contentSha256": "79bce7988b2c3be2ccd6d57faa24f0e6424961ab83b71de315d5308ee4146192",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2019-SPRING-AM-A-024",
+        "score": 0.21940928270042195
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-016",
+      "officialAnswer": "イ",
+      "answerIndex": 1,
+      "questionPage": 9,
+      "contentSha256": "ffa5d2f6c324784782e1c0cddcd6dae7571154ee5bf4af0a1de7ab2a5ee50270",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2022-SAMPLESET-A-016",
+        "score": 0.24858757062146894
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-024",
+      "officialAnswer": "エ",
+      "answerIndex": 3,
+      "questionPage": 14,
+      "contentSha256": "6b67406fc2ab1662bac7429e012337a60bb94f0edd36bdb9c07f485c86d7d748",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2019-SPRING-AM-A-074",
+        "score": 0.22115384615384615
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-029",
+      "officialAnswer": "ウ",
+      "answerIndex": 2,
+      "questionPage": 14,
+      "contentSha256": "312b3b67fcb410ab8e604d1f5870972f9ff386e51e94865ff4d48fe571e22088",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2026-KOUKAI-A-007",
+        "score": 0.1452513966480447
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-026",
+      "officialAnswer": "ウ",
+      "answerIndex": 2,
+      "questionPage": 15,
+      "contentSha256": "f7f0d171b3012fa35ec834ff19ae5aeb5d3487f2bb1743c2e98510779f717395",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2019-SPRING-AM-A-027",
+        "score": 0.3023255813953488
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-030",
+      "officialAnswer": "エ",
+      "answerIndex": 3,
+      "questionPage": 17,
+      "contentSha256": "cd20dcf5d3802c6439f37fe69fb8153e8c74de3c11e6a728d330db5266e739d3",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2025-KOUKAI-A-007",
+        "score": 0.4222222222222222
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-031",
+      "officialAnswer": "イ",
+      "answerIndex": 1,
+      "questionPage": 18,
+      "contentSha256": "cb273599b59b7b14f8b1ae64eb329dea587f7adb29fcbc296f824dd00e999ed9",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2026-KOUKAI-A-008",
+        "score": 0.1590909090909091
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-032",
+      "officialAnswer": "イ",
+      "answerIndex": 1,
+      "questionPage": 18,
+      "contentSha256": "e41442c0c93617fd396352b9d28820761e671dfa70cb2e62d76c618c39f8dd6f",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2024-KOUKAI-A-008",
+        "score": 0.2459016393442623
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-040",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 18,
+      "contentSha256": "e385ee8a4e5c5ec70e5aef6ae285f6d17a44fc93bf2da7d0a20d7374f989e05d",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2026-KOUKAI-A-010",
+        "score": 0.16
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-041",
+      "officialAnswer": "イ",
+      "answerIndex": 1,
+      "questionPage": 19,
+      "contentSha256": "2a45c46e2e2eb48164eb2e2b65ba75b2e94e222d33d7350f0faffceac5d535a7",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2022-SAMPLESET-A-033",
+        "score": 0.18106995884773663
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-043",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 19,
+      "contentSha256": "e5cfcbecb26103d772d8defdd26124177ca0c468dfb82ec30533f8f1a8915184",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2019-SPRING-AM-A-031",
+        "score": 0.2446043165467626
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-044",
+      "officialAnswer": "ウ",
+      "answerIndex": 2,
+      "questionPage": 20,
+      "contentSha256": "2ed535e10f0aaa1792e65b9a839ca606eb83e6fef8a9d2013901237634c31049",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "A-T04",
+        "score": 0.19047619047619047
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-046",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 20,
+      "contentSha256": "3bfe2c64698b5a9444a96ad5717b29a88407761d464d54cbed9939910b822efd",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2022-SAMPLESET-A-018",
+        "score": 0.16666666666666666
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-049",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 22,
+      "contentSha256": "42d36f771e06326ae97ac0f0c2d920e65ade1f8e68c7302a6315d8d3f924f826",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "A-S01",
+        "score": 0.12738853503184713
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-052",
+      "officialAnswer": "エ",
+      "answerIndex": 3,
+      "questionPage": 23,
+      "contentSha256": "bfa1f7963cdfa6a7ec6473f811f15dac1d252034249d6a98886dd5f37dc711da",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2024-KOUKAI-A-012",
+        "score": 0.13658536585365855
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-056",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 25,
+      "contentSha256": "70e922c3efd92659323b4fc3850bea56dd902b9ecd9eeb42531d8481c0549b84",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2024-KOUKAI-A-014",
+        "score": 0.16326530612244897
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-058",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 26,
+      "contentSha256": "3361c60f8c390c74f8a97b71aefab71ac29c161517fc42a752a0ca4d0179391c",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2022-SAMPLESET-A-047",
+        "score": 0.2178988326848249
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-061",
+      "officialAnswer": "イ",
+      "answerIndex": 1,
+      "questionPage": 30,
+      "contentSha256": "a2f7c901784b23d384f1e8e0fd86c09043627cc200fe99fda112bde3a3d81648",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2019-SPRING-AM-A-061",
+        "score": 0.19095477386934673
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-062",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 31,
+      "contentSha256": "220420d28982ad8c03a9df5efee07a1d34ac484dd4f9b5c5620365c16eeafd44",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2025-KOUKAI-A-005",
+        "score": 0.17857142857142858
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-066",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 32,
+      "contentSha256": "3a3e5fe5b9c73b5fc82ebc31ff5d260a7895ba27f773db4f2aa23ddd7b15ac2a",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2023-KOUKAI-A-017",
+        "score": 0.15743440233236153
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-067",
+      "officialAnswer": "エ",
+      "answerIndex": 3,
+      "questionPage": 33,
+      "contentSha256": "b0e0474a734d664b39812eed3959e29dcf643c37dcf1feafdf2e5d8a76b8cc18",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2024-KOUKAI-A-016",
+        "score": 0.13636363636363635
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-071",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 34,
+      "contentSha256": "47d930c9f9a7db6d7259e1f0af6607198e35fd142f8a2626f69f6e0e9f0c46cc",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2022-SAMPLESET-A-055",
+        "score": 0.16938110749185667
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-072",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 34,
+      "contentSha256": "2dd8f7d6a3cd84cc98bd520928c113430e3ff6d32660185c101a56181d37bd71",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2022-SAMPLESET-A-055",
+        "score": 0.2088888888888889
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-075",
+      "officialAnswer": "イ",
+      "answerIndex": 1,
+      "questionPage": 33,
+      "contentSha256": "4e8e1dcd235939e392d40e1e7f1ecc0168ec872166d78a7329d6dd7d575aeb07",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2024-KOUKAI-A-012",
+        "score": 0.1452991452991453
+      }
+    },
+    {
+      "id": "IPA-FE-2019-SPRING-AM-A-078",
+      "officialAnswer": "エ",
+      "answerIndex": 3,
+      "questionPage": 34,
+      "contentSha256": "2ffc7a80c539dec979e6cc103822f0efb00c9ebdf43a02b375a830981e4f73ef",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "A-S01",
+        "score": 0.16901408450704225
+      }
+    },
+    {
+      "id": "IPA-FE-2019-AUTUMN-AM-A-080",
+      "officialAnswer": "ア",
+      "answerIndex": 0,
+      "questionPage": 37,
+      "contentSha256": "8275cffc0e3d1facab8e1b49576c2965815d677a2b2f3b3984865d5dc7893e4a",
+      "transcriptionChecked": true,
+      "answerChecked": true,
+      "briefAndDetailChecked": true,
+      "nearestExisting": {
+        "id": "IPA-FE-2025-KOUKAI-A-005",
+        "score": 0.2246376811594203
+      }
+    }
+  ],
+  "validation": {
+    "combinedSchemaAndDuplicates": "passed",
+    "all30OfficialAnswerLabelsAndIndexes": "passed",
+    "targetAll23Subfields": "exactly matched",
+    "existingNodeTests": {
+      "passed": 29,
+      "failed": 0,
+      "note": "標準sandbox内はspawn EPERMのため実行不可。権限付き再実行で29件合格。成果JSONは未統合なので、新30問のスキーマ検査はprepareQuestionBankで別途実施。"
+    },
+    "editorDiagnostics": "data/official-a-additions.json: no errors"
+  }
+}

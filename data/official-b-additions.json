@@ -1,0 +1,1781 @@
+{
+  "version": 1,
+  "questions": [
+    {
+      "id": "IPA-FE-2023-KOUKAI-B-001",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【a】と【b】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は1 から始まる。関数findPrimeNumbers は，引数で与えられた整数以下の，全ての素数だけを格納した配列を返す関数である。ここで，引数に与える整数は2 以上である。",
+      "choices": [
+        "a：maxNum，b：i ÷ j の余り が 0 と等しい",
+        "a：maxNum，b：i ÷ j の商 が 1 と等しくない",
+        "a：maxNum ＋ 1，b：i ÷ j の余り が 0 と等しい",
+        "a：maxNum ＋ 1，b：i ÷ j の商 が 1 と等しくない"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+      ],
+      "answer": 0,
+      "explanation": {
+        "brief": "maxNumまでを候補にし、平方根以下の約数があれば除く。",
+        "detail": "aは引数以下という仕様からmaxNum。合成数には平方根以下の約数があるので、bは余りが0かどうかの判定になる。2と3では内側の繰返しを行わずそのまま追加する。上限をmaxNum＋1にすると範囲外の素数を含み得る。商が1でないことは約数の条件ではなく、例えば5÷2の商2によって素数5も除いてしまう。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和5年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2023,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 1,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。",
+        "answerKey": {
+          "label": "ア",
+          "index": 0
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2023r05.html",
+        "questionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+        "answerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf 問1; docs/official-b-additions-verification.json #IPA-FE-2023-KOUKAI-B-001",
+          "answerIndex": 0,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○整数型の配列: findPrimeNumbers(整数型: maxNum)\n  整数型の配列: pnList ← {}  // 要素数0の配列\n  整数型: i, j\n  論理型: divideFlag\n  for (i を 2 から 【a】 まで 1 ずつ増やす)\n    divideFlag ← true\n    /* iの正の平方根の整数部分が2未満のときは，繰返し処理を実行しない */\n    for (j を 2 から iの正の平方根の整数部分 まで 1 ずつ増やす)  // α\n      if (【b】)\n        divideFlag ← false\n        αの行から始まる繰返し処理を終了する\n      endif\n    endfor\n    if (divideFlag が true と等しい)\n      pnListの末尾 に iの値 を追加する\n    endif\n  endfor\n  return pnList"
+    },
+    {
+      "id": "IPA-FE-2023-KOUKAI-B-002",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次の記述中の【空欄】に入れる正しい答えを，解答群の中から選べ。次のプログラムにおいて，手続proc2 を呼び出すと，【空欄】の順に出力される。",
+      "choices": [
+        "“A”，“B”，“B”，“C”",
+        "“A”，“C”",
+        "“A”，“C”，“B”，“C”",
+        "“B”，“A”，“B”，“C”",
+        "“B”，“C”，“B”，“A”",
+        "“C”，“B”",
+        "“C”，“B”，“A”",
+        "“C”，“B”，“A”，“C”"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ",
+        "ク"
+      ],
+      "answer": 7,
+      "explanation": {
+        "brief": "proc2からの呼出しを順に追うとC、B、A、C。",
+        "detail": "proc2は最初のproc3でCを出力し、続いてBを出力する。最後にproc1を呼び、そこでA、さらにproc3でCが出力される。したがって4文字のC,B,A,Cで、途中の呼出しを省いたカ・キや先頭がA/Bの選択肢は一致しない。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和5年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2023,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 2,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。",
+        "answerKey": {
+          "label": "ク",
+          "index": 7
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2023r05.html",
+        "questionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+        "answerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf 問2; docs/official-b-additions-verification.json #IPA-FE-2023-KOUKAI-B-002",
+          "answerIndex": 7,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○proc1()\n  \"A\" を出力する\n  proc3()\n\n○proc2()\n  proc3()\n  \"B\" を出力する\n  proc1()\n\n○proc3()\n  \"C\" を出力する"
+    },
+    {
+      "id": "IPA-FE-2023-KOUKAI-B-003",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次の記述中の【空欄】に入れる正しい答えを，解答群の中から選べ。ここで，配列の要素番号は1 から始まる。次の手続sort は，大域の整数型の配列data の，引数first で与えられた要素番号から引数last で与えられた要素番号までの要素を昇順に整列する。ここで，first＜ last とする。手続sort をsort(1, 5) として呼び出すと，/*** α ***/ の行を最初に実行したときの出力は“【空欄】”となる。",
+      "choices": [
+        "1 2 3 4 5",
+        "1 2 3 5 4",
+        "2 1 3 4 5",
+        "2 1 3 5 4"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+      ],
+      "answer": 3,
+      "explanation": {
+        "brief": "最初の分割では入替えが起こらず、元の配列を出力する。",
+        "detail": "pivotは中央の3。左から2,1を通過してi=3、右から4,5を通過してj=3となる。i≧jなので入替えず繰返しを終了し、最初のαでは2 1 3 5 4を出力する。再帰による整列はその後であり、整列完了後の配列と混同しない。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和5年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2023,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 3,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。",
+        "answerKey": {
+          "label": "エ",
+          "index": 3
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2023r05.html",
+        "questionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+        "answerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf 問3; docs/official-b-additions-verification.json #IPA-FE-2023-KOUKAI-B-003",
+          "answerIndex": 3,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "大域: 整数型の配列: data ← {2, 1, 3, 5, 4}\n○sort(整数型: first, 整数型: last)\n  整数型: pivot, i, j\n  pivot ← data[(first ＋ last) ÷ 2 の商]\n  i ← first\n  j ← last\n  while (true)\n    while (data[i] ＜ pivot)\n      i ← i ＋ 1\n    endwhile\n    while (pivot ＜ data[j])\n      j ← j － 1\n    endwhile\n    if (i ≧ j)\n      繰返し処理を終了する\n    endif\n    data[i]とdata[j]の値を入れ替える\n    i ← i ＋ 1\n    j ← j － 1\n  endwhile\n  dataの全要素の値を要素番号の順に空白区切りで出力する  /*** α ***/\n  if (first ＜ i － 1)\n    sort(first, i － 1)\n  endif\n  if (j ＋ 1 ＜ last)\n    sort(j ＋ 1, last)\n  endif"
+    },
+    {
+      "id": "IPA-FE-2023-KOUKAI-B-004",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次の記述中の【空欄】に入れる正しい答えを，解答群の中から選べ。ここで，配列の要素番号は1 から始まる。関数add は，引数で指定された正の整数value を大域の整数型の配列hashArray に格納する。格納できた場合はtrue を返し，格納できなかった場合はfalse を返す。ここで，整数value をhashArray のどの要素に格納すべきかを，関数calcHash1 及びcalcHash2 を利用して決める。手続test は，関数add を呼び出して，hashArray に正の整数を格納する。手続test の処理が終了した直後のhashArray の内容は，【空欄】である。",
+      "choices": [
+        "{－1, 3, －1, 18, 11}",
+        "{－1, 11, －1, 3, －1}",
+        "{－1, 11, －1, 18, －1}",
+        "{－1, 18, －1, 3, 11}",
+        "{－1, 18, 11, 3, －1}"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ"
+      ],
+      "answer": 3,
+      "explanation": {
+        "brief": "3は4番、18は2番、11は5番へ格納される。",
+        "detail": "要素数は5。3は(3 mod 5)+1=4へ格納する。18も第一候補が4なので衝突し、第二候補((18+3) mod 5)+1=2へ格納する。11の第一候補2は18が使用中なので、第二候補((11+3) mod 5)+1=5へ格納する。結果は{-1,18,-1,3,11}。全てtrueを返し、他の配列はこの格納順・位置と一致しない。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和5年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2023,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 4,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。",
+        "answerKey": {
+          "label": "エ",
+          "index": 3
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2023r05.html",
+        "questionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+        "answerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf 問4; docs/official-b-additions-verification.json #IPA-FE-2023-KOUKAI-B-004",
+          "answerIndex": 3,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "大域: 整数型の配列: hashArray\n○論理型: add(整数型: value)\n  整数型: i ← calcHash1(value)\n  if (hashArray[i] ＝ －1)\n    hashArray[i] ← value\n    return true\n  else\n    i ← calcHash2(value)\n    if (hashArray[i] ＝ －1)\n      hashArray[i] ← value\n      return true\n    endif\n  endif\n  return false\n\n○整数型: calcHash1(整数型: value)\n  return (value mod hashArrayの要素数) ＋ 1\n\n○整数型: calcHash2(整数型: value)\n  return ((value ＋ 3) mod hashArrayの要素数) ＋ 1\n\n○test()\n  hashArray ← {5個の －1}\n  add(3)\n  add(18)\n  add(11)"
+    },
+    {
+      "id": "IPA-FE-2023-KOUKAI-B-005",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【a】と【b】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は1から始まる。\nコサイン類似度は，二つのベクトルの向きの類似性を測る尺度である。関数calcCosineSimilarityは，いずれも要素数がn(n≧1)である実数型の配列vector1とvector2を受け取り，二つの配列のコサイン類似度を返す。配列vector1が{a1, a2, …, an}，配列vector2が{b1, b2, …, bn}のとき，コサイン類似度は次の数式で計算される。ここで，配列vector1と配列vector2のいずれも，全ての要素に0が格納されていることはないものとする。\n(a1b1＋a2b2＋…＋anbn) ÷ (√(a1²＋a2²＋…＋an²) × √(b1²＋b2²＋…＋bn²))",
+      "choices": [
+        "a：(vector1[i] × vector2[i])の正の平方根，b：denominator × (tempの正の平方根)",
+        "a：(vector1[i] × vector2[i])の正の平方根，b：denominator ＋ (tempの正の平方根)",
+        "a：(vector1[i] × vector2[i])の正の平方根，b：tempの正の平方根",
+        "a：vector1[i] × vector2[i]，b：denominator × (tempの正の平方根)",
+        "a：vector1[i] × vector2[i]，b：denominator ＋ (tempの正の平方根)",
+        "a：vector1[i] × vector2[i]，b：tempの正の平方根",
+        "a：vector1[i]の2乗，b：denominator × (tempの正の平方根)",
+        "a：vector1[i]の2乗，b：denominator ＋ (tempの正の平方根)",
+        "a：vector1[i]の2乗，b：tempの正の平方根"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ",
+        "ク",
+        "ケ"
+      ],
+      "answer": 3,
+      "explanation": {
+        "brief": "内積を、二つのベクトルの長さの積で割る。",
+        "detail": "分子はΣ(vector1[i]×vector2[i])である。最初の平方和からvector1の長さをdenominatorへ格納し、二回目の平方和tempの平方根との積を分母にする。各積の平方根やvector1だけの平方和では内積にならない。長さの和やvector2の長さだけでも公式の分母にならないため、aとbの両方を満たすエに決まる。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和5年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2023,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 5,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。分数と平方根の数式を括弧付きの一行式に転記。",
+        "answerKey": {
+          "label": "エ",
+          "index": 3
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2023r05.html",
+        "questionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+        "answerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf 問5; docs/official-b-additions-verification.json #IPA-FE-2023-KOUKAI-B-005",
+          "answerIndex": 3,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○実数型: calcCosineSimilarity(実数型の配列: vector1, 実数型の配列: vector2)\n  実数型: similarity, numerator, denominator, temp ← 0\n  整数型: i\n  numerator ← 0\n  for (i を 1 から vector1の要素数 まで 1 ずつ増やす)\n    numerator ← numerator ＋ 【a】\n  endfor\n  for (i を 1 から vector1の要素数 まで 1 ずつ増やす)\n    temp ← temp ＋ vector1[i]の2乗\n  endfor\n  denominator ← tempの正の平方根\n  temp ← 0\n  for (i を 1 から vector2の要素数 まで 1 ずつ増やす)\n    temp ← temp ＋ vector2[i]の2乗\n  endfor\n  denominator ← 【b】\n  similarity ← numerator ÷ denominator\n  return similarity"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-B-003",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【空欄】に入れる正しい答えを，解答群の中から選べ。ここで，配列の要素番号は1から始まる。\n図1に示すグラフの頂点には，1から順に整数で番号が付けられている。グラフは無向グラフであり，各頂点間には高々一つの辺がある。一つの辺は両端の頂点の番号を要素にもつ要素数2の整数型の配列で表現できる。例えば，{1, 3}は頂点1と頂点3を端点とする辺を表す。グラフ全体は，グラフに含まれる辺を表す要素数2の配列を全て格納した配列（以下，辺の配列という）で表現できる。辺の配列の要素数はグラフの辺の個数と等しい。図1のグラフは整数型配列の配列{{1, 3}, {1, 4}, {3, 4}, {2, 4}, {4, 5}}と表現できる。\n図1 グラフの例：頂点{1,2,3,4,5}、辺1―3、1―4、3―4、2―4、4―5（全て無向）。\n関数edgesToMatrixは，辺の配列を隣接行列に変換する。隣接行列とは，グラフに含まれる頂点の個数と等しい行数及び列数の正方行列で，i行j列の成分は頂点iと頂点jを結ぶ辺があるときに1となり，それ以外は0となる。行列の対角成分は全て0で，無向グラフの場合は対称行列になる。図1のグラフを表現する隣接行列を図2に示す。\n関数edgesToMatrixは，引数edgeListで辺の配列を，引数nodeNumでグラフの頂点の個数をそれぞれ受け取り，隣接行列を表す整数型の二次元配列を返す。",
+      "choices": [
+        "adjMatrix[u, u] ← 1",
+        "adjMatrix[u, u] ← 1\nadjMatrix[v, v] ← 1",
+        "adjMatrix[u, v] ← 1",
+        "adjMatrix[u, v] ← 1\nadjMatrix[v, u] ← 1",
+        "adjMatrix[v, u] ← 1",
+        "adjMatrix[v, v] ← 1"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ"
+      ],
+      "answer": 3,
+      "explanation": {
+        "brief": "無向の辺は、隣接行列の対称な二つの成分を1にする。",
+        "detail": "辺{u,v}はuからvとvからuのどちらにも接続しているのでadjMatrix[u,v]とadjMatrix[v,u]へ1を代入する。対角成分[u,u]や[v,v]は自己接続を示し、問題では0である。片方向だけの代入では対称行列にならないためエだけが適切。例の五つの辺から図2の全25成分を独立に再構成して確認した。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和6年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2024,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 3,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。図1を全頂点・全辺の列挙へ、図2の行列を表へ転記。",
+        "answerKey": {
+          "label": "エ",
+          "index": 3
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2024r06.html",
+        "questionSha256": "c82b9e6a84707d163b15a0073533bf615e6eaed36e65123ed13a4ff80a1cddd4",
+        "answerSha256": "ca5fbc5c32a987c78972ea1c9a25686f1f5668dcd45b6d36a3dcb316026144e6"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_ans.pdf 問3; docs/official-b-additions-verification.json #IPA-FE-2024-KOUKAI-B-003",
+          "answerIndex": 3,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○整数型の二次元配列: edgesToMatrix(整数型配列の配列: edgeList, 整数型: nodeNum)\n  整数型の二次元配列: adjMatrix ← {nodeNum行nodeNum列の 0}\n  整数型: i, u, v\n  for (i を 1 から edgeListの要素数 まで 1 ずつ増やす)\n    u ← edgeList[i][1]\n    v ← edgeList[i][2]\n    【空欄】\n  endfor\n  return adjMatrix",
+      "table": {
+        "headers": [
+          "図2：行＼列",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "rows": [
+          [
+            "1",
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            "2",
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            "3",
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            "4",
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            "5",
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-B-005",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【a】～【c】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は1から始まる。\n一度の注文で購入された商品のリストを，注文ごとに記録した注文データがある。表に，注文データの例を示す。\n注文データから，商品xと商品yとが同一の注文で購入されやすい傾向を示す関連度Lxyを，次の式で計算する。\nLxy＝(Mxy × 全注文数) ÷ (Kx × Ky)\nここで，Mxyは商品xと商品yとが同一の注文で購入された注文数，Kxは商品xが購入された注文数，Kyは商品yが購入された注文数を表す。表の例では，MABが2，全注文数が6，KAが4，KBが3であるので，商品Aと商品Bの関連度LABは，(2×6)／(4×3)＝1.0である。\n手続putRelatedItemは，大域変数ordersに格納された注文データを基に，引数で与えられた商品との関連度が最も大きい商品のうちの一つと，その関連度を出力する。プログラムでは，商品は文字列で表し，注文は購入された商品の配列，注文データは注文の配列で表している。注文データには2種類以上の商品が含まれるものとする。また，注文データにある商品以外の商品が，引数として与えられることはないものとする。",
+      "choices": [
+        "a：arrayK[i]，b：arrayM[i]，c：allItemsの要素数",
+        "a：arrayK[i]，b：arrayM[i]，c：ordersの要素数",
+        "a：arrayK[i]，b：arrayM[i]，c：otherItemsの要素数",
+        "a：arrayM[i]，b：arrayK[i]，c：allItemsの要素数",
+        "a：arrayM[i]，b：arrayK[i]，c：ordersの要素数",
+        "a：arrayM[i]，b：arrayK[i]，c：otherItemsの要素数"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ"
+      ],
+      "answer": 4,
+      "explanation": {
+        "brief": "共に購入された注文数をarrayM、各商品の注文数をarrayKへ数える。",
+        "detail": "内側のifではitemとotherItems[i]が同じ注文に含まれるのでarrayM[i]を増やす。外側のifではotherItems[i]を含む全注文を数えるのでarrayK[i]を増やす。式の全注文数はordersの要素数であり、商品の種類数ではない。したがってa=arrayM[i]、b=arrayK[i]、c=ordersの要素数のオ。例のAとBでは2×6/(4×3)=1.0となる。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和6年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2024,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 5,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。注文表の全6行を表へ、分数を括弧付き式へ転記。",
+        "answerKey": {
+          "label": "オ",
+          "index": 4
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2024r06.html",
+        "questionSha256": "c82b9e6a84707d163b15a0073533bf615e6eaed36e65123ed13a4ff80a1cddd4",
+        "answerSha256": "ca5fbc5c32a987c78972ea1c9a25686f1f5668dcd45b6d36a3dcb316026144e6"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_ans.pdf 問5; docs/official-b-additions-verification.json #IPA-FE-2024-KOUKAI-B-005",
+          "answerIndex": 4,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "// 注文データ（ここでは表の例を与えている）\n大域: 文字列型配列の配列: orders ← {{\"A\", \"B\", \"D\"}, {\"A\", \"D\"}, {\"A\"}, {\"A\", \"B\", \"E\"}, {\"B\"}, {\"C\", \"E\"}}\n○putRelatedItem(文字列型: item)\n  文字列型の配列: allItems ← ordersに含まれる文字列を重複なく辞書順に格納した配列\n  // 表の例では {\"A\", \"B\", \"C\", \"D\", \"E\"}\n  文字列型の配列: otherItems ← allItemsの複製から値がitemである要素を除いた配列\n  整数型: i, itemCount ← 0\n  整数型の配列: arrayK ← {otherItemsの要素数個の0}\n  整数型の配列: arrayM ← {otherItemsの要素数個の0}\n  実数型: valueL, maxL ← －∞\n  文字列型の配列: order\n  文字列型: relatedItem\n  for (orderにordersの要素を順に代入する)\n    if (orderのいずれかの要素の値がitemの値と等しい)\n      itemCountの値を1増やす\n    endif\n    for (iを1からotherItemsの要素数まで1ずつ増やす)\n      if (orderのいずれかの要素の値がotherItems[i]の値と等しい)\n        if (orderのいずれかの要素の値がitemの値と等しい)\n          【a】の値を1増やす\n        endif\n        【b】の値を1増やす\n      endif\n    endfor\n  endfor\n  for (iを1からotherItemsの要素数まで1ずつ増やす)\n    valueL ← (arrayM[i] × 【c】) ÷ (itemCount × arrayK[i])  /* 実数として計算する */\n    if (valueLがmaxLより大きい)\n      maxL ← valueL\n      relatedItem ← otherItems[i]\n    endif\n  endfor\n  relatedItemの値とmaxLの値をこの順にコンマ区切りで出力する",
+      "table": {
+        "headers": [
+          "表 注文データの例：注文番号",
+          "購入された商品のリスト"
+        ],
+        "rows": [
+          [
+            1,
+            "A, B, D"
+          ],
+          [
+            2,
+            "A, D"
+          ],
+          [
+            3,
+            "A"
+          ],
+          [
+            4,
+            "A, B, E"
+          ],
+          [
+            5,
+            "B"
+          ],
+          [
+            6,
+            "C, E"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-B-006",
+      "subject": "B",
+      "field": "情報セキュリティ",
+      "prompt": "A 社は従業員450 名の商社であり，昨年から働き方改革の一環として，在宅でのテレワークを推進している。A 社のシステム環境を図1 に示す。\n・従業員には，一人に1 台デスクトップPC（以下，社内PC という）を貸与している。\n・従業員が利用するシステムには，自社で開発しA 社に設置している業務システムのほかに，次の二つのSaaS（以下，二つのSaaS をA 社利用クラウドサービスという）がある。1. メール機能，チャット機能及びクラウドストレージ機能をもつグループウェア（以下，A 社利用グループウェアという）2. オンライン会議サービス\n・テレワークでは，従業員の個人所有PC（以下，私有PC という）の業務利用（BYOD）を許可している。\n・テレワークでは，社内PC 及び私有PC のそれぞれに専用のアプリケーションソフトウェア（以下，専用アプリという）を導入し，社内PC のデスクトップから私有PC に画面転送を行うリモートデスクトップ方式を採用している。\n・専用アプリには，リモートデスクトップからPC へのファイルのダウンロード及びファイル，文字列，画像などのコピー＆ペーストを禁止する機能（以下，保存禁止機能という）があり，A 社では私有PC に対して当該機能を有効にしている。\n・業務システムには，社内PC のデスクトップから利用者ID 及びパスワードを入力してログインしている。\n・A 社利用クラウドサービスへのログインは，A 社利用クラウドサービス側の設定によってA 社の社内ネットワークからだけ可能になるように制限している。ログインには利用者ID 及びパスワードを用いている。\n図1 A社のシステム環境（抜粋）\nテレワークの定着が進むにつれて，社内PC からインターネットへの接続が極端に遅くなり，業務に支障をきたしているので改善できないかと，従業員から問合せがあった。A 社の社内ネットワークとインターネットとの間の通信量を調査したところ，テレワーク導入前に比べ，業務時間帯で顕著に増加していることが判明した。そのため，情報システム部では，テレワークでA 社利用クラウドサービスに接続する場合には，A 社の社内ネットワークも社内PC も介さずに直接接続することを可能にするネットワークの設定変更を実施することにした。設定変更に当たり，情報セキュリティ上の問題がないかをA 社の情報セキュリティリーダーであるB さんが検討したところ，幾つか問題があることが分かった。その一つは，A 社利用クラウドサービスへの不正アクセスのリスクが増加することである。そこでB さんは，リスクを低減するために，情報システム部に対策を依頼することにした。\n設問 次の対策のうち，情報システム部に依頼することにしたものはどれか。解答群のうち，最も適切なものを選べ。",
+      "choices": [
+        "A社の社内ネットワークからA社利用クラウドサービスへの通信を監視する。",
+        "A社の社内ネットワークとA社利用クラウドサービスとの間の通信速度を制限する。",
+        "A社利用クラウドサービスにA社外から接続する際の認証に2要素認証を導入する。",
+        "A社利用クラウドサービスのうち，A社利用グループウェアだけを直接接続の対象とする。",
+        "専用アプリの保存禁止機能を無効にする。"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ"
+      ],
+      "answer": 2,
+      "explanation": {
+        "brief": "社外からの直接接続には2要素認証を追加する。",
+        "detail": "変更前は社内ネットワークからだけログインできるが、直接接続を許すと社外からIDとパスワードを使う攻撃の機会が増える。別の要素も必要とする2要素認証が不正ログインのリスクを低減する。社内側の通信監視では社外からの直接接続を対象にできず、帯域制限も認証強化ではない。対象をグループウェアに限定してもその不正アクセスは残り、保存禁止機能の無効化は情報流出のリスクを増やす。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和6年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2024,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 6,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。図1の箇条書きを全項目・小項目とも本文へ転記。",
+        "answerKey": {
+          "label": "ウ",
+          "index": 2
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2024r06.html",
+        "questionSha256": "c82b9e6a84707d163b15a0073533bf615e6eaed36e65123ed13a4ff80a1cddd4",
+        "answerSha256": "ca5fbc5c32a987c78972ea1c9a25686f1f5668dcd45b6d36a3dcb316026144e6"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_ans.pdf 問6; docs/official-b-additions-verification.json #IPA-FE-2024-KOUKAI-B-006",
+          "answerIndex": 2,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      }
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-B-003",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【a】と【b】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は1から始まる。\n関数pushは，引数で与えられた整数をスタックに格納する。格納できた場合はtrueを返し，格納できなかった場合はfalseを返す。\n関数popは，スタックから値を取り出して返す。スタックが空のときは未定義の値を返す。\nスタックを，要素数が4である大域の整数型の配列stack，及び次に値を格納する位置を示す大域の変数stackPosで表現する。スタックの初期状態を図に示す。プログラムでは，配列の領域外を参照してはならないものとする。",
+      "choices": [
+        "a：stackPos，b：stackPos ＋ 1",
+        "a：stackPos，b：stackPos － 1",
+        "a：stackPos － 1，b：stackPos ＋ 1",
+        "a：stackPos － 1，b：stackPos － 1"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+      ],
+      "answer": 1,
+      "explanation": {
+        "brief": "pushは次の空き位置に格納し、popは位置を一つ戻して取り出す。",
+        "detail": "stackPosは次に格納する位置なのでpushの添字aはstackPos。popでは最後に格納した位置がstackPos−1なので、bで先に1を減らす。初期状態ならpopで3を返し、次のpushで空いた位置へ格納できる。a=stackPos−1では既存の末尾を上書きし、b=stackPos＋1では空の領域や配列外を読むのでイだけが正しい。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和7年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2025,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 3,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。図の全4要素とstackPosの矢印・網掛け（未定義）を表へ転記。",
+        "answerKey": {
+          "label": "イ",
+          "index": 1
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2025r07.html",
+        "questionSha256": "18c43738820a136adf48a1990aaf571fa4203e1f1a162d51322d29d319da67d9",
+        "answerSha256": "d2683dc460dffde9ca7817483edbd207c9696c061362281710ebc9d89ff6c2fe"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_ans.pdf 問3; docs/official-b-additions-verification.json #IPA-FE-2025-KOUKAI-B-003",
+          "answerIndex": 1,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "大域: 整数型: stackPos ← 3\n大域: 整数型の配列: stack ← {4, 3, 未定義の値, 未定義の値}\n○論理型: push(整数型: inputData)\n  if (stackPos ≦ stackの要素数)\n    stack[【a】] ← inputData\n    stackPos ← stackPos ＋ 1\n    return true\n  else\n    return false\n  endif\n\n○整数型: pop()\n  整数型: popData ← 未定義の値\n  if (stackPos ＞ 1)\n    stackPos ← 【b】\n    popData ← stack[stackPos]\n    stack[stackPos] ← 未定義の値\n  endif\n  return popData",
+      "table": {
+        "headers": [
+          "図 スタックの初期状態：要素番号",
+          "1",
+          "2",
+          "3",
+          "4"
+        ],
+        "rows": [
+          [
+            "stack",
+            4,
+            3,
+            "未定義",
+            "未定義"
+          ],
+          [
+            "stackPosが指す位置",
+            "",
+            "",
+            "↑",
+            ""
+          ]
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-B-004",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次の記述中の【空欄】に入れる正しい答えを，解答群の中から選べ。ここで，配列の要素番号は1 から始まる。関数search は，二つの文字型の配列を，それぞれ引数data 及びkey で受け取り，data から，key の要素の並びと同じ並びを全て探し，その先頭の要素番号を全て格納した配列を返す。見つからなければ，要素数0 の配列を返す。関数search をsearch({\"a\", \"b\", \"a\", \"b\", \"c\", \"a\", \"b\", \"c\"}, {\"a\", \"b\",\"c\"}) として呼び出すと，/*** β ***/の行の条件式が真となる回数は【空欄】回である。",
+      "choices": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6",
+        "7",
+        "8",
+        "9",
+        "10"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ",
+        "ク",
+        "ケ",
+        "コ"
+      ],
+      "answer": 7,
+      "explanation": {
+        "brief": "一致した比較の回数は、先頭位置ごとに2、0、3、0、0、3で合計8回。",
+        "detail": "i=1ではa,bが一致した後cとaが不一致なので真は2回。i=2は先頭bで0回。i=3はa,b,cが全て一致して3回。i=4,5は先頭がb,cなので0回。i=6は3回一致する。合計2+0+3+0+0+3=8となる。見つかった並びの個数2や全比較回数12とは異なり、βの条件が真となった回数を問う。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和7年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2025,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 4,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。",
+        "answerKey": {
+          "label": "ク",
+          "index": 7
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2025r07.html",
+        "questionSha256": "18c43738820a136adf48a1990aaf571fa4203e1f1a162d51322d29d319da67d9",
+        "answerSha256": "d2683dc460dffde9ca7817483edbd207c9696c061362281710ebc9d89ff6c2fe"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_ans.pdf 問4; docs/official-b-additions-verification.json #IPA-FE-2025-KOUKAI-B-004",
+          "answerIndex": 7,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "/* keyは，要素数1以上の配列である */\n○整数型の配列: search(文字型の配列: data, 文字型の配列: key)\n  整数型: i, j, lenData, lenKey\n  整数型の配列: result ← {}  // 要素数0の配列\n  lenData ← dataの要素数\n  lenKey ← keyの要素数\n  /* (lenData － lenKey ＋ 1) が0以下のときは繰返し処理を実行しない */\n  for (i を 1 から (lenData － lenKey ＋ 1) まで 1 ずつ増やす)\n    for (j を 1 から lenKey まで 1 ずつ増やす)  // α\n      if (data[i ＋ j － 1] が key[j] と等しい)  /*** β ***/\n        if (j が lenKey と等しい)\n          resultの末尾 に iの値 を追加する\n        endif\n      else\n        αの行から始まる繰返し処理を終了する\n      endif\n    endfor\n  endfor\n  return result"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-B-005",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次の記述中の【a】と【b】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は1から始まる。\n予防接種の病気Xに対する予防効果を調査するために集めたデータの集計結果を基に，病気Xにかかるかどうかが，予防接種の有無に影響されないと仮定した場合の人数を計算する。この人数を理論度数という。表1に集計結果の例を示し，表2に表1を基に計算した理論度数を示す。\n関数fは，引数dataで受け取った集計結果を基に計算した理論度数を返す。引数と戻り値は二次元配列で，その行が表の行，その列が表の列に対応する。\n表1 集計結果の例（単位 人）：予防接種を受けた人は病気Xにかからなかった82人、かかった6人。受けていない人はかからなかった58人、かかった8人。\n表2 表1を基に計算した理論度数（単位 人）を以下に示す。注記：網掛けの部分は表示していない。",
+      "choices": [
+        "a：44，b：33",
+        "a：58，b：8",
+        "a：70，b：7",
+        "a：75，b：2",
+        "a：80，b：6",
+        "a：80，b：8",
+        "a：82，b：6"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ"
+      ],
+      "answer": 4,
+      "explanation": {
+        "brief": "行の合計×列の合計÷総人数で、a=80、b=6。",
+        "detail": "総人数は82+6+58+8=154人。接種ありの行合計88人、罹患なしの列合計140人なのでa=88×140/154=80。接種なしの行合計66人、罹患ありの列合計14人なのでb=66×14/154=6。元の観測人数82や8ではなく、独立を仮定した理論度数を計算するため、両値が一致するオだけが正しい。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和7年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2025,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 5,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。表1の全4数値を本文へ、表2の空欄位置・網掛けを表へ転記。",
+        "answerKey": {
+          "label": "オ",
+          "index": 4
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2025r07.html",
+        "questionSha256": "18c43738820a136adf48a1990aaf571fa4203e1f1a162d51322d29d319da67d9",
+        "answerSha256": "d2683dc460dffde9ca7817483edbd207c9696c061362281710ebc9d89ff6c2fe"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_ans.pdf 問5; docs/official-b-additions-verification.json #IPA-FE-2025-KOUKAI-B-005",
+          "answerIndex": 4,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○実数型の二次元配列: f(実数型の二次元配列: data)\n  実数型: t ← dataの要素の和\n  整数型: row ← dataの行数\n  整数型: col ← dataの列数\n  実数型の二次元配列: result ← {row行col列の 未定義の値}\n  整数型: r, c\n  for (r を 1 から row まで 1 ずつ増やす)\n    for (c を 1 から col まで 1 ずつ増やす)\n      result[r, c] ← (dataの行番号rの要素の和) × (dataの列番号cの要素の和) ÷ t\n    endfor\n  endfor\n  return result",
+      "table": {
+        "headers": [
+          "表2：理論度数（単位 人）",
+          "病気Xにかからなかった",
+          "病気Xにかかった"
+        ],
+        "rows": [
+          [
+            "予防接種を受けた",
+            "【a】",
+            "非表示（網掛け）"
+          ],
+          [
+            "予防接種を受けていない",
+            "非表示（網掛け）",
+            "【b】"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-B-006",
+      "subject": "B",
+      "field": "情報セキュリティ",
+      "prompt": "A 社は従業員200 名の電子機器メーカーである。東京に本社があり，新潟に工場がある。A 社では，ファイルサーバを図1 のように運用している。\n・ファイルサーバは本社と工場のサーバルームに設置している。\n・ファイルサーバは，磁気テープを使用してファイルのバックアップを取得している。\n・土曜日の午前2 時からフルバックアップを取得し，翌週の火曜日と木曜日の午前2 時から増分バックアップを取得している。\n・情報システム部の担当者は毎週月曜日，火曜日，木曜日の朝10 時頃，バックアップジョブの実行結果の確認と磁気テープの交換を行い，磁気テープは耐火金庫に保管している。\n・磁気テープには上書きモードでバックアップを取得し，1 か月分の磁気テープを世代管理している。\n・これまで，フルバックアップからのリストアには平均して4 時間，1 回の増分バックアップからは平均して0.25 時間掛かっている。\n・A 社はICT 継続のための試験を実施しており，ファイルサーバも試験対象である。\n注記 事業影響度分析の結果に基づき，ファイルサーバは，72 時間の目標復旧時点（RPO）と120 時間の目標復旧時間(RTO)が要求事項として定められている。図1 A 社のファイルサーバの運用A 社はISMS 認証を取得しており，最高情報セキュリティ責任者（CISO）を中心に情報セキュリティに取り組み，定期的に，情報セキュリティリスクアセスメントを行っている。今般，ISMS 認証基準がJIS Q 27001:2023 に改正されたことを受け，情報セキュリティリーダーのB さんは，新基準への移行審査に向けて準備することになった。改正によって新たに追加された情報セキュリティ管理策について，B さんは情報システム部の担当者に取組状況を確認し，その評価結果を表1 にまとめた。\n表1 Bさんの評価結果（抜粋）\n項番1：情報セキュリティ管理策「（事業継続のためのICTの備え）事業継続の目的及びICT継続の要求事項に基づいて，ICTの備えを計画し，実施し，維持し，試験しなければならない。」評価結果：実施している。\nBさんは，移行審査前の内部監査で，内部監査室から表1の項番1に関するファイルサーバの運用について何点か質問を受け，表2のとおり回答した。\n設問 表2中の【a1】～【a3】に入れる字句の適切な組合せを，aに関する解答群の中から選べ。",
+      "choices": [
+        "a1：月曜日の正午，a2：4.25，a3：CISO",
+        "a1：月曜日の正午，a2：4.25，a3：情報システム部の担当者",
+        "a1：月曜日の正午，a2：4.25，a3：内部監査室長",
+        "a1：月曜日の正午，a2：4.50，a3：CISO",
+        "a1：月曜日の正午，a2：4.50，a3：情報システム部の担当者",
+        "a1：火曜日の正午，a2：4.25，a3：情報システム部の担当者",
+        "a1：火曜日の正午，a2：4.25，a3：内部監査室長",
+        "a1：火曜日の正午，a2：4.50，a3：CISO",
+        "a1：火曜日の正午，a2：4.50，a3：情報システム部の担当者",
+        "a1：火曜日の正午，a2：4.50，a3：内部監査室長"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ",
+        "ク",
+        "ケ",
+        "コ"
+      ],
+      "answer": 7,
+      "explanation": {
+        "brief": "RPOは火曜正午、復元は4.50時間、計画の承認者はCISO。",
+        "detail": "金曜正午の72時間前は火曜正午なので、それ以降の時点のデータまで復元する必要がある。木曜正午の障害では土曜のフル4時間に火曜・木曜の増分各0.25時間を加え、4+0.25+0.25=4.50時間となる。ICT継続の計画は情報セキュリティの責任者であるCISOが承認し、作業担当者や独立して監査する内部監査室長を承認者にしない。三条件を全て満たすク。RTO120時間とRPO72時間は意味が異なる。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和7年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2025,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 6,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。図1の全箇条書きと注記、表1の1行を本文へ、表2の全3行を表へ転記。",
+        "answerKey": {
+          "label": "ク",
+          "index": 7
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2025r07.html",
+        "questionSha256": "18c43738820a136adf48a1990aaf571fa4203e1f1a162d51322d29d319da67d9",
+        "answerSha256": "d2683dc460dffde9ca7817483edbd207c9696c061362281710ebc9d89ff6c2fe"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_ans.pdf 問6; docs/official-b-additions-verification.json #IPA-FE-2025-KOUKAI-B-006",
+          "answerIndex": 7,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "table": {
+        "headers": [
+          "表2 項番",
+          "内部監査室へのBさんの回答（抜粋）"
+        ],
+        "rows": [
+          [
+            1,
+            "例えば，金曜日の正午に障害が発生した場合，少なくとも【a1】の時点のデータは復元しなければならない。"
+          ],
+          [
+            2,
+            "例えば，木曜日の正午に障害が発生し，ファイルサーバの全データが消失したとすると，バックアップからのリストアには【a2】時間掛かると予想される。"
+          ],
+          [
+            3,
+            "ICT継続の計画書は，【a3】が承認している。"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-B-004",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【a】と【b】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は1から始まる。\n単方向リストを，配列dataListと配列pointerListの二つの配列で表現する。dataListにリストの要素の値を格納し，pointerListにリストの次の要素に対応するdataListの要素番号を格納する。単方向リストの先頭は，dataList[1]及びpointerList[1]の組みである。単方向リストの末尾に対応するpointerListの要素は未定義である。dataListのうち単方向リストの要素の値を格納していない要素と，対応するpointerListの要素は未定義である。\nプログラムが扱うdataList及びpointerListの内容を図1に示す。先頭の次の要素の要素番号は，pointerList[1]に格納された3であり，値はdataList[3]に格納された20である。その次の要素の要素番号はpointerList[3]に格納された2であり，値はdataList[2]に格納された30である。\n関数orderListは，図1のdataList及びpointerListで表現した単方向リストの値を，単方向リストの先頭からたどって順番に格納した配列を返す。関数orderListが返す配列を図2に示す。\n図2 関数orderListが返す配列：要素番号1,2,3,4にそれぞれ10,20,30,40。",
+      "choices": [
+        "a：dataList[p]，b：i",
+        "a：dataList[p]，b：pointerList[p]",
+        "a：pointerList[p]，b：i",
+        "a：pointerList[p]，b：pointerList[p]"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+      ],
+      "answer": 3,
+      "explanation": {
+        "brief": "末尾判定も次の節への移動もpointerList[p]を使う。",
+        "detail": "p=1から値10を追加し、pointerList[1]=3へ進む。続いて20、30、40の順に追加し、p=4ではpointerList[4]が未定義なので終了する。末尾の値40自体は定義済みなのでdataList[p]で末尾判定してはならない。次の節を指すのはiではなくpointerList[p]であり、エだけが両条件を満たす。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和8年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2026,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 4,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。図1の全10要素と網掛け（未定義）を表へ、図2の全4要素を本文へ転記。",
+        "answerKey": {
+          "label": "エ",
+          "index": 3
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2026r08.html",
+        "questionSha256": "3995e35d9ca102e9363ac049303e65b936a860ef6377ffbbcbc0620484a6bbb2",
+        "answerSha256": "ca47fecabfcb67745b339522f75f907a3d29217a63e0c1efb38cff4c7aaac2af"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_ans.pdf 問4; docs/official-b-additions-verification.json #IPA-FE-2026-KOUKAI-B-004",
+          "answerIndex": 3,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "大域: 整数型の配列: dataList ← {10, 30, 20, 40, 未定義の値}\n大域: 整数型の配列: pointerList ← {3, 4, 2, 未定義の値, 未定義の値}\n○整数型の配列: orderList()\n  整数型: i, p ← 1\n  整数型の配列: linearList ← {}  // 要素数0の配列\n  for (i を 1 から dataListの要素数 まで 1 ずつ増やす)\n    linearListの末尾 に dataList[p]の値 を追加する\n    if (【a】 が 未定義)\n      繰返し処理を終了する\n    endif\n    p ← 【b】\n  endfor\n  return linearList",
+      "table": {
+        "headers": [
+          "図1：要素番号",
+          "1",
+          "2",
+          "3",
+          "4",
+          "5"
+        ],
+        "rows": [
+          [
+            "dataList",
+            10,
+            30,
+            20,
+            40,
+            "未定義"
+          ],
+          [
+            "pointerList",
+            3,
+            4,
+            2,
+            "未定義",
+            "未定義"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-B-005",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【a】と【b】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は1から始まる。\n一つの要素だけが1で他の要素が0であるような整数型の配列による表現を，本問ではOne-Hot表現という。関数oneHotEncodingは，図のように，色の名前が格納されている要素数1以上の文字列型の配列を引数として受け取り，配列に含まれる色の名前（図の例では3種類）に基づいて，各要素をOne-Hot表現に変換し，整数型配列の配列に格納して返す。関数oneHotEncodingにおける変換の例を図に示す。\n図 関数oneHotEncodingにおける変換の例\n引数の例：{\"Red\", \"Green\", \"Blue\", \"Red\"}\n↓\n\"Red\"のOne-Hot表現：{1,0,0}\n\"Green\"のOne-Hot表現：{0,1,0}\n\"Blue\"のOne-Hot表現：{0,0,1}\n↓\n引数の例に対応する戻り値：{{1,0,0},{0,1,0},{0,0,1},{1,0,0}}",
+      "choices": [
+        "a：colors[i]の値，b：colors の要素のいずれかに colorVector[k]の値 が格納されている",
+        "a：colors[i]の値，b：colors[j] が colorVector[k] と等しい",
+        "a：未定義の値，b：colors の要素のいずれかに colorVector[k]の値 が格納されている",
+        "a：未定義の値，b：colors[j] が colorVector[k] と等しい"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+      ],
+      "answer": 1,
+      "explanation": {
+        "brief": "色名一覧に実際の色名を加え、現在の色と各色名を比較する。",
+        "detail": "最初のループは出現順に重複のない色名一覧を作るためcolors[i]を追加する。変換では現在のcolors[j]と一覧のcolorVector[k]が同じ位置だけ1とする。一覧の全要素は元のcolorsのいずれかに存在するため、その存在だけを判定するアは全て1になってしまう。未定義を一覧に加えるウ・エも色名の対応を失う。イなら例のRed,Green,Blue,Redが{1,0,0},{0,1,0},{0,0,1},{1,0,0}になる。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "令和8年度 基本情報技術者試験 科目B 公開問題",
+        "year": 2026,
+        "session": "公開問題",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 5,
+        "url": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/faq.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。図の引数・色別の全変換・戻り値と矢印を本文へ転記。",
+        "answerKey": {
+          "label": "イ",
+          "index": 1
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2026r08.html",
+        "questionSha256": "3995e35d9ca102e9363ac049303e65b936a860ef6377ffbbcbc0620484a6bbb2",
+        "answerSha256": "ca47fecabfcb67745b339522f75f907a3d29217a63e0c1efb38cff4c7aaac2af"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_ans.pdf 問5; docs/official-b-additions-verification.json #IPA-FE-2026-KOUKAI-B-005",
+          "answerIndex": 1,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○整数型配列の配列: oneHotEncoding(文字列型の配列: colors)\n  整数型: i, j, k\n  文字列型の配列: colorVector ← {}  // 要素数0の配列\n  整数型の配列: tempVector\n  整数型配列の配列: oneHotVector ← {}  // 要素数0の配列\n  /* 名前一覧の作成 */\n  for (i を 1 から colorsの要素数 まで 1 ずつ増やす)\n    if (colorVector の要素のいずれにも colors[i]の値 が格納されていない)\n      colorVectorの末尾 に 【a】 を追加する\n    endif\n  endfor\n  /* One-Hot表現への変換 */\n  for (j を 1 から colorsの要素数 まで 1 ずつ増やす)\n    tempVector ← {}  // 要素数0の配列\n    for (k を 1 から colorVectorの要素数 まで 1 ずつ増やす)\n      if (【b】)\n        tempVectorの末尾 に 1 を追加する\n      else\n        tempVectorの末尾 に 0 を追加する\n      endif\n    endfor\n    oneHotVectorの末尾 に tempVector を追加する\n  endfor\n  return oneHotVector"
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLESET-B-013",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次の記述中の【空欄】に入れる正しい答えを，解答群の中から選べ。ここで，配列の要素番号は1 から始まる。関数search は，引数data で指定された配列に，引数target で指定された値が含まれていればその要素番号を返し，含まれていなければ －1 を返す。data は昇順に整列されており，値に重複はない。関数search には不具合がある。例えば，data の【空欄】場合は，無限ループになる。",
+      "choices": [
+        "要素数が1で，targetがその要素の値と等しい",
+        "要素数が2で，targetがdataの先頭要素の値と等しい",
+        "要素数が2で，targetがdataの末尾要素の値と等しい",
+        "要素に－1が含まれている"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+      ],
+      "answer": 2,
+      "explanation": {
+        "brief": "要素数2で末尾を探すと、中央が先頭のままで探索範囲が縮まらない。",
+        "detail": "例えばdata={1,2},target=2ではlow=1,high=2,middle=1。data[1]<2なのでlow=middle=1となり、同じ状態が無限に続く。先頭を探すア・イは最初の比較で見つかる。値−1が含まれること自体は停止性に関係せず、例えば{-1,1}で−1を探すと直ちに返る。一般にはlow=middle+1、high=middle−1のように比較済みの中央を範囲から除く修正が必要である。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "基本情報技術者試験 科目B サンプル問題セット",
+        "year": 2022,
+        "session": "サンプル問題セット",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 13,
+        "url": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20221226.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。",
+        "answerKey": {
+          "label": "ウ",
+          "index": 2
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20221226.html",
+        "questionSha256": "54e16b636f3c69fc30cd92dbbbcb1b0e0acbb1e64bbd5066e971dce954d7dd11",
+        "answerSha256": "6830553e6df6d54cf8d51365e00171e564e289edb27b7a5bcbee56035969fe3a"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_ans.pdf 問13; docs/official-b-additions-verification.json #IPA-FE-2022-SAMPLESET-B-013",
+          "answerIndex": 2,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○整数型: search(整数型の配列: data, 整数型: target)\n  整数型: low, high, middle\n  low ← 1\n  high ← dataの要素数\n  while (low ≦ high)\n    middle ← (low ＋ high) ÷ 2 の商\n    if (data[middle] ＜ target)\n      low ← middle\n    elseif (data[middle] ＞ target)\n      high ← middle\n    else\n      return middle\n    endif\n  endwhile\n  return －1"
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLESET-B-014",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次の記述中の【空欄】に入れる正しい答えを，解答群の中から選べ。ここで，配列の要素番号は1 から始まる。要素数が1 以上で，昇順に整列済みの配列を基に，配列を特徴づける五つの値を返すプログラムである。関数summarize をsummarize({0.1, 0.2, 0.3, 0.4, 0.5, 0.6, 0.7, 0.8, 0.9,1})として呼び出すと，戻り値は【空欄】である。",
+      "choices": [
+        "{0.1, 0.3, 0.5, 0.7, 1}",
+        "{0.1, 0.3, 0.5, 0.8, 1}",
+        "{0.1, 0.3, 0.6, 0.7, 1}",
+        "{0.1, 0.3, 0.6, 0.8, 1}",
+        "{0.1, 0.4, 0.5, 0.7, 1}",
+        "{0.1, 0.4, 0.5, 0.8, 1}",
+        "{0.1, 0.4, 0.6, 0.7, 1}",
+        "{0.1, 0.4, 0.6, 0.8, 1}"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ",
+        "ク"
+      ],
+      "answer": 7,
+      "explanation": {
+        "brief": "切上げ後に1を加えた要素番号は1、4、6、8、10。",
+        "detail": "要素数10なのでp×9の切上げは順に0,3,5,7,9。その値に1を加え、元配列の1,4,6,8,10番を取り出す。したがって{0.1,0.4,0.6,0.8,1}でク。切捨てや近い要素間の平均を使う一般的な四分位数の定義ではなく、このプログラムの切上げ規則を適用する。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "基本情報技術者試験 科目B サンプル問題セット",
+        "year": 2022,
+        "session": "サンプル問題セット",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 14,
+        "url": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20221226.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。",
+        "answerKey": {
+          "label": "ク",
+          "index": 7
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20221226.html",
+        "questionSha256": "54e16b636f3c69fc30cd92dbbbcb1b0e0acbb1e64bbd5066e971dce954d7dd11",
+        "answerSha256": "6830553e6df6d54cf8d51365e00171e564e289edb27b7a5bcbee56035969fe3a"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_ans.pdf 問14; docs/official-b-additions-verification.json #IPA-FE-2022-SAMPLESET-B-014",
+          "answerIndex": 7,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○実数型: findRank(実数型の配列: sortedData, 実数型: p)\n  整数型: i\n  i ← (p × (sortedDataの要素数 － 1)) の小数点以下を切り上げた値\n  return sortedData[i ＋ 1]\n\n○実数型の配列: summarize(実数型の配列: sortedData)\n  実数型の配列: rankData ← {}  /* 要素数0の配列 */\n  実数型の配列: p ← {0, 0.25, 0.5, 0.75, 1}\n  整数型: i\n  for (i を 1 から pの要素数 まで 1 ずつ増やす)\n    rankDataの末尾 に findRank(sortedData, p[i])の戻り値 を追加する\n  endfor\n  return rankData"
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLESET-B-015",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次の記述中の【a】と【b】に入れる正しい答えの組合せを，解答群の中から選べ。三目並べにおいて自分が勝利する可能性が最も高い手を決定する。次の手順で，ゲームの状態遷移を木構造として表現し，根以外の各節の評価値を求める。その結果，根の子の中で最も評価値が高い手を，最も勝利する可能性が高い手とする。自分が選択した手を○で表し，相手が選択した手を×で表す。\n〔手順〕\n\n(1) 現在の盤面の状態を根とし，勝敗がつくか，引き分けとなるまでの考えられる全ての手を木構造で表現する。\n(2) 葉の状態を次のように評価する。\n① 自分が勝ちの場合は10\n② 自分が負けの場合は－10\n③ 引き分けの場合は0\n(3) 葉以外の節の評価値は，その節の全ての子の評価値を基に決定する。\n① 自分の手番の節である場合，子の評価値で最大の評価値を節の評価値とする。\n② 相手の手番の節である場合，子の評価値で最小の評価値を節の評価値とする。ゲームが図の最上部にある根の状態のとき，自分が選択できる手は三つある。そのうちA が指す子の評価値は 【a】であり，B が指す子の評価値は 【b】である。\n図 三目並べの状態遷移を次の表に転記した。「/」は盤面の改行、「・」は空きマスを表す。表の節名は親子関係を示すために付記したもので，根の三つの子は左からA，中央，B。A，Bの子も原図の左から右の順。",
+      "choices": [
+        "a：0，b：－10",
+        "a：0，b：0",
+        "a：10，b：－10",
+        "a：10，b：0"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+      ],
+      "answer": 0,
+      "explanation": {
+        "brief": "相手は自分にとって小さい評価値を選ぶので、Aは0、Bは－10。",
+        "detail": "Aの各子からは最後の一手で引き分け0又は勝ち10となる。Aは相手の手番なのでmin(0,10)=0。Bは相手が直ちに勝って自分が負ける枝−10と、最終的に引き分ける枝0を持つのでmin(−10,0)=−10。従ってア。自分の手番では最大値、相手の手番では最小値を取り、枝の最大値だけでAやBを評価しない。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "基本情報技術者試験 科目B サンプル問題セット",
+        "year": 2022,
+        "session": "サンプル問題セット",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 15,
+        "url": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20221226.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。状態遷移図の全11盤面・全10辺・手番・終局結果と評価値・A/Bの指示先を表へ転記。補助的な節名と空きマス記号を付記。",
+        "answerKey": {
+          "label": "ア",
+          "index": 0
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20221226.html",
+        "questionSha256": "54e16b636f3c69fc30cd92dbbbcb1b0e0acbb1e64bbd5066e971dce954d7dd11",
+        "answerSha256": "6830553e6df6d54cf8d51365e00171e564e289edb27b7a5bcbee56035969fe3a"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_ans.pdf 問15; docs/official-b-additions-verification.json #IPA-FE-2022-SAMPLESET-B-015",
+          "answerIndex": 0,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "table": {
+        "headers": [
+          "節",
+          "親の節",
+          "盤面（上段／中段／下段）",
+          "手番又は終了",
+          "原図の評価表示"
+        ],
+        "rows": [
+          [
+            "根",
+            "なし",
+            "×○× / ×○○ / ・・・",
+            "自分",
+            ""
+          ],
+          [
+            "A",
+            "根",
+            "×○× / ×○○ / ○・・",
+            "相手",
+            "【a】"
+          ],
+          [
+            "中央",
+            "根",
+            "×○× / ×○○ / ・○・",
+            "終了",
+            "勝ち：10"
+          ],
+          [
+            "B",
+            "根",
+            "×○× / ×○○ / ・・○",
+            "相手",
+            "【b】"
+          ],
+          [
+            "A左",
+            "A",
+            "×○× / ×○○ / ○×・",
+            "自分",
+            ""
+          ],
+          [
+            "A右",
+            "A",
+            "×○× / ×○○ / ○・×",
+            "自分",
+            ""
+          ],
+          [
+            "B左",
+            "B",
+            "×○× / ×○○ / ×・○",
+            "終了",
+            "負け：－10"
+          ],
+          [
+            "B右",
+            "B",
+            "×○× / ×○○ / ・×○",
+            "自分",
+            ""
+          ],
+          [
+            "A左の子",
+            "A左",
+            "×○× / ×○○ / ○×○",
+            "終了",
+            "引き分け：0"
+          ],
+          [
+            "A右の子",
+            "A右",
+            "×○× / ×○○ / ○○×",
+            "終了",
+            "勝ち：10"
+          ],
+          [
+            "B右の子",
+            "B右",
+            "×○× / ×○○ / ○×○",
+            "終了",
+            "引き分け：0"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLESET-B-016",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【空欄】に入れる正しい答えを，解答群の中から選べ。二つの【空欄】には，同じ答えが入る。ここで，配列の要素番号は1 から始まる。Unicode の符号位置を，UTF-8 の符号に変換するプログラムである。本問で数値の後ろに“(16)”と記載した場合は，その数値が16 進数であることを表す。Unicode の各文字には，符号位置と呼ばれる整数値が与えられている。UTF-8 は，Unicode の文字を符号化する方式の一つであり，符号位置が800(16) 以上FFFF(16)以下の文字は，次のように3 バイトの値に符号化する。3 バイトの長さのビットパターンを 1110xxxx 10xxxxxx 10xxxxxx とする。ビットパターンの“x”の箇所（原本では全ての“x”に下線）に，符号位置を2 進数で表した値を右詰めで格納し，余った“x”の箇所に，0 を格納する。この3 バイトの値がUTF-8 の符号である。例えば，ひらがなの“あ”の符号位置である3042(16) を2 進数で表すと11000001000010 である。これを，上に示したビットパターンの“x”の箇所に右詰めで格納すると，1110xx11 10000001 10000010 となる。余った二つの“x”の箇所に0を格納すると，“あ”のUTF-8 の符号 11100011 10000001 10000010 が得られる。関数encode は，引数で渡されたUnicode の符号位置をUTF-8 の符号に変換し，先頭から順に1 バイトずつ要素に格納した整数型の配列を返す。encode には，引数として，800(16) 以上FFFF(16) 以下の整数値だけが渡されるものとする。",
+      "choices": [
+        "((4 － i) × 2)",
+        "(2 の (4 － i)乗)",
+        "(2 の i 乗)",
+        "(i × 2)",
+        "2",
+        "6",
+        "16",
+        "64",
+        "256"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ",
+        "ク",
+        "ケ"
+      ],
+      "answer": 7,
+      "explanation": {
+        "brief": "下位6ビットずつを取り出すので、除数は2⁶=64。",
+        "detail": "後ろ二つのバイトは10xxxxxxの下位6ビットへ格納するため、cp mod 64を加えcpを64で割った商へ更新する。同じ処理を3回すると先頭には残りの上位4ビットが入り、0x3042では224+3,128+1,128+2={227,129,130}となる。64以外では6ビットごとの分割にならない。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "基本情報技術者試験 科目B サンプル問題セット",
+        "year": 2022,
+        "session": "サンプル問題セット",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 16,
+        "url": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_qs.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_ans.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20221226.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。原図の下線付きxは符号位置のビットを格納する全てのxを指す旨を本文の説明とともに保持。",
+        "answerKey": {
+          "label": "ク",
+          "index": 7
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20221226.html",
+        "questionSha256": "54e16b636f3c69fc30cd92dbbbcb1b0e0acbb1e64bbd5066e971dce954d7dd11",
+        "answerSha256": "6830553e6df6d54cf8d51365e00171e564e289edb27b7a5bcbee56035969fe3a"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_ans.pdf 問16; docs/official-b-additions-verification.json #IPA-FE-2022-SAMPLESET-B-016",
+          "answerIndex": 7,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○整数型の配列: encode(整数型: codePoint)\n  /* utf8Bytesの初期値は，ビットパターンの“x”を全て0に置き換え，\n     8桁ごとに区切って，それぞれを2進数とみなしたときの値 */\n  整数型の配列: utf8Bytes ← {224, 128, 128}\n  整数型: cp ← codePoint\n  整数型: i\n  for (i を utf8Bytesの要素数 から 1 まで 1 ずつ減らす)\n    utf8Bytes[i] ← utf8Bytes[i] ＋ (cp ÷ 【空欄】 の余り)\n    cp ← cp ÷ 【空欄】 の商\n  endfor\n  return utf8Bytes"
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLE-B-001",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【空欄】に入れる正しい答えを，解答群の中から選べ。ある施設の入場料は，0 歳から3 歳までは100 円，4 歳から9 歳までは300 円，10 歳以上は500 円である。関数fee は，年齢を表す0 以上の整数を引数として受け取り，入場料を返す。",
+      "choices": [
+        "(age が 4 以上) and (age が 9 より小さい)",
+        "(age が 4 と等しい) or (age が 9 と等しい)",
+        "(age が 4 より大きい) and (age が 9 以下)",
+        "age が 4 以上",
+        "age が 4 より大きい",
+        "age が 9 以下",
+        "age が 9 より小さい"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ",
+        "キ"
+      ],
+      "answer": 5,
+      "explanation": {
+        "brief": "最初のifで3歳以下を除いているので、次は9歳以下を判定する。",
+        "detail": "elseifに進む時点ではage>3が確定している。整数年齢なのでage≦9だけで4〜9歳を表せる。ア・キは9歳、ウ・オは4歳を除外し、イは5〜8歳を除外する。エは10歳以上まで300円にしてしまう。0〜3歳100円、4〜9歳300円、10歳以上500円の全範囲を満たすのはカ。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "基本情報技術者試験 科目Bのサンプル問題（2022年4月25日公開）",
+        "year": 2022,
+        "session": "サンプル問題（2022年4月公開）",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 1,
+        "url": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。",
+        "answerKey": {
+          "label": "カ",
+          "index": 5
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+        "questionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+        "answerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf PDF内11ページ 問1; docs/official-b-additions-verification.json #IPA-FE-2022-SAMPLE-B-001",
+          "answerIndex": 5,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○整数型: fee(整数型: age)\n  整数型: ret\n  if (age が 3 以下)\n    ret ← 100\n  elseif (【空欄】)\n    ret ← 300\n  else\n    ret ← 500\n  endif\n  return ret"
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLE-B-002",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【a】と【b】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は1 から始まる。次のプログラムは，整数型の配列arrayの要素の並びを逆順にする。",
+      "choices": [
+        "a：arrayの要素数 － left，b：array[left]",
+        "a：arrayの要素数 － left，b：array[right]",
+        "a：arrayの要素数 － left ＋ 1，b：array[left]",
+        "a：arrayの要素数 － left ＋ 1，b：array[right]"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+      ],
+      "answer": 2,
+      "explanation": {
+        "brief": "左右対称の添字を求め、退避した右の値を左へ戻す。",
+        "detail": "1始まりの配列ではleftとrightの和は要素数+1なのでright=要素数−left+1。右の値をtmpへ退避し左の値を右へコピーした後、tmpをarray[left]へ入れる。例では1と5、2と4を交換し{5,4,3,2,1}となる。+1がなければ右端が対象にならず、bをarray[right]にすると右への代入を打ち消してしまう。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "基本情報技術者試験 科目Bのサンプル問題（2022年4月25日公開）",
+        "year": 2022,
+        "session": "サンプル問題（2022年4月公開）",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 2,
+        "url": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。",
+        "answerKey": {
+          "label": "ウ",
+          "index": 2
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+        "questionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+        "answerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf PDF内11ページ 問2; docs/official-b-additions-verification.json #IPA-FE-2022-SAMPLE-B-002",
+          "answerIndex": 2,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "整数型の配列: array ← {1, 2, 3, 4, 5}\n整数型: right, left\n整数型: tmp\nfor (left を 1 から (arrayの要素数 ÷ 2 の商) まで 1 ずつ増やす)\n  right ← 【a】\n  tmp ← array[right]\n  array[right] ← array[left]\n  【b】 ← tmp\nendfor"
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLE-B-003",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【a】と【b】に入れる正しい答えの組合せを，解答群の中から選べ。手続append は，引数で与えられた文字を単方向リストに追加する手続である。単方向リストの各要素は，クラスListElement を用いて表現する。クラスListElement の説明を図に示す。ListElement 型の変数はクラスListElement のインスタンスの参照を格納するものとする。大域変数listHead は，単方向リストの先頭の要素の参照を格納する。リストが空のときは，listHead は未定義である。\n図 クラスListElementの説明：メンバ変数とコンストラクタを以下に示す。",
+      "choices": [
+        "a：未定義，b：curr",
+        "a：未定義，b：curr.next",
+        "a：未定義，b：listHead",
+        "a：未定義でない，b：curr",
+        "a：未定義でない，b：curr.next",
+        "a：未定義でない，b：listHead"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ",
+        "オ",
+        "カ"
+      ],
+      "answer": 0,
+      "explanation": {
+        "brief": "空なら先頭をcurrとし、空でなければ末尾のnextをcurrへつなぐ。",
+        "detail": "空のリストではlistHeadが未定義なのでaは未定義。非空ならprevを末尾まで進め、そのnextに新しい節currの参照を格納する。curr.nextは生成時に未定義で追加にならず、listHeadをつなぐと循環してしまう。未定義でない条件では既存先頭を置換し、空のときに未定義参照をたどる。従ってア。空→1節→複数節の追加順を独立に確認した。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "基本情報技術者試験 科目Bのサンプル問題（2022年4月25日公開）",
+        "year": 2022,
+        "session": "サンプル問題（2022年4月公開）",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 3,
+        "url": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。クラス説明図の全メンバ変数・型・説明・コンストラクタを1表へ再配置。",
+        "answerKey": {
+          "label": "ア",
+          "index": 0
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+        "questionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+        "answerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf PDF内11ページ 問3; docs/official-b-additions-verification.json #IPA-FE-2022-SAMPLE-B-003",
+          "answerIndex": 0,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "大域: ListElement: listHead ← 未定義の値\n○append(文字型: qVal)\n  ListElement: prev, curr\n  curr ← ListElement(qVal)\n  if (listHead が 【a】)\n    listHead ← curr\n  else\n    prev ← listHead\n    while (prev.next が 未定義でない)\n      prev ← prev.next\n    endwhile\n    prev.next ← 【b】\n  endif",
+      "table": {
+        "headers": [
+          "区分",
+          "名前",
+          "型",
+          "説明"
+        ],
+        "rows": [
+          [
+            "メンバ変数",
+            "val",
+            "文字型",
+            "リストに格納する文字。"
+          ],
+          [
+            "メンバ変数",
+            "next",
+            "ListElement",
+            "リストの次の文字を保持するインスタンスの参照。初期状態は未定義である。"
+          ],
+          [
+            "コンストラクタ",
+            "ListElement(文字型: qVal)",
+            "―",
+            "引数qValでメンバ変数valを初期化する。"
+          ]
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLE-B-004",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次の記述中の【a】～【c】に入れる正しい答えの組合せを，解答群の中から選べ。ここで，配列の要素番号は1 から始まる。要素の多くが0 の行列を疎行列という。次のプログラムは，二次元配列に格納された行列のデータ量を削減するために，疎行列の格納に適したデータ構造に変換する。関数transformSparseMatrix は，引数matrix で二次元配列として与えられた行列を，整数型配列の配列に変換して返す。関数transformSparseMatrix をtransformSparseMatrix({{3, 0, 0, 0, 0}, {0, 2, 2, 0, 0}, {0, 0, 0, 1, 3}, {0, 0,0, 2, 0}, {0, 0, 0, 0, 1}})として呼び出したときの戻り値は，{{【a】},{【b】}, {【c】}} である。",
+      "choices": [
+        "a：1, 2, 2, 3, 3, 4, 5，b：1, 2, 3, 4, 5, 4, 5，c：3, 2, 2, 1, 2, 3, 1",
+        "a：1, 2, 2, 3, 3, 4, 5，b：1, 2, 3, 4, 5, 4, 5，c：3, 2, 2, 1, 3, 2, 1",
+        "a：1, 2, 3, 4, 5, 4, 5，b：1, 2, 2, 3, 3, 4, 5，c：3, 2, 2, 1, 2, 3, 1",
+        "a：1, 2, 3, 4, 5, 4, 5，b：1, 2, 2, 3, 3, 4, 5，c：3, 2, 2, 1, 3, 2, 1"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+      ],
+      "answer": 1,
+      "explanation": {
+        "brief": "行、列、値を非ゼロ要素の行優先順でそれぞれ格納する。",
+        "detail": "非ゼロ要素は(1,1)=3,(2,2)=2,(2,3)=2,(3,4)=1,(3,5)=3,(4,4)=2,(5,5)=1の順。したがって第1配列は行番号1,2,2,3,3,4,5、第2配列は列番号1,2,3,4,5,4,5、第3配列は値3,2,2,1,3,2,1でイ。アは末尾付近の値3と2が入れ替わり、ウ・エは行と列の配列が逆である。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "基本情報技術者試験 科目Bのサンプル問題（2022年4月25日公開）",
+        "year": 2022,
+        "session": "サンプル問題（2022年4月公開）",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 4,
+        "url": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。",
+        "answerKey": {
+          "label": "イ",
+          "index": 1
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+        "questionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+        "answerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf PDF内11ページ 問4; docs/official-b-additions-verification.json #IPA-FE-2022-SAMPLE-B-004",
+          "answerIndex": 1,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "○整数型配列の配列: transformSparseMatrix(整数型の二次元配列: matrix)\n  整数型: i, j\n  整数型配列の配列: sparseMatrix\n  sparseMatrix ← {{}, {}, {}}  /* 要素数0の配列を三つ要素にもつ配列 */\n  for (i を 1 から matrixの行数 まで 1 ずつ増やす)\n    for (j を 1 から matrixの列数 まで 1 ずつ増やす)\n      if (matrix[i, j] が 0 でない)\n        sparseMatrix[1]の末尾 に iの値 を追加する\n        sparseMatrix[2]の末尾 に jの値 を追加する\n        sparseMatrix[3]の末尾 に matrix[i, j]の値 を追加する\n      endif\n    endfor\n  endfor\n  return sparseMatrix"
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLE-B-005",
+      "subject": "B",
+      "field": "アルゴリズム・プログラミング",
+      "prompt": "次のプログラム中の【空欄】に入れる正しい答えを，解答群の中から選べ。任意の異なる2 文字をc1，c2 とするとき，英単語群に含まれる英単語において，c1 の次にc2 が出現する割合を求めるプログラムである。英単語は，英小文字だけから成る。英単語の末尾の文字がc1 である場合，その箇所は割合の計算に含めない。例えば，図に示す4語の英単語“importance”，“inflation”，“information”，“innovation”から成る英単語群において，c1 を“n”，c2 を“f”とする。英単語の末尾の文字以外に“n”は五つあり，そのうち次の文字が“f”であるものは二つである。したがって，求める割合は，2 ÷ 5 ＝0.4 である。c1 とc2 の並びが一度も出現しない場合，c1 の出現回数によらず割合を0 と定義する。\n図 4語から成る英単語群の例：importanceのnの次はc。inflationの先頭側のnの次はf、末尾のnは割合の計算に含めない。informationの先頭側のnの次はf、末尾のnは割合の計算に含めない。innovationの先頭側の二つのnの次はそれぞれnとo、末尾のnは割合の計算に含めない。\nプログラムにおいて，英単語群はWords型の大域変数wordsに格納されている。クラスWordsのメソッドの説明を，表に示す。本問において，文字列に対する演算子“＋”は，文字列の連結を表す。また，整数に対する演算子“÷”は，実数として計算する。",
+      "choices": [
+        "(words.freq(s1) － words.freqE(s1)) ÷ words.freq(s1 ＋ s2)",
+        "(words.freq(s2) － words.freqE(s2)) ÷ words.freq(s1 ＋ s2)",
+        "words.freq(s1 ＋ s2) ÷ (words.freq(s1) － words.freqE(s1))",
+        "words.freq(s1 ＋ s2) ÷ (words.freq(s2) － words.freqE(s2))"
+      ],
+      "choiceLabels": [
+        "ア",
+        "イ",
+        "ウ",
+        "エ"
+      ],
+      "answer": 2,
+      "explanation": {
+        "brief": "c1c2の出現回数を、末尾以外のc1の出現回数で割る。",
+        "detail": "分子は連続するc1,c2を文字列連結したs1+s2の出現回数。分母はs1の全出現回数からs1で終わる単語数を引く。例のnは全8回のうち単語末尾3回を除き5回、nfは2回なので2/5=0.4となる。ア・イは分子と分母が逆で、イ・エはc2を母数にしている。c1c2が0回ならelseで0を返すため分母0の除算を行わない。",
+        "author": "Codex（AIによる独自解説。IPA公式解説ではありません）"
+      },
+      "source": {
+        "type": "ipa",
+        "title": "基本情報技術者試験 科目Bのサンプル問題（2022年4月25日公開）",
+        "year": 2022,
+        "session": "サンプル問題（2022年4月公開）",
+        "exam": "FE",
+        "section": "科目B",
+        "questionNumber": 5,
+        "url": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+        "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+        "termsUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+        "accessedAt": "2026-11-19",
+        "modified": true,
+        "modificationNote": "PDFの組版上の改行・空白・ルビを整理。空欄を【空欄】又は【a】等で表示。疑似言語の字下げを保持し、組合せ選択肢を列名付き文字列に再配置。図の全4単語・c1の全出現位置と後続文字・末尾の除外を本文へ、メソッド表を全行転記。",
+        "answerKey": {
+          "label": "ウ",
+          "index": 2
+        },
+        "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+        "questionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+        "answerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4"
+      },
+      "verification": {
+        "status": "verified",
+        "date": "2026-11-19",
+        "method": "公式PDFの本文・全選択肢・コード・図表をページ画像と照合し、公式解答例の記号を原問番号で照合。転記後の別工程で同一AI担当が独自解説の簡潔・詳細を再読し、独立JavaScript計算又は全選択肢の条件比較で正答・解説を確認。",
+        "review": {
+          "reviewer": "Codex（AI。同一担当の転記後別工程レビュー。人手・専門家の独立レビューは未実施）",
+          "reference": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf PDF内11ページ 問5; docs/official-b-additions-verification.json #IPA-FE-2022-SAMPLE-B-005",
+          "answerIndex": 2,
+          "answerChecked": true,
+          "explanationChecked": true,
+          "transcriptionChecked": true
+        }
+      },
+      "code": "大域: Words: words  /* 英単語群が格納されている */\n/* c1の次にc2が出現する割合を返す */\n○実数型: prob(文字型: c1, 文字型: c2)\n  文字列型: s1 ← c1の1文字だけから成る文字列\n  文字列型: s2 ← c2の1文字だけから成る文字列\n  if (words.freq(s1 ＋ s2) が 0 より大きい)\n    return 【空欄】\n  else\n    return 0\n  endif",
+      "table": {
+        "headers": [
+          "表 クラスWordsのメソッド",
+          "戻り値",
+          "説明"
+        ],
+        "rows": [
+          [
+            "freq(文字列型: str)",
+            "整数型",
+            "英単語群中の文字列strの出現回数を返す。"
+          ],
+          [
+            "freqE(文字列型: str)",
+            "整数型",
+            "英単語群の中で，文字列strで終わる英単語の数を返す。"
+          ]
+        ]
+      }
+    }
+  ]
+}

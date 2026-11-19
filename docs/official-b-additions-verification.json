@@ -1,0 +1,1286 @@
+{
+  "version": 1,
+  "date": "2026-11-19",
+  "reviewer": "Codex（同一AIが転記と別工程レビューを実施）",
+  "scope": "科目B公式未収録問題。旧午後は対象外。共有JSONは編集せず追加JSONを親統合用に出力。",
+  "summary": {
+    "added": 23,
+    "verified": 23,
+    "distribution": {
+      "アルゴリズム・プログラミング": 21,
+      "情報セキュリティ": 2
+    },
+    "before": 30,
+    "after": 53,
+    "afterOfficial": 49,
+    "afterAI": 4,
+    "afterDistribution": {
+      "アルゴリズム・プログラミング": 44,
+      "情報セキュリティ": 9
+    },
+    "target": 60,
+    "shortfall": 7
+  },
+  "inventory": [
+    {
+      "source": "2023年度公開問題",
+      "raw": 6,
+      "alreadyPresent": [
+        6
+      ],
+      "added": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "source": "2024年度公開問題",
+      "raw": 6,
+      "alreadyPresent": [
+        1,
+        2,
+        4
+      ],
+      "added": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "source": "2025年度公開問題",
+      "raw": 6,
+      "alreadyPresent": [
+        1,
+        2
+      ],
+      "added": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "source": "2026年度公開問題",
+      "raw": 6,
+      "alreadyPresent": [
+        1,
+        2,
+        3,
+        6
+      ],
+      "added": [
+        4,
+        5
+      ]
+    },
+    {
+      "source": "2022年12月サンプル問題セット",
+      "raw": 20,
+      "alreadyPresent": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        17,
+        18,
+        19,
+        20
+      ],
+      "added": [
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "source": "2022年4月別サンプル",
+      "raw": 6,
+      "alreadyPresent": [],
+      "added": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ],
+      "excluded": [
+        6
+      ]
+    }
+  ],
+  "duplicateReview": {
+    "exactIdAndSourceTuple": "prepareQuestionBank([...sampleQuestions,...existing],payload)合格。正規化本文・選択肢集合・コード・表の内容重複も同じ検査で確認。",
+    "manual": "全50出典設問の本文・設問と既存26公式B問題を照合。2022別サンプル問6は同じA社ECサイトのPaaS責任分担事例でセット問17に相当。項目順とアプリ脆弱性の表現が変わり正答記号はオ→カだが、同じ基盤B社／アプリC社の対応を問うため実質重複として除外。統合担当も除外方針を確認。",
+    "excluded": [
+      {
+        "source": "2022年4月別サンプル問6",
+        "equivalentExistingId": "IPA-FE-2022-SAMPLESET-B-017",
+        "originalAnswer": "オ",
+        "existingAnswer": "カ",
+        "difference": "別サンプル：(一)DBMS、(二)OS、(三)ログイン機能の脆弱性。セット：項番1 OS、項番2 XSS、項番3 DBMS。事例・責任対応の並べ替えを含む類似問。"
+      }
+    ]
+  },
+  "shortfallReason": "指定の公式資料は公開24問＋セット20問＋別サンプル6問＝50出典設問。実質重複1問を除き49問。既存公式26問に未収録23問を加えて公式49問、保持したAI4問と合わせB53問。よって目標60まで7問不足。指定資料内の採用可能な非重複未収録は残らない。旧午後や非公開問題による水増しは行っていない。",
+  "sources": [
+    {
+      "title": "令和5年度 基本情報技術者試験 科目B 公開問題",
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2023r05.html",
+      "questionUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/t6hhco0000003zx0-att/2023r05_fe_kamoku_b_ans.pdf",
+      "questionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+      "answerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6",
+      "accessedAt": "2026-11-19",
+      "addedQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    },
+    {
+      "title": "令和6年度 基本情報技術者試験 科目B 公開問題",
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2024r06.html",
+      "questionUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/eid2eo0000007g1d-att/2024r06_fe_kamoku_b_ans.pdf",
+      "questionSha256": "c82b9e6a84707d163b15a0073533bf615e6eaed36e65123ed13a4ff80a1cddd4",
+      "answerSha256": "ca5fbc5c32a987c78972ea1c9a25686f1f5668dcd45b6d36a3dcb316026144e6",
+      "accessedAt": "2026-11-19",
+      "addedQuestionNumbers": [
+        3,
+        5,
+        6
+      ]
+    },
+    {
+      "title": "令和7年度 基本情報技術者試験 科目B 公開問題",
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2025r07.html",
+      "questionUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/tbl5kb0000005r9r-att/2025r07_fe_kamoku_b_ans.pdf",
+      "questionSha256": "18c43738820a136adf48a1990aaf571fa4203e1f1a162d51322d29d319da67d9",
+      "answerSha256": "d2683dc460dffde9ca7817483edbd207c9696c061362281710ebc9d89ff6c2fe",
+      "accessedAt": "2026-11-19",
+      "addedQuestionNumbers": [
+        3,
+        4,
+        5,
+        6
+      ]
+    },
+    {
+      "title": "令和8年度 基本情報技術者試験 科目B 公開問題",
+      "pageUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/2026r08.html",
+      "questionUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/mondai-kaiotu/sg_fe/koukai/rcu1hd0000012qj6-att/2026r08_fe_kamoku_b_ans.pdf",
+      "questionSha256": "3995e35d9ca102e9363ac049303e65b936a860ef6377ffbbcbc0620484a6bbb2",
+      "answerSha256": "ca47fecabfcb67745b339522f75f907a3d29217a63e0c1efb38cff4c7aaac2af",
+      "accessedAt": "2026-11-19",
+      "addedQuestionNumbers": [
+        4,
+        5
+      ]
+    },
+    {
+      "title": "基本情報技術者試験 科目B サンプル問題セット",
+      "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20221226.html",
+      "questionUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_qs.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/ssf7ph000000h5tb-att/fe_kamoku_b_set_sample_ans.pdf",
+      "questionSha256": "54e16b636f3c69fc30cd92dbbbcb1b0e0acbb1e64bbd5066e971dce954d7dd11",
+      "answerSha256": "6830553e6df6d54cf8d51365e00171e564e289edb27b7a5bcbee56035969fe3a",
+      "accessedAt": "2026-11-19",
+      "addedQuestionNumbers": [
+        13,
+        14,
+        15,
+        16
+      ]
+    },
+    {
+      "title": "基本情報技術者試験 科目Bのサンプル問題（2022年4月25日公開）",
+      "pageUrl": "https://www.ipa.go.jp/shiken/syllabus/henkou/2022/20220425.html",
+      "questionUrl": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+      "answerUrl": "https://www.ipa.go.jp/shiken/syllabus/ps6vr7000000oett-att/fe_kamoku_b_sample.pdf",
+      "questionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "answerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "accessedAt": "2026-11-19",
+      "addedQuestionNumbers": [
+        1,
+        2,
+        3,
+        4,
+        5
+      ]
+    }
+  ],
+  "checks": {
+    "schemaAndDuplicates": "passed: prepareQuestionBank with existing bank",
+    "independentChecks": 23,
+    "existingBankRegression": "node --test（Node v24.22.1、制限外再実行）: 29 passed / 0 failed。追加JSONは親統合前なので、この回帰テストは既存バンクへの影響確認。追加23問自体は別途スキーマ・重複検査及び独立計算で検証。",
+    "augmentedApplicationFlows": "追加23問をメモリ上だけでquestionsとadditionalQuestionsへ統合し、stage1ApplicationFlowsを実行。追加バンク187問・採点374回（全新規23問を含む）の出題、未解答時の解説非表示、誤答、休止再開、採点、簡潔/詳細解説、出典、公式リンク、復習、正答、旧履歴保持、state検証に合格。共有ファイルは変更していない。実ブラウザの描画確認ではない。",
+    "reviewHashCheck": "出力後に全23問の内容ハッシュを再計算し、各records.contentSha256と一致。VS Code JSON診断も両ファイルでエラーなし。",
+    "renderedOriginalPages": "tmp/official-b-review: 原本ページPNGとcontact-0.jpg～contact-10.jpgを視覚確認。",
+    "humanReview": false,
+    "browserIntegration": "この追加JSONは単独成果。実アプリへの統合・最終画面確認は統合担当。"
+  },
+  "records": [
+    {
+      "id": "IPA-FE-2023-KOUKAI-B-001",
+      "contentSha256": "616f5ea3db75a537790b384f133250eb1bd6bcb5279a2bf451eaa904505b669e",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        4
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+      "sourceAnswerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6",
+      "officialAnswer": {
+        "label": "ア",
+        "index": 0
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "range": "maxNum=2..100、4候補",
+        "example": [
+          2,
+          3,
+          5,
+          7,
+          11
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2023-KOUKAI-B-002",
+      "contentSha256": "0b2d8e699620d8b3a78bb7d2df19aa6a3c59afd8a4a4ffc1e5716cc669403781",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        5
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+      "sourceAnswerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6",
+      "officialAnswer": {
+        "label": "ク",
+        "index": 7
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "callOrder": [
+          "C",
+          "B",
+          "A",
+          "C"
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2023-KOUKAI-B-003",
+      "contentSha256": "cbe161c6ec071fc8379f3ee7b8c2dd894299c9cf327a2281b8e8407b2e2888ee",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        6,
+        7
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+      "sourceAnswerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6",
+      "officialAnswer": {
+        "label": "エ",
+        "index": 3
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "pivot": 3,
+        "events": [
+          {
+            "i": 3,
+            "j": 3
+          }
+        ],
+        "firstOutput": [
+          2,
+          1,
+          3,
+          5,
+          4
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2023-KOUKAI-B-004",
+      "contentSha256": "090e1b0e48356d2e61511dbcd055ef02093598e9ef5893bb4a1a9af7e012589b",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        8,
+        9
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+      "sourceAnswerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6",
+      "officialAnswer": {
+        "label": "エ",
+        "index": 3
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "hashEvents": [
+          {
+            "value": 3,
+            "elementNumber": 4,
+            "success": true
+          },
+          {
+            "value": 18,
+            "elementNumber": 2,
+            "success": true
+          },
+          {
+            "value": 11,
+            "elementNumber": 5,
+            "success": true
+          }
+        ],
+        "result": [
+          -1,
+          18,
+          -1,
+          3,
+          11
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2023-KOUKAI-B-005",
+      "contentSha256": "0a6f4fc887753876c0fb9a72f6f1a819afadf1a0ef1a551f9552420e5386dcbc",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        10,
+        11
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "04fc7d8dbeed2f29bb7082d24ecdc8712c78b39012de0813c6a11cd1c5eea25a",
+      "sourceAnswerSha256": "416572bcae9a3fdcdf21a6b0bde3717c31b66591fca1d58e27dcc750f438e6e6",
+      "officialAnswer": {
+        "label": "エ",
+        "index": 3
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "vectors": [
+          [
+            [
+              1,
+              2
+            ],
+            [
+              2,
+              1
+            ]
+          ],
+          [
+            [
+              2,
+              -1
+            ],
+            [
+              3,
+              4
+            ]
+          ],
+          [
+            [
+              1
+            ],
+            [
+              2
+            ]
+          ],
+          [
+            [
+              0,
+              1
+            ],
+            [
+              1,
+              0
+            ]
+          ]
+        ],
+        "referenceValues": [
+          0.8,
+          0.17888543819998318,
+          1,
+          0
+        ],
+        "matchingOptions": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-B-003",
+      "contentSha256": "33f466fddab5d2435481ded234a12acb684737cb846154c068f5dd201c833758",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        6,
+        7
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "c82b9e6a84707d163b15a0073533bf615e6eaed36e65123ed13a4ff80a1cddd4",
+      "sourceAnswerSha256": "ca5fbc5c32a987c78972ea1c9a25686f1f5668dcd45b6d36a3dcb316026144e6",
+      "officialAnswer": {
+        "label": "エ",
+        "index": 3
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "edges": [
+          [
+            1,
+            3
+          ],
+          [
+            1,
+            4
+          ],
+          [
+            3,
+            4
+          ],
+          [
+            2,
+            4
+          ],
+          [
+            4,
+            5
+          ]
+        ],
+        "referenceMatrix": [
+          [
+            0,
+            0,
+            1,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            0,
+            0,
+            1,
+            0
+          ],
+          [
+            1,
+            1,
+            1,
+            0,
+            1
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            0
+          ]
+        ],
+        "matchingOptions": [
+          3
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-B-005",
+      "contentSha256": "c64ad16d3db29e5808a8feb5a83d08912c320c68432598afd423c5feb383a823",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        10,
+        11,
+        12
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "c82b9e6a84707d163b15a0073533bf615e6eaed36e65123ed13a4ff80a1cddd4",
+      "sourceAnswerSha256": "ca5fbc5c32a987c78972ea1c9a25686f1f5668dcd45b6d36a3dcb316026144e6",
+      "officialAnswer": {
+        "label": "オ",
+        "index": 4
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "definition": "内側の条件は共起M、外側は各商品のK。全注文数は6。",
+        "examples": [
+          {
+            "item": "A",
+            "others": [
+              "B",
+              "C",
+              "D",
+              "E"
+            ],
+            "itemCount": 4,
+            "arrayK": [
+              3,
+              1,
+              2,
+              2
+            ],
+            "arrayM": [
+              2,
+              0,
+              2,
+              1
+            ],
+            "lift": [
+              1,
+              0,
+              1.5,
+              0.75
+            ]
+          },
+          {
+            "item": "B",
+            "others": [
+              "A",
+              "C",
+              "D",
+              "E"
+            ],
+            "itemCount": 3,
+            "arrayK": [
+              4,
+              1,
+              2,
+              2
+            ],
+            "arrayM": [
+              2,
+              0,
+              1,
+              1
+            ],
+            "lift": [
+              1,
+              0,
+              1,
+              1
+            ]
+          },
+          {
+            "item": "C",
+            "others": [
+              "A",
+              "B",
+              "D",
+              "E"
+            ],
+            "itemCount": 1,
+            "arrayK": [
+              4,
+              3,
+              2,
+              2
+            ],
+            "arrayM": [
+              0,
+              0,
+              0,
+              1
+            ],
+            "lift": [
+              0,
+              0,
+              0,
+              3
+            ]
+          },
+          {
+            "item": "D",
+            "others": [
+              "A",
+              "B",
+              "C",
+              "E"
+            ],
+            "itemCount": 2,
+            "arrayK": [
+              4,
+              3,
+              1,
+              2
+            ],
+            "arrayM": [
+              2,
+              1,
+              0,
+              0
+            ],
+            "lift": [
+              1.5,
+              1,
+              0,
+              0
+            ]
+          },
+          {
+            "item": "E",
+            "others": [
+              "A",
+              "B",
+              "C",
+              "D"
+            ],
+            "itemCount": 2,
+            "arrayK": [
+              4,
+              3,
+              1,
+              2
+            ],
+            "arrayM": [
+              1,
+              1,
+              1,
+              0
+            ],
+            "lift": [
+              0.75,
+              1,
+              3,
+              0
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-B-006",
+      "contentSha256": "24dbc3cb5d1ae743b8eafe74405130030dc9d99eae07149c8e2c7d0c6463a0bb",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        14,
+        15
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "c82b9e6a84707d163b15a0073533bf615e6eaed36e65123ed13a4ff80a1cddd4",
+      "sourceAnswerSha256": "ca5fbc5c32a987c78972ea1c9a25686f1f5668dcd45b6d36a3dcb316026144e6",
+      "officialAnswer": {
+        "label": "ウ",
+        "index": 2
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "reason": "社外からの直接ログインを許す変更に対し、2要素認証が資格情報だけの不正利用を低減。社内通信の監視、帯域制限、対象限定、保存禁止解除は同じリスクへの認証対策にならない。",
+        "review": "本文の接続制限、保存禁止機能、全5選択肢を原本と再照合。"
+      }
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-B-003",
+      "contentSha256": "05d7b464ed03ed071624a8d4441f46630c24e70a66292d0ada7160d4f6515fa3",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        8,
+        9
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "18c43738820a136adf48a1990aaf571fa4203e1f1a162d51322d29d319da67d9",
+      "sourceAnswerSha256": "d2683dc460dffde9ca7817483edbd207c9696c061362281710ebc9d89ff6c2fe",
+      "officialAnswer": {
+        "label": "イ",
+        "index": 1
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "operations": "pop,push9,pop,pop,pop,push1,push2,push3,push4,push5,pop×5",
+        "results": [
+          3,
+          true,
+          9,
+          4,
+          null,
+          true,
+          true,
+          true,
+          true,
+          false,
+          4,
+          3,
+          2,
+          1,
+          null
+        ],
+        "matchingOptions": [
+          1
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-B-004",
+      "contentSha256": "348937e7bd1cdf3831120d5beec1ed877b3b6082d64480fe55854c9901aab744",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        10
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "18c43738820a136adf48a1990aaf571fa4203e1f1a162d51322d29d319da67d9",
+      "sourceAnswerSha256": "d2683dc460dffde9ca7817483edbd207c9696c061362281710ebc9d89ff6c2fe",
+      "officialAnswer": {
+        "label": "ク",
+        "index": 7
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "truePerStart": [
+          2,
+          0,
+          3,
+          0,
+          0,
+          3
+        ],
+        "totalTrue": 8,
+        "totalComparisons": 12,
+        "found": [
+          3,
+          6
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-B-005",
+      "contentSha256": "18359627aa8fd23cfec26ec60b7dbe284b9cae6bab0618c52c93f88cd611e10d",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        12,
+        13
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "18c43738820a136adf48a1990aaf571fa4203e1f1a162d51322d29d319da67d9",
+      "sourceAnswerSha256": "d2683dc460dffde9ca7817483edbd207c9696c061362281710ebc9d89ff6c2fe",
+      "officialAnswer": {
+        "label": "オ",
+        "index": 4
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "observed": [
+          [
+            82,
+            6
+          ],
+          [
+            58,
+            8
+          ]
+        ],
+        "total": 154,
+        "expected": [
+          [
+            80,
+            8
+          ],
+          [
+            60,
+            6
+          ]
+        ],
+        "a": 80,
+        "b": 6
+      }
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-B-006",
+      "contentSha256": "91d0979098f7a8464295c94f3e0678bd7f12d73eb1f3893bf898d343d3e3bf14",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        14,
+        15
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "18c43738820a136adf48a1990aaf571fa4203e1f1a162d51322d29d319da67d9",
+      "sourceAnswerSha256": "d2683dc460dffde9ca7817483edbd207c9696c061362281710ebc9d89ff6c2fe",
+      "officialAnswer": {
+        "label": "ク",
+        "index": 7
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "rpo72HoursBeforeFridayNoon": "火曜日の正午",
+        "restoreHours": 4.5,
+        "approver": "CISO",
+        "rejected": "月曜正午はRPO超過、4.25は増分1回分不足。情報システム担当者は実施側、監査室長は独立監査側で計画の承認責任者ではない。"
+      }
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-B-004",
+      "contentSha256": "b7e81ee508cc888da2857d34014c47d614384a506c10a10a2c187d9da12fbfec",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        8,
+        9
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "3995e35d9ca102e9363ac049303e65b936a860ef6377ffbbcbc0620484a6bbb2",
+      "sourceAnswerSha256": "ca47fecabfcb67745b339522f75f907a3d29217a63e0c1efb38cff4c7aaac2af",
+      "officialAnswer": {
+        "label": "エ",
+        "index": 3
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "visits": [
+          1,
+          3,
+          2,
+          4
+        ],
+        "ordered": [
+          10,
+          20,
+          30,
+          40
+        ],
+        "stop": "pointerList[4]が未定義。dataList[4]=40は定義済み。"
+      }
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-B-005",
+      "contentSha256": "0bf44c6fce05c752279681d37fe94ddf8c4c985570b0fb71b750798e706b8ab9",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        10,
+        11
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "3995e35d9ca102e9363ac049303e65b936a860ef6377ffbbcbc0620484a6bbb2",
+      "sourceAnswerSha256": "ca47fecabfcb67745b339522f75f907a3d29217a63e0c1efb38cff4c7aaac2af",
+      "officialAnswer": {
+        "label": "イ",
+        "index": 1
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "colors": [
+          "Red",
+          "Green",
+          "Blue",
+          "Red"
+        ],
+        "names": [
+          "Red",
+          "Green",
+          "Blue"
+        ],
+        "oneHot": [
+          [
+            1,
+            0,
+            0
+          ],
+          [
+            0,
+            1,
+            0
+          ],
+          [
+            0,
+            0,
+            1
+          ],
+          [
+            1,
+            0,
+            0
+          ]
+        ],
+        "wrongExistencePredicate": "colorVectorの全要素はcolorsに存在するため、アは全て1になる。"
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLESET-B-013",
+      "contentSha256": "38c324ab13738ad92a6145e39ccaff8e5068db34422ac8b8876f541d20ded93c",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        22
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "54e16b636f3c69fc30cd92dbbbcb1b0e0acbb1e64bbd5066e971dce954d7dd11",
+      "sourceAnswerSha256": "6830553e6df6d54cf8d51365e00171e564e289edb27b7a5bcbee56035969fe3a",
+      "officialAnswer": {
+        "label": "ウ",
+        "index": 2
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "infiniteExample": {
+          "loop": true,
+          "history": [
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        },
+        "counterexampleForMinusOneChoice": {
+          "loop": false,
+          "index": 1,
+          "history": [
+            [
+              1,
+              2,
+              1
+            ]
+          ]
+        }
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLESET-B-014",
+      "contentSha256": "024395e39bc826453c901e1699b591eba84ab8d1b306097a93e01e9bdc6ede94",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        23
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "54e16b636f3c69fc30cd92dbbbcb1b0e0acbb1e64bbd5066e971dce954d7dd11",
+      "sourceAnswerSha256": "6830553e6df6d54cf8d51365e00171e564e289edb27b7a5bcbee56035969fe3a",
+      "officialAnswer": {
+        "label": "ク",
+        "index": 7
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "ranks": [
+          1,
+          4,
+          6,
+          8,
+          10
+        ],
+        "summary": [
+          0.1,
+          0.4,
+          0.6,
+          0.8,
+          1
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLESET-B-015",
+      "contentSha256": "87d74ff13f92b0eabb58e362c8eceef1ff5da360daf65256c60405dab6ef6fad",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        24,
+        25
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "54e16b636f3c69fc30cd92dbbbcb1b0e0acbb1e64bbd5066e971dce954d7dd11",
+      "sourceAnswerSha256": "6830553e6df6d54cf8d51365e00171e564e289edb27b7a5bcbee56035969fe3a",
+      "officialAnswer": {
+        "label": "ア",
+        "index": 0
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "boardsChecked": 11,
+        "edgesChecked": 10,
+        "a": 0,
+        "b": -10,
+        "rootValue": 10
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLESET-B-016",
+      "contentSha256": "eb57d18b09d6ce5faae34445f865334c1dce1ba911efc91a2e4d022058efbf90",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        26,
+        27
+      ],
+      "answerPage": 1,
+      "sourceQuestionSha256": "54e16b636f3c69fc30cd92dbbbcb1b0e0acbb1e64bbd5066e971dce954d7dd11",
+      "sourceAnswerSha256": "6830553e6df6d54cf8d51365e00171e564e289edb27b7a5bcbee56035969fe3a",
+      "officialAnswer": {
+        "label": "ク",
+        "index": 7
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "codePointCount": 63488,
+        "range": "0x800..0xffff。サロゲートも整数演算として検査。",
+        "example": [
+          227,
+          129,
+          130
+        ],
+        "matchingOptions": [
+          7
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLE-B-001",
+      "contentSha256": "5851b7d32073682e0b0143a54a28b3ae3353e026eda2c18c29238146b8bbe91b",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        2
+      ],
+      "answerPage": 11,
+      "sourceQuestionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "sourceAnswerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "officialAnswer": {
+        "label": "カ",
+        "index": 5
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "ageRange": "0..130、全7候補。上側は9との大小だけなので130超も同じ分岐。",
+        "matchingOptions": [
+          5
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLE-B-002",
+      "contentSha256": "a5d960db2bfabb20acedaafe4137aa3f13f57ac4ff73f4169a277ab1194c5dff",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        3
+      ],
+      "answerPage": 11,
+      "sourceQuestionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "sourceAnswerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "officialAnswer": {
+        "label": "ウ",
+        "index": 2
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "allCandidateResults": [
+          [
+            4,
+            3,
+            2,
+            1,
+            5
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ],
+          [
+            5,
+            4,
+            3,
+            2,
+            1
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5
+          ]
+        ],
+        "matchingOptions": [
+          2
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLE-B-003",
+      "contentSha256": "01cc16728245bf847dbce58af15f0d4af8b2ce89ee0f2768a331940432143018",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        4,
+        5
+      ],
+      "answerPage": 11,
+      "sourceQuestionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "sourceAnswerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "officialAnswer": {
+        "label": "ア",
+        "index": 0
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "emptyAndNonemptyAppend": [
+          "A",
+          "B",
+          "C"
+        ],
+        "rejected": "curr.nextは未定義、listHeadをつなぐと循環。条件を反転すると空リスト参照又は既存先頭の置換。"
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLE-B-004",
+      "contentSha256": "1cb0b64dfd28a8dd97c870b905a59512052dd5cc0f34394fe3f517afed5a0e7c",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        6
+      ],
+      "answerPage": 11,
+      "sourceQuestionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "sourceAnswerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "officialAnswer": {
+        "label": "イ",
+        "index": 1
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "sparseInput": [
+          [
+            3,
+            0,
+            0,
+            0,
+            0
+          ],
+          [
+            0,
+            2,
+            2,
+            0,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            1,
+            3
+          ],
+          [
+            0,
+            0,
+            0,
+            2,
+            0
+          ],
+          [
+            0,
+            0,
+            0,
+            0,
+            1
+          ]
+        ],
+        "sparse": [
+          [
+            1,
+            2,
+            2,
+            3,
+            3,
+            4,
+            5
+          ],
+          [
+            1,
+            2,
+            3,
+            4,
+            5,
+            4,
+            5
+          ],
+          [
+            3,
+            2,
+            2,
+            1,
+            3,
+            2,
+            1
+          ]
+        ]
+      }
+    },
+    {
+      "id": "IPA-FE-2022-SAMPLE-B-005",
+      "contentSha256": "da4f74f686f8d78e25e273c7e761ab81b75e8c44d0dbfb3cbf129fbbfdba2d9a",
+      "hashScope": "UTF-8 JSON.stringify({prompt,choices,choiceLabels,code:code??null,table:table??null,answer,explanation})",
+      "questionPages": [
+        7,
+        8
+      ],
+      "answerPage": 11,
+      "sourceQuestionSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "sourceAnswerSha256": "2fd7381d998d44cba7f53a8603051a8a1ded63ca05c63c35b2ec0ed5db774ef4",
+      "officialAnswer": {
+        "label": "ウ",
+        "index": 2
+      },
+      "transcriptionReview": "本文・全選択肢の順序・疑似言語・図表を原本ページ画像で別工程再照合。図の全構成要素の再配置はsource.modificationNoteに記録。",
+      "explanationReview": "簡潔・詳細の両解説を再読。正解の理由と誤選択肢の排除理由を以下の独立計算又は条件比較と照合。",
+      "independentCheck": {
+        "words": [
+          "importance",
+          "inflation",
+          "information",
+          "innovation"
+        ],
+        "numerator": 2,
+        "denominator": 5,
+        "referenceProbability": 0.4,
+        "allCandidateProbabilities": [
+          2.5,
+          1,
+          0.4,
+          1
+        ]
+      }
+    }
+  ]
+}
