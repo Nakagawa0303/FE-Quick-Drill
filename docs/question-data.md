@@ -22,7 +22,7 @@
 3. `npm run questions:check` でJSON・既存サンプル・生成物の一致を確認する。
 4. `npm test` と少数問題の画面確認を行い、JSONと生成JSを一緒にコミットする。
 
-Node.js 20以上、追加パッケージ不要。`node scripts/build-questions.js --write` / `--check` でも実行できる。実行場所に依存せず、このリポジトリのJSONを読む。ブラウザで利用するときのビルドや外部通信は増えない。追加ファイルは現時点では空。
+Node.js 20以上、追加パッケージ不要。`node scripts/build-questions.js --write` / `--check` でも実行できる。実行場所に依存せず、このリポジトリのJSONを読む。ブラウザで利用するときのビルドや外部通信は増えない。以下は空の追加バンクの形式例であり、現在の収録数はREADMEを参照する。
 
 ```json
 {
@@ -37,7 +37,9 @@ Node.js 20以上、追加パッケージ不要。`node scripts/build-questions.j
 
 ## 追加問題の形式
 
-全問題で `id`, `subject`, `field`, `prompt`, `choices`, `answer`, `explanation.brief/detail`, `source.type/title`, `verification.status` が必須。大分野は `js/core.js` の `FIELDS` に一致させる。
+全問題で `id`, `subject`, `field`, `prompt`, `choices`, `answer`, `explanation.brief/detail`, `source.type/title`, `verification.status` が必須。分類辞書は `js/classification.js` に集約し、coreとappが共有する（coreは互換性のためFIELDSを再export）。
+
+新規科目A問題は `subfield` 必須。親の `field` 配下にある正確な名称を指定する。小分野はIPAシラバスVer.9.2の中分類相当で、公式の小分類ではない。旧バンクを直接読む `validateQuestions` の既定動作では、プロパティ欠落だけ「未分類」へフォールバックする。空文字・null・未知名・親子不一致・科目Bへの付与は拒否する。「未分類」という値を新規問題へ書かず、分類できない候補は追加バンクの外で理由とともに保留する。`prepareQuestionBank`／questions:buildは新規Aの分類欠落も拒否する。履歴のitemsには分類を追加しない。
 
 `answer` は**0始まりの整数**。確認前の正答候補・解説案が揃っていても `pending` とし、演習には出さない。候補も未入力の段階の作業メモは追加バンクの外で管理する。欠落項目を空白や「確認済み」の仮記録で埋めない。
 
@@ -48,6 +50,7 @@ Node.js 20以上、追加パッケージ不要。`node scripts/build-questions.j
   "id": "AI-FE-A-TECH-0001",
   "subject": "A",
   "field": "テクノロジ",
+  "subfield": "基礎理論",
   "prompt": "ここに問題文を記入",
   "choices": ["選択肢1", "選択肢2"],
   "answer": 0,
@@ -99,7 +102,7 @@ Node.js 20以上、追加パッケージ不要。`node scripts/build-questions.j
 
 独自解説には `explanation.author`（例：作成者、AI下書きの有無）を必須記録し、IPA公式解説と誤認させない。結果画面には構造化項目から年度・資料区分・試験区分・科目・問番号を表示し、改変内容、問題・解答例・利用条件へのリンク、解説作成主体も表示する。
 
-現段階は2023年度以降の科目A/B公開問題を対象に設計している。旧制度の午前・午後や複数設問を持つ大問を、そのまま科目Bとみなさない。画像が解答に必須の問題や複雑な複数空欄の問題は、現在の本文・コード・単一表・単一正答形式で忠実に表現できるか別途確認し、対応できなければ収録を保留する。
+2023年度以降の科目A/B公開問題に加え、公式の科目A/Bサンプル問題セットも対象にする。旧制度の午前問題を科目A相当として分類する場合は、source.session/title/modificationNoteに元の期・時間区分・旧制度であることを明記し、originalSection/originalSessionも記録する。アプリ内のsubject/sectionは科目Aで統一するが、元の出典を現行制度の試験だったかのように表現しない。旧午後や複数設問を持つ大問を、そのまま科目Bとみなさない。画像が解答に必須の問題や複雑な複数空欄の問題は、現在の本文・コード・単一表・単一正答形式で忠実に表現できるか別途確認し、対応できなければ収録を保留する。
 
 ## 公式資料と利用条件（2026-11-08確認）
 

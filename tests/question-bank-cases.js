@@ -8,7 +8,7 @@ import {prepareQuestionBank,serializeQuestionBank} from '../js/question-bank.js'
 import {buildQuestions} from '../scripts/build-questions.js';
 
 // テスト専用の架空データ。公式問題・検証済み問題として実バンクに収録しない。
-const pending=()=>({id:'TEST-A-001',subject:'A',field:'テクノロジ',prompt:'テスト専用の形式確認問題',choices:['候補1','候補2'],answer:0,explanation:{brief:'説明案',detail:'詳細説明案'},source:{type:'ai',title:'テストfixture'},verification:{status:'pending'}});
+const pending=()=>({id:'TEST-A-001',subject:'A',field:'テクノロジ',subfield:'基礎理論',prompt:'テスト専用の形式確認問題',choices:['候補1','候補2'],answer:0,explanation:{brief:'説明案',detail:'詳細説明案'},source:{type:'ai',title:'テストfixture'},verification:{status:'pending'}});
 const reviewed=()=>({...pending(),verification:{status:'verified',method:'テスト用の架空確認記録',date:'2026-11-08',review:{reviewer:'TEST-ONLY',reference:'テスト用根拠',answerIndex:0,answerChecked:true,explanationChecked:true}}});
 const ipa=()=>({...reviewed(),id:'TEST-IPA-A-001',choiceLabels:['ア','イ'],explanation:{brief:'説明',detail:'詳細説明',author:'テスト専用作成者'},source:{type:'ipa',title:'架空のテスト用資料',year:2025,session:'公開問題',exam:'FE',section:'科目A',questionNumber:1,url:'https://www.ipa.go.jp/test-question.pdf',answerUrl:'https://www.ipa.go.jp/test-answer.pdf',termsUrl:'https://www.ipa.go.jp/shiken/faq.html',accessedAt:'2026-11-08',modified:false,answerKey:{label:'ア',index:0}},verification:{...reviewed().verification,review:{...reviewed().verification.review,transcriptionChecked:true}}});
 const payload=q=>({version:1,questions:q});
@@ -39,6 +39,7 @@ export function registerBankTests(test) {
   });
   test('科目Bのコード・表・トレース・可変選択肢と不正表',()=>{
     const q={...pending(),subject:'B',field:'アルゴリズム・プログラミング',choices:['a','b','c','d','e','f'],answer:5,code:'if (x)\n  y ← 1\nendif',table:{headers:['列1','列2'],rows:[[1,'値']]},trace:{headers:['x'],rows:[[1],[2]]}};
+    delete q.subfield;
     assert.equal(validateQuestions([q])[0].choices.length,6);
     for(const table of [null,{}, {headers:['列'],rows:[[1,2]]},{headers:['列'],rows:[[Infinity]]},{headers:['列'],rows:[]}])assert.throws(()=>validateQuestions([{...q,table}]));
     assert.throws(()=>validateQuestions([{...q,code:' '}]),/code/);

@@ -1,0 +1,257 @@
+{
+  "syllabus": "IPA FE Ver.9.2",
+  "baseline": "1930ef1a68c4e1b04ecbb9747bb476bbd6a0766e",
+  "date": "2026-11-13",
+  "basis": "各問題の本文・選択肢を読み、問う知識・技能と既存fieldを照合。公式による個問の分類認定ではない。",
+  "classified": [
+    {
+      "id": "A-T01",
+      "subfield": "基礎理論"
+    },
+    {
+      "id": "A-T02",
+      "subfield": "コンピュータ構成要素"
+    },
+    {
+      "id": "A-T03",
+      "subfield": "データベース"
+    },
+    {
+      "id": "A-T04",
+      "subfield": "ネットワーク"
+    },
+    {
+      "id": "A-T05",
+      "subfield": "アルゴリズムとプログラミング"
+    },
+    {
+      "id": "A-T06",
+      "subfield": "セキュリティ"
+    },
+    {
+      "id": "A-M01",
+      "subfield": "プロジェクトマネジメント"
+    },
+    {
+      "id": "A-M02",
+      "subfield": "サービスマネジメント"
+    },
+    {
+      "id": "A-M03",
+      "subfield": "システム監査"
+    },
+    {
+      "id": "A-S01",
+      "subfield": "企業活動"
+    },
+    {
+      "id": "A-S02",
+      "subfield": "経営戦略マネジメント"
+    },
+    {
+      "id": "A-S03",
+      "subfield": "システム戦略"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-001",
+      "subfield": "基礎理論"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-002",
+      "subfield": "アルゴリズムとプログラミング"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-003",
+      "subfield": "コンピュータ構成要素"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-004",
+      "subfield": "システム構成要素"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-005",
+      "subfield": "ソフトウェア"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-007",
+      "subfield": "データベース"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-008",
+      "subfield": "ネットワーク"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-009",
+      "subfield": "セキュリティ"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-010",
+      "subfield": "セキュリティ"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-011",
+      "subfield": "システム開発技術"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-012",
+      "subfield": "プロジェクトマネジメント"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-013",
+      "subfield": "プロジェクトマネジメント"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-014",
+      "subfield": "サービスマネジメント"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-015",
+      "subfield": "システム監査"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-016",
+      "subfield": "経営戦略マネジメント"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-017",
+      "subfield": "経営戦略マネジメント"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-018",
+      "subfield": "ビジネスインダストリ"
+    },
+    {
+      "id": "IPA-FE-2026-KOUKAI-A-019",
+      "subfield": "企業活動"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-001",
+      "subfield": "基礎理論"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-002",
+      "subfield": "基礎理論"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-004",
+      "subfield": "システム構成要素"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-005",
+      "subfield": "ソフトウェア開発管理技術"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-006",
+      "subfield": "データベース"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-007",
+      "subfield": "ネットワーク"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-008",
+      "subfield": "セキュリティ"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-009",
+      "subfield": "セキュリティ"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-010",
+      "subfield": "セキュリティ"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-011",
+      "subfield": "データベース"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-012",
+      "subfield": "アルゴリズムとプログラミング"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-013",
+      "subfield": "ソフトウェア開発管理技術"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-015",
+      "subfield": "システム監査"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-016",
+      "subfield": "経営戦略マネジメント"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-017",
+      "subfield": "ビジネスインダストリ"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-018",
+      "subfield": "ビジネスインダストリ"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-019",
+      "subfield": "企業活動"
+    },
+    {
+      "id": "IPA-FE-2025-KOUKAI-A-020",
+      "subfield": "企業活動"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-002",
+      "subfield": "アルゴリズムとプログラミング"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-004",
+      "subfield": "システム構成要素"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-005",
+      "subfield": "ソフトウェア"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-006",
+      "subfield": "情報メディア"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-007",
+      "subfield": "データベース"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-008",
+      "subfield": "ネットワーク"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-009",
+      "subfield": "セキュリティ"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-010",
+      "subfield": "セキュリティ"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-011",
+      "subfield": "システム開発技術"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-012",
+      "subfield": "ソフトウェア開発管理技術"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-014",
+      "subfield": "サービスマネジメント"
+    },
+    {
+      "id": "IPA-FE-2024-KOUKAI-A-015",
+      "subfield": "基礎理論"
+    }
+  ],
+  "unclassified": [],
+  "notes": {
+    "IPA-FE-2024-KOUKAI-A-015": "非構造化データを機械学習で処理する設問。既存field=テクノロジを維持し、基礎理論（AI・データ利活用）に分類。",
+    "IPA-FE-2025-KOUKAI-A-011": "E-Rモデルのエンティティの属性を問うためデータベース設計に分類。",
+    "IPA-FE-2025-KOUKAI-A-005": "ローコードを用いた開発方式を問うためソフトウェア開発管理技術に分類。",
+    "IPA-FE-2026-KOUKAI-A-011": "コーディング規約による実装・保守の改善を問うためシステム開発技術に分類。",
+    "IPA-FE-2026-KOUKAI-A-018": "既存field=ストラテジを維持。AIの実用事例の判別としてビジネスインダストリに分類。",
+    "IPA-FE-2025-KOUKAI-A-017": "既存field=ストラテジを維持。生成AIサービスの利用を問うためビジネスインダストリに分類。"
+  }
+}
