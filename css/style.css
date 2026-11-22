@@ -197,6 +197,32 @@ select {
   gap: 10px;
   margin: 20px 0
 }
+/* 学習分析だけに適用し、演習・結果画面の共通スタイルは維持する。 */
+.analysis-filters {
+  display: grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap: 16px
+}
+.analysis-filters .field {
+  min-width: 0
+}
+.analysis-filters select {
+  margin-top: 8px
+}
+.analysis-filters select:disabled {
+  opacity: .55
+}
+.analysis-summary {
+  grid-template-columns: repeat(4,minmax(0,1fr))
+}
+@media(max-width:600px) {
+  .analysis-filters {
+    grid-template-columns: 1fr
+  }
+  .analysis-summary {
+    grid-template-columns: repeat(2,minmax(0,1fr))
+  }
+}
 .stat {
   background: #fff;
   border-radius: 0;
