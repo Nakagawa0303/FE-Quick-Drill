@@ -12,6 +12,8 @@ try {
   throw error;
 }
 const loaded = load(questions);
+// 読込失敗時の原文は、検証済みデータを明示的に復元するまで保護する。
+let recovery = loaded.error ? loaded : null;
 // view/tab は表示状態、state は保存対象の学習データ。
 let state = loaded.state,
   view = 'home',
@@ -47,6 +49,8 @@ function notify(message) {
 }
 
 function persist() {
+  if (recovery)
+    return;
   try {
     save(state);
   } catch {
@@ -99,6 +103,9 @@ function render() {
     renderResult();
   else
     renderHome();
+  if (recovery) {
+    root.innerHTML = `<section class="card" role="alert"><h2>保存データを保護しています</h2><p>${escapeHtml(recovery.error)}</p><p>元の保存内容を上書きしないよう、自動保存を停止しています。この状態での演習や設定変更は保存されません。</p><p>元データを退避するには下のボタンを使ってください。復元は「学習記録」の「復元」から行えます。書き出した元データは修復・互換性確認が必要な場合があります。</p><button data-action="export-original" ${recovery.raw === null ? 'disabled' : ''}>元データを書き出し</button></section>${root.innerHTML}`;
+  }
 }
 
 function renderHome() {
@@ -314,6 +321,16 @@ root.addEventListener('click', event => {
     link.click();
     setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
+  if (action === 'export-original' && recovery && recovery.raw !== null) {
+    // JSONの解析・整形をせず、読み取った原文をそのまま退避する。
+    const blob = new Blob([recovery.raw], { type: 'application/json' });
+    const url = URL.createObjectURL(blob);
+    const link = document.createElement('a');
+    link.href = url;
+    link.download = `fe-quick-drill-original-${new Date().toISOString().slice(0, 10)}.json`;
+    link.click();
+    setTimeout(() => URL.revokeObjectURL(url), 1000);
+  }
   if (action === 'import')
     root.querySelector('#import-file').click();
 });
@@ -338,10 +355,12 @@ root.addEventListener('change', async event => {
       if (file.size > 10 * 1024 * 1024)
         throw new Error('ファイルは10MB以下にしてください。');
       const importedState = validateState(JSON.parse(await file.text()), questions);
-      if (!window.confirm(`${importedState.history.length}回分の演習記録と復習${importedState.review.length}問を復元します。現在の学習データは上書きされます。続けますか？`))
+      const recoveryWarning = recovery ? '保護中の元データも置き換わります。必要なら先に「元データを書き出し」で退避してください。\n' : '';
+      if (!window.confirm(`${recoveryWarning}${importedState.history.length}回分の演習記録と復習${importedState.review.length}問を復元します。現在の学習データは上書きされます。続けますか？`))
         return;
       // 書き込み成功を確認してから画面の状態を置き換える。
       save(importedState);
+      recovery = null;
       state = importedState;
       runningSince = null;
       view = 'home';
