@@ -199,6 +199,112 @@ function chooseAnswer(answer) {
   root.querySelector(`[data-answer="${answer}"]`)?.focus({ preventScroll: true });
 }
 
+// 操作単位の処理。計時・保存・描画の順序は各関数内で維持する。
+function startPractice() {
+  if (state.active)
+    return;
+  const ids = selectQuestions(questions, state, tab === 'review');
+  if (!ids.length) {
+    notify('該当する問題がありません。条件を変更してください。');
+    return;
+  }
+  state.active = {
+    id: crypto.randomUUID(),
+    ids,
+    index: 0,
+    answers: {},
+    elapsedMs: 0
+  };
+  view = 'quiz';
+  runningSince = performance.now();
+  persist();
+  render();
+  window.scrollTo(0, 0);
+}
+
+function resumePractice() {
+  view = 'quiz';
+  runningSince = document.hidden ? null : performance.now();
+  render();
+}
+
+function pausePractice() {
+  accrueElapsedTime();
+  runningSince = null;
+  persist();
+  view = 'home';
+  render();
+}
+
+function finishPractice() {
+  const active = state.active;
+  if (!active)
+    return;
+  const unansweredCount = active.ids.filter(id => active.answers[id] === undefined).length;
+  if (!window.confirm(unansweredCount ? `未解答が${unansweredCount}問あります。未解答は不正解として採点します。終了しますか？` : '採点しますか？'))
+    return;
+  accrueElapsedTime();
+  runningSince = null;
+  const items = grade(active, questions);
+  state.review = [...new Set([...state.review, ...items.filter(i => !i.correct).map(i => i.id)])];
+  state.history.push({
+    id: active.id,
+    finishedAt: new Date().toISOString(),
+    elapsedMs: active.elapsedMs,
+    items
+  });
+  resultId = active.id;
+  state.active = null;
+  persist();
+  view = 'result';
+  render();
+  window.scrollTo(0, 0);
+}
+
+function exportState() {
+  accrueElapsedTime();
+  persist();
+  const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' }),
+    url = URL.createObjectURL(blob),
+    link = document.createElement('a');
+  link.href = url;
+  link.download = `fe-quick-drill-${new Date().toISOString().slice(0, 10)}.json`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+function exportOriginalData() {
+  // JSONの解析・整形をせず、読み取った原文をそのまま退避する。
+  const blob = new Blob([recovery.raw], { type: 'application/json' });
+  const url = URL.createObjectURL(blob);
+  const link = document.createElement('a');
+  link.href = url;
+  link.download = `fe-quick-drill-original-${new Date().toISOString().slice(0, 10)}.json`;
+  link.click();
+  setTimeout(() => URL.revokeObjectURL(url), 1000);
+}
+
+async function importState(file) {
+  try {
+    if (file.size > 10 * 1024 * 1024)
+      throw new Error('ファイルは10MB以下にしてください。');
+    const importedState = validateState(JSON.parse(await file.text()), questions);
+    const recoveryWarning = recovery ? '保護中の元データも置き換わります。必要なら先に「元データを書き出し」で退避してください。\n' : '';
+    if (!window.confirm(`${recoveryWarning}${importedState.history.length}回分の演習記録と復習${importedState.review.length}問を復元します。現在の学習データは上書きされます。続けますか？`))
+      return;
+    // 書き込み成功を確認してから画面の状態を置き換える。
+    save(importedState);
+    recovery = null;
+    state = importedState;
+    runningSince = null;
+    view = 'home';
+    render();
+    notify('学習データを復元しました。');
+  } catch (error) {
+    notify(`復元できませんでした。${error instanceof SyntaxError ? 'JSON形式を確認してください。' : error.message}`);
+  }
+}
+
 // ボタン操作は画面全体で受け取り、data-action ごとに処理する。
 root.addEventListener('click', event => {
   const button = event.target.closest('button[data-action]');
@@ -225,37 +331,13 @@ root.addEventListener('click', event => {
     render();
   }
   if (action === 'start') {
-    if (state.active)
-      return;
-    const ids = selectQuestions(questions, state, tab === 'review');
-    if (!ids.length) {
-      notify('該当する問題がありません。条件を変更してください。');
-      return;
-    }
-    state.active = {
-      id: crypto.randomUUID(),
-      ids,
-      index: 0,
-      answers: {},
-      elapsedMs: 0
-    };
-    view = 'quiz';
-    runningSince = performance.now();
-    persist();
-    render();
-    window.scrollTo(0, 0);
+    startPractice();
   }
   if (action === 'resume') {
-    view = 'quiz';
-    runningSince = document.hidden ? null : performance.now();
-    render();
+    resumePractice();
   }
   if (action === 'pause') {
-    accrueElapsedTime();
-    runningSince = null;
-    persist();
-    view = 'home';
-    render();
+    pausePractice();
   }
   if (action === 'answer')
     chooseAnswer(Number(button.dataset.answer));
@@ -266,28 +348,7 @@ root.addEventListener('click', event => {
   if (action === 'jump')
     moveToQuestion(Number(button.dataset.index));
   if (action === 'finish') {
-    const active = state.active;
-    if (!active)
-      return;
-    const unansweredCount = active.ids.filter(id => active.answers[id] === undefined).length;
-    if (!window.confirm(unansweredCount ? `未解答が${unansweredCount}問あります。未解答は不正解として採点します。終了しますか？` : '採点しますか？'))
-      return;
-    accrueElapsedTime();
-    runningSince = null;
-    const items = grade(active, questions);
-    state.review = [...new Set([...state.review, ...items.filter(i => !i.correct).map(i => i.id)])];
-    state.history.push({
-      id: active.id,
-      finishedAt: new Date().toISOString(),
-      elapsedMs: active.elapsedMs,
-      items
-    });
-    resultId = active.id;
-    state.active = null;
-    persist();
-    view = 'result';
-    render();
-    window.scrollTo(0, 0);
+    finishPractice();
   }
   if (action === 'mark') {
     const id = button.dataset.id;
@@ -311,25 +372,10 @@ root.addEventListener('click', event => {
     window.scrollTo(0, 0);
   }
   if (action === 'export') {
-    accrueElapsedTime();
-    persist();
-    const blob = new Blob([JSON.stringify(state, null, 2)], { type: 'application/json' }),
-      url = URL.createObjectURL(blob),
-      link = document.createElement('a');
-    link.href = url;
-    link.download = `fe-quick-drill-${new Date().toISOString().slice(0, 10)}.json`;
-    link.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    exportState();
   }
   if (action === 'export-original' && recovery && recovery.raw !== null) {
-    // JSONの解析・整形をせず、読み取った原文をそのまま退避する。
-    const blob = new Blob([recovery.raw], { type: 'application/json' });
-    const url = URL.createObjectURL(blob);
-    const link = document.createElement('a');
-    link.href = url;
-    link.download = `fe-quick-drill-original-${new Date().toISOString().slice(0, 10)}.json`;
-    link.click();
-    setTimeout(() => URL.revokeObjectURL(url), 1000);
+    exportOriginalData();
   }
   if (action === 'import')
     root.querySelector('#import-file').click();
@@ -351,24 +397,7 @@ root.addEventListener('change', async event => {
     event.target.value = '';
     if (!file)
       return;
-    try {
-      if (file.size > 10 * 1024 * 1024)
-        throw new Error('ファイルは10MB以下にしてください。');
-      const importedState = validateState(JSON.parse(await file.text()), questions);
-      const recoveryWarning = recovery ? '保護中の元データも置き換わります。必要なら先に「元データを書き出し」で退避してください。\n' : '';
-      if (!window.confirm(`${recoveryWarning}${importedState.history.length}回分の演習記録と復習${importedState.review.length}問を復元します。現在の学習データは上書きされます。続けますか？`))
-        return;
-      // 書き込み成功を確認してから画面の状態を置き換える。
-      save(importedState);
-      recovery = null;
-      state = importedState;
-      runningSince = null;
-      view = 'home';
-      render();
-      notify('学習データを復元しました。');
-    } catch (error) {
-      notify(`復元できませんでした。${error instanceof SyntaxError ? 'JSON形式を確認してください。' : error.message}`);
-    }
+    await importState(file);
   }
 });
 document.addEventListener('keydown', event => {

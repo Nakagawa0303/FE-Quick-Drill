@@ -7,14 +7,17 @@ export async function applicationSmoke() {
   const names=['document','window','localStorage','setInterval','setTimeout','clearTimeout'];
   const original=new Map(names.map(k=>[k,Object.getOwnPropertyDescriptor(globalThis,k)]));
   const listeners={},docListeners={},windowListeners={},memory=new Map(),notice={textContent:''};
-  const root={innerHTML:'',addEventListener:(type,fn)=>listeners[type]=fn,querySelector:()=>({focus(){},click(){}})};
+  const steps=[];
+  let markup='';
+  const root={get innerHTML(){return markup;},set innerHTML(value){steps.push('render');markup=value;},addEventListener:(type,fn)=>listeners[type]=fn,querySelector:()=>({focus(){},click(){}})};
+  const expectSteps=(expected,action)=>{steps.length=0;action();assert.deepEqual(steps,expected);};
   let approved=true;
   let exported=false;
   try {
     Object.assign(globalThis,{
-      document:{hidden:false,querySelector:s=>s==='#app'?root:s==='#notice'?notice:null,addEventListener:(type,fn)=>docListeners[type]=fn,createElement:()=>({click(){exported=true;}})},
-      localStorage:{getItem:k=>memory.get(k)??null,setItem:(k,v)=>memory.set(k,v)},
-      window:{confirm:()=>approved,scrollTo(){},addEventListener:(type,fn)=>windowListeners[type]=fn},
+      document:{hidden:false,querySelector:s=>s==='#app'?root:s==='#notice'?notice:null,addEventListener:(type,fn)=>docListeners[type]=fn,createElement:()=>({click(){steps.push('download');exported=true;}})},
+      localStorage:{getItem:k=>memory.get(k)??null,setItem:(k,v)=>{steps.push('save');memory.set(k,v);}},
+      window:{confirm:()=>{steps.push('confirm');return approved;},scrollTo(){steps.push('scroll');},addEventListener:(type,fn)=>windowListeners[type]=fn},
       setInterval:()=>0,setTimeout:()=>0,clearTimeout:()=>{},
     });
     await import('../js/app.js');
@@ -23,15 +26,19 @@ export async function applicationSmoke() {
     assert(root.innerHTML.includes('<h2>演習</h2>'));
     click('subject',{subject:'B'});click('count',{count:'3'});
     assert.equal(saved().settings.subject,'B');assert.equal(saved().settings.count,3);
-    click('subject',{subject:'A'});click('start');
+    click('subject',{subject:'A'});
+    // 処理分割後も、保存・描画・確認などの操作順序を維持する。
+    expectSteps(['save','render','scroll'],()=>click('start'));
+    expectSteps([],()=>click('start'));
     assert(root.innerHTML.includes('問題 1'));assert(!root.innerHTML.includes('正答：'));
     click('answer',{answer:'1'});click('next');click('answer',{answer:'2'});click('prev');click('answer',{answer:'0'});
-    click('pause');assert(root.innerHTML.includes('中断中の演習'));
+    expectSteps(['save','render'],()=>click('pause'));assert(root.innerHTML.includes('中断中の演習'));
     assert.equal(Object.keys(saved().active.answers).length,2);
     assert.equal(saved().active.answers[saved().active.ids[0]],0);
-    click('resume');assert(root.innerHTML.includes('問題 1'));
-    approved=false;click('finish');assert(saved().active);assert.equal(saved().history.length,0);
-    approved=true;click('finish');assert(root.innerHTML.includes('<h1>演習結果</h1>'));
+    expectSteps(['render'],()=>click('resume'));assert(root.innerHTML.includes('問題 1'));
+    approved=false;expectSteps(['confirm'],()=>click('finish'));assert(saved().active);assert.equal(saved().history.length,0);
+    approved=true;expectSteps(['confirm','save','render','scroll'],()=>click('finish'));assert(root.innerHTML.includes('<h1>演習結果</h1>'));
+    expectSteps([],()=>click('finish'));
     const completed=saved();assert.equal(completed.history.length,1);assert.equal(completed.active,null);assert(completed.review.length>=3);
     assert.equal(validateState(completed,questions).history.length,1);
     const id=completed.history[0].items[0].id;
@@ -61,11 +68,11 @@ export async function applicationSmoke() {
     assert(root.innerHTML.includes('&lt;img src=x onerror=&quot;bad&quot;&gt;'));assert(!root.innerHTML.includes('<img src=x'));
     first.subfield=subfield;
     click('home');click('tab',{tab:'records'});
-    click('export');assert(exported);assert.deepEqual(saved(),JSON.parse(before));
+    expectSteps(['save','download'],()=>click('export'));assert(exported);assert.deepEqual(saved(),JSON.parse(before));
     const fileEvent=text=>({target:{id:'import-file',files:[{size:text.length,text:async()=>text}],value:'sample.json'}});
     await listeners.change(fileEvent('{broken'));assert.equal(memory.get('fe-quick-drill:v1'),before);assert(notice.textContent.includes('復元できませんでした'));
-    approved=false;await listeners.change(fileEvent(JSON.stringify(completed)));assert.equal(memory.get('fe-quick-drill:v1'),before);
-    approved=true;await listeners.change(fileEvent(JSON.stringify(completed)));assert.deepEqual(saved(),completed);
+    steps.length=0;approved=false;await listeners.change(fileEvent(JSON.stringify(completed)));assert.deepEqual(steps,['confirm']);assert.equal(memory.get('fe-quick-drill:v1'),before);
+    steps.length=0;approved=true;await listeners.change(fileEvent(JSON.stringify(completed)));assert.deepEqual(steps,['confirm','save','render']);assert.deepEqual(saved(),completed);
     click('tab',{tab:'review'});click('start');assert(saved().active.ids.every(id=>completed.review.includes(id)));
   } finally {
     for(const [key,descriptor] of original) {if(descriptor)Object.defineProperty(globalThis,key,descriptor);else delete globalThis[key];}
